@@ -467,107 +467,19 @@
   ],
   "playground": [
     {
-      "name": "Risk Matrix Score",
-      "project": "Playground",
-      "owner": "guy.d",
-      "updated": "2022-10-12T08:31:39Z",
-      "url": "https://tableau.office.taboola.com/#/views/RiskMatrixScore/RiskMatrix",
+      "name": "ROC Daily Alerts",
+      "project": "Yahel",
+      "owner": "mor.h",
+      "updated": "2025-12-01T19:16:31Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCDailyAlerts/Dashboard1",
       "type": "playground"
     },
     {
-      "name": "Adv. DCC AM Created Cases (playground version)",
-      "project": "Playground",
-      "owner": "gal.k",
-      "updated": "2023-03-15T15:24:03Z",
-      "url": "https://tableau.office.taboola.com/#/views/Adv_DCCAMCreatedCasesplaygroundversion/Adoption",
-      "type": "playground"
-    },
-    {
-      "name": "Advertiser 2nd Level Support - KPIs Dashboard",
-      "project": "Playground",
-      "owner": "guy.d",
-      "updated": "2024-03-28T05:54:02Z",
-      "url": "https://tableau.office.taboola.com/#/views/Advertiser2ndLevelSupport-KPIsDashboard/CSAT",
-      "type": "playground"
-    },
-    {
-      "name": "Proactive",
-      "project": "Playground",
-      "owner": "igor.g",
-      "updated": "2025-10-25T04:32:11Z",
-      "url": "https://tableau.office.taboola.com/#/views/CHURN/Overview",
-      "type": "playground"
-    },
-    {
-      "name": "CRT TEST",
-      "project": "Playground",
-      "owner": "igor.g",
-      "updated": "2025-05-03T04:45:27Z",
-      "url": "https://tableau.office.taboola.com/#/views/CaseMetricsTrendsAnalysis_17339266166250/CaseResolutionOverview",
-      "type": "playground"
-    },
-    {
-      "name": "DSA Report",
-      "project": "Playground",
-      "owner": "igor.g",
-      "updated": "2025-04-17T13:01:26Z",
-      "url": "https://tableau.office.taboola.com/#/views/DSAReport/DSAReport",
-      "type": "playground"
-    },
-    {
-      "name": "Data",
-      "project": "Playground",
-      "owner": "igor.g",
-      "updated": "2025-07-19T04:40:11Z",
-      "url": "https://tableau.office.taboola.com/#/views/Data/RawData",
-      "type": "playground"
-    },
-    {
-      "name": "Proactive - TEST TEST",
-      "project": "Playground",
-      "owner": "igor.g",
-      "updated": "2025-11-20T22:38:57Z",
-      "url": "https://tableau.office.taboola.com/#/views/Proactive-TEST_17542145804480/DepletionDistribution",
-      "type": "playground"
-    },
-    {
-      "name": "Adv -  2nd/3rd Slack Consultation Dashboard - TEST",
-      "project": "Playground",
-      "owner": "igor.g",
-      "updated": "2025-10-13T02:08:16Z",
-      "url": "https://tableau.office.taboola.com/#/views/Adv-2nd3rdSlackConsultationDashboard-TEST_17549093535860/2nd3rdSlackConsultationDashboard",
-      "type": "playground"
-    },
-    {
-      "name": "DCC Unified Dashboard - TEST",
-      "project": "Playground",
-      "owner": "igor.g",
-      "updated": "2025-10-10T04:28:58Z",
-      "url": "https://tableau.office.taboola.com/#/views/DCCUnifiedDashboard-TEST_17549202887780/CRT-DCCScopeRate",
-      "type": "playground"
-    },
-    {
-      "name": "Apple 2nd Review Tableau - Test 2",
-      "project": "Playground",
-      "owner": "igor.g",
-      "updated": "2025-11-07T18:24:20Z",
-      "url": "https://tableau.office.taboola.com/#/views/Apple2ndReviewTableau-Test2/Spend",
-      "type": "playground"
-    },
-    {
-      "name": "Display",
-      "project": "Playground",
-      "owner": "igor.g",
-      "updated": "2025-12-01T06:37:51Z",
-      "url": "https://tableau.office.taboola.com/#/views/Display/AccountTier_1",
-      "type": "playground"
-    },
-    {
-      "name": "Display - Test",
-      "project": "Playground",
-      "owner": "igor.g",
-      "updated": "2025-11-30T05:22:45Z",
-      "url": "https://tableau.office.taboola.com/#/views/Display-Test/AlertsOverview",
+      "name": "snapshots hourly",
+      "project": "Mor",
+      "owner": "mor.h",
+      "updated": "2025-12-01T19:00:52Z",
+      "url": "https://tableau.office.taboola.com/#/views/snapshotshourly/Table",
       "type": "playground"
     },
     {
@@ -587,107 +499,11 @@
       "type": "playground"
     },
     {
-      "name": "Budget Analysis (Daniel Lead) 2023-05-25",
-      "project": "Mor",
-      "owner": "guy.d",
-      "updated": "2023-05-25T08:46:54Z",
-      "url": "https://tableau.office.taboola.com/#/views/BudgetAnalysisDanielLead2023-05-25/BudgetsAnalysis",
-      "type": "playground"
-    },
-    {
-      "name": "Browser Versions - Revenue 2023-05-29",
-      "project": "Mor",
-      "owner": "guy.d",
-      "updated": "2023-05-29T14:37:13Z",
-      "url": "https://tableau.office.taboola.com/#/views/BrowserVersions-Revenue2023-05-29/Sheet1",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Historical Business Performance Analysis: SC/Non-SC",
+      "name": "Display ",
       "project": "Mor",
       "owner": "mor.h",
-      "updated": "2024-10-20T16:12:26Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC_17047298212750/SCSpendMTD",
-      "type": "playground"
-    },
-    {
-      "name": "Holidays Automation- Playground",
-      "project": "Mor",
-      "owner": "mor.h",
-      "updated": "2025-03-26T12:37:10Z",
-      "url": "https://tableau.office.taboola.com/#/views/HolidaysAutomation/HolidaysPerformance",
-      "type": "playground"
-    },
-    {
-      "name": "raven alerts analysis",
-      "project": "Mor",
-      "owner": "mor.h",
-      "updated": "2024-04-25T23:11:53Z",
-      "url": "https://tableau.office.taboola.com/#/views/ravenalertsanalysis/Dashboard1",
-      "type": "playground"
-    },
-    {
-      "name": "Hourly WoW - Calendar View",
-      "project": "Mor",
-      "owner": "mor.h",
-      "updated": "2024-04-25T23:04:52Z",
-      "url": "https://tableau.office.taboola.com/#/views/HourlyWoW-CalendarView/MonthlyCalendar",
-      "type": "playground"
-    },
-    {
-      "name": "May 28 Snapshots",
-      "project": "Mor",
-      "owner": "mor.h",
-      "updated": "2024-05-29T08:16:09Z",
-      "url": "https://tableau.office.taboola.com/#/views/May28Snapshots/HighLevel",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Historical Business Performance Analysis (Publisher & Advertiser) -Playground",
-      "project": "Mor",
-      "owner": "mor.h",
-      "updated": "2024-09-01T13:08:38Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisherAdvertiser-PG/RevenueMTD",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Jira - KPI Table",
-      "project": "Mor",
-      "owner": "mor.h",
-      "updated": "2024-07-11T07:10:40Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCJira-KPITable/KPITableXLS",
-      "type": "playground"
-    },
-    {
-      "name": "RT Optimization- beg of month",
-      "project": "Mor",
-      "owner": "mor.h",
-      "updated": "2024-07-31T09:12:52Z",
-      "url": "https://tableau.office.taboola.com/#/views/RTOptimization-begofmonth/RevenueGlobal",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Revenue Health-Playground",
-      "project": "Mor",
-      "owner": "mor.h",
-      "updated": "2025-01-01T15:04:51Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCRevenueHealth-Playground/RevenueHealth-Global",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Historical Business Performance Analysis (Publisher) - Playground",
-      "project": "Mor",
-      "owner": "mor.h",
-      "updated": "2025-03-18T14:08:57Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher-Playground/RevenueMTD",
-      "type": "playground"
-    },
-    {
-      "name": "Playground - ROC Revenue Status",
-      "project": "Mor",
-      "owner": "mor.h",
-      "updated": "2025-06-03T07:02:09Z",
-      "url": "https://tableau.office.taboola.com/#/views/Playground-ROCRevenueStatus/RevenueStatusV1",
+      "updated": "2025-12-01T14:16:51Z",
+      "url": "https://tableau.office.taboola.com/#/views/Display_17596672725210/Display",
       "type": "playground"
     },
     {
@@ -699,22 +515,6 @@
       "type": "playground"
     },
     {
-      "name": "Market Constraints - 2025-08-20",
-      "project": "Mor",
-      "owner": "guy.d",
-      "updated": "2025-10-17T13:12:24Z",
-      "url": "https://tableau.office.taboola.com/#/views/MarketConstraints-2025-08-20/MarketConstraints",
-      "type": "playground"
-    },
-    {
-      "name": "CPA Seasonality",
-      "project": "Mor",
-      "owner": "mor.h",
-      "updated": "2025-09-25T09:58:47Z",
-      "url": "https://tableau.office.taboola.com/#/views/CPASeasonality/ClicksWoWTable",
-      "type": "playground"
-    },
-    {
       "name": "CVR Analysis Over Time",
       "project": "Mor",
       "owner": "mor.h",
@@ -723,723 +523,11 @@
       "type": "playground"
     },
     {
-      "name": "Display ",
-      "project": "Mor",
-      "owner": "mor.h",
-      "updated": "2025-12-01T14:16:51Z",
-      "url": "https://tableau.office.taboola.com/#/views/Display_17596672725210/Display",
-      "type": "playground"
-    },
-    {
-      "name": "snapshots hourly",
-      "project": "Mor",
-      "owner": "mor.h",
-      "updated": "2025-12-01T19:00:52Z",
-      "url": "https://tableau.office.taboola.com/#/views/snapshotshourly/Table",
-      "type": "playground"
-    },
-    {
-      "name": "Publisher Scorecard (Start From Q4 - 2021) 2022-10-26",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2022-10-26T05:06:38Z",
-      "url": "https://tableau.office.taboola.com/#/views/PublisherScorecardStartFromQ4-20212022-10-26/IndiaTechCenter",
-      "type": "playground"
-    },
-    {
-      "name": "DCC Live Chat QA 2022-11-02",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2022-11-03T07:00:48Z",
-      "url": "https://tableau.office.taboola.com/#/views/DCCLiveChatQA2022-11-02/ChatMetricsOverview",
-      "type": "playground"
-    },
-    {
-      "name": "Adv - CRT Flag Content Cases 2022-11-06",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2022-12-25T04:11:49Z",
-      "url": "https://tableau.office.taboola.com/#/views/Adv-CRTFlagContentCases2022-11-06/CRTFlagContentCases",
-      "type": "playground"
-    },
-    {
-      "name": "M\u05d8SQL TESTS",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2022-11-07T15:12:50Z",
-      "url": "https://tableau.office.taboola.com/#/views/MSQLTESTS/Sheet130",
-      "type": "playground"
-    },
-    {
-      "name": "Adv - Metrics Dashboard 2022-11-08",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2022-11-08T11:04:08Z",
-      "url": "https://tableau.office.taboola.com/#/views/Adv-MetricsDashboard2022-11-08/BarMetrics",
-      "type": "playground"
-    },
-    {
-      "name": "Tableau Alerts 2022-11-10",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2022-11-10T12:23:17Z",
-      "url": "https://tableau.office.taboola.com/#/views/TableauAlerts2022-11-10/Visits",
-      "type": "playground"
-    },
-    {
-      "name": "Tableau Alerts 2022-11-13",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2022-11-13T08:22:23Z",
-      "url": "https://tableau.office.taboola.com/#/views/TableauAlerts2022-11-13/TestDashboard",
-      "type": "playground"
-    },
-    {
-      "name": "Publisher Scorecard (Start From Q4 - 2021) 2022-12-13",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-01-29T05:49:17Z",
-      "url": "https://tableau.office.taboola.com/#/views/PublisherScorecardStartFromQ4-20212022-12-13/IndiaTechCenter",
-      "type": "playground"
-    },
-    {
-      "name": "Adv CRT - Case TTR, TTFR, FCR KPIs - 2022-12-26",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-02-23T05:27:46Z",
-      "url": "https://tableau.office.taboola.com/#/views/AdvCRT-CaseTTRTTFRFCRKPIs-2022-12-26/CRTCases",
-      "type": "playground"
-    },
-    {
-      "name": "Policy Dashboard 2023-01-23",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-02-23T05:19:22Z",
-      "url": "https://tableau.office.taboola.com/#/views/PolicyDashboard2023-01-23/PolicyCasesDashboard",
-      "type": "playground"
-    },
-    {
-      "name": "Operational Advertiser Scorecard KPIs (Start From Q4 - 2021)",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-01-29T15:46:08Z",
-      "url": "https://tableau.office.taboola.com/#/views/OperationalAdvertiserScorecardKPIsStartFromQ4-2021_16750071674720/TechCenter",
-      "type": "playground"
-    },
-    {
-      "name": "Adv - Support Case UFR KPI 2023-02-12",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-03-09T06:29:07Z",
-      "url": "https://tableau.office.taboola.com/#/views/Adv-SupportCaseUFRKPI2023-02-12/AdvSupportUFR",
-      "type": "playground"
-    },
-    {
-      "name": "FL & TI - FCR & Quality & Resolution KPIs 2023-02-13 TEST",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-02-23T02:03:40Z",
-      "url": "https://tableau.office.taboola.com/#/views/FLTI-FCRQualityResolutionKPIs2023-02-13TEST/ResolutionOverview",
-      "type": "playground"
-    },
-    {
-      "name": "PS Bridge Dashboard TEST",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-02-23T18:01:41Z",
-      "url": "https://tableau.office.taboola.com/#/views/PSBridgeDashboard_16763819344590/CompletionRateView",
-      "type": "playground"
-    },
-    {
-      "name": "Homepage 4U 2023-02-20",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-02-23T04:11:43Z",
-      "url": "https://tableau.office.taboola.com/#/views/Homepage4U_16769001463560/Homepage4U",
-      "type": "playground"
-    },
-    {
-      "name": "Taboola News & Growth PS Scorecard - TEST",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-03-01T13:52:06Z",
-      "url": "https://tableau.office.taboola.com/#/views/TaboolaNewsGrowthPSScorecard-TEST_16776782259390/KPIsDashboardbyTeam",
-      "type": "playground"
-    },
-    {
-      "name": "BQ PV IncludingExcluding",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-03-08T17:24:01Z",
-      "url": "https://tableau.office.taboola.com/#/views/BQPVIncludingExcluding/ExcludingPush",
-      "type": "playground"
-    },
-    {
-      "name": "Cloaker Spend GD 2023-03-13",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-04-25T03:11:29Z",
-      "url": "https://tableau.office.taboola.com/#/views/CloakerSpendGD2023-03-13/Byspenddateandregion",
-      "type": "playground"
-    },
-    {
-      "name": "Adv - CRT Flag Content Cases 2023-03-21 TEST",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-04-01T03:18:08Z",
-      "url": "https://tableau.office.taboola.com/#/views/Adv-CRTFlagContentCases2023-03-21TEST/CRTFlagContentCases",
-      "type": "playground"
-    },
-    {
-      "name": "Pub CRT - Reviews Metrics TEST 2023-03-23",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-05-04T02:09:55Z",
-      "url": "https://tableau.office.taboola.com/#/views/PubCRT-ReviewsMetricsTEST2023-03-23/ProtectPubFiredReviewsData",
-      "type": "playground"
-    },
-    {
-      "name": "DCC Live Chat 2023-05-30 AFTER CHANGE",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-06-05T00:04:17Z",
-      "url": "https://tableau.office.taboola.com/#/views/DCCLiveChat2023-05-30AFTERCHANGE/ChatMetricsOverview",
-      "type": "playground"
-    },
-    {
-      "name": "Adv CRT - Sweeps Inconsistency - TEST 2023-06-11",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-12-03T01:09:05Z",
-      "url": "https://tableau.office.taboola.com/#/views/AdvCRT-SweepsInconsistency-TEST2023-06-11/SweepsReport",
-      "type": "playground"
-    },
-    {
-      "name": "Mockup PS-2623 2023-08-01",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-08-01T07:55:29Z",
-      "url": "https://tableau.office.taboola.com/#/views/MockupPS-26232023-08-01/Dashboard1",
-      "type": "playground"
-    },
-    {
-      "name": "Adv - Support Case UFR KPI - LIVE TEST 2023-08-03",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-09-16T09:36:18Z",
-      "url": "https://tableau.office.taboola.com/#/views/Adv-SupportCaseUFRKPI-LIVETEST2023-08-03/AdvSupportUFR",
-      "type": "playground"
-    },
-    {
-      "name": "Adv - CRT Flag Content Cases 2023-08-08 TEST",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-08-20T06:06:15Z",
-      "url": "https://tableau.office.taboola.com/#/views/Adv-CRTFlagContentCases2023-08-08TEST/CRTFlagContentCases",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Seasonality 2023-08-16 TEST",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-09-08T05:31:52Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCSeasonality2023-08-16TEST/RevenueGlobalAllYears",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Revenue Health(old)",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-12-27T10:17:24Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCRevenueHealth/RevenueHealth1",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Seasonality 2023-08-30",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-09-03T05:29:13Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCSeasonality2023-08-30/RevenueGlobalAllYears",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Historical Business Performance Analysis 2023-09-11",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-11-02T05:28:00Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysis2023-09-11/RevenueMTD",
-      "type": "playground"
-    },
-    {
-      "name": "Brain Dashboard 2023-09-11",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-09-13T09:41:38Z",
-      "url": "https://tableau.office.taboola.com/#/views/BrainDashboard2023-09-11/Sheet51",
-      "type": "playground"
-    },
-    {
-      "name": "Brain Dashboard 2023-09-18",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-09-18T08:56:45Z",
-      "url": "https://tableau.office.taboola.com/#/views/BrainDashboard2023-09-18/AnchorOrig",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Historical Business Performance Analysis 2023-09-19",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-11-01T05:23:09Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysis2023-09-19/RevenueMTDTable",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Historical Business Performance Analysis",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-09-21T11:02:47Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysis/RevenueMTD",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Historical Business Performance Analysis - TEST",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-11-27T07:38:41Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysis-TEST/RevenueMTD",
-      "type": "playground"
-    },
-    {
-      "name": "Monthly % Median Change",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-09-27T06:27:49Z",
-      "url": "https://tableau.office.taboola.com/#/views/MonthlyMedianChange/MonthlyMedianChange",
-      "type": "playground"
-    },
-    {
-      "name": "Case Metrics & Trends Analysis 2023-10-01",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-10-01T13:20:27Z",
-      "url": "https://tableau.office.taboola.com/#/views/CaseMetricsTrendsAnalysis2023-10-01/AvgResponseAnalysis",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Historical Business Performance Analysis - 2023-10-03 TEST",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-10-19T10:16:35Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysis-2023-10-03TEST/RevenueMTD",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Revenue Health 2023-10-19(old)",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-12-27T10:17:32Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCRevenueHealth2023-10-19/RevenueHealth",
-      "type": "playground"
-    },
-    {
-      "name": "Implementation - Workload Dashboard - TEST 2023-10-25",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-12-02T18:32:45Z",
-      "url": "https://tableau.office.taboola.com/#/views/Implementation-WorkloadDashboard-TEST2023-10-25/PubWorkloadScore",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Historical Business Performance Analysis - 2023-11-01 TEST",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2024-02-23T13:14:48Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysis-2023-11-01TEST/RevenueMTD",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Revenue Health 2023-11-05 (old)",
-      "project": "Guy",
-      "owner": "mor.h",
-      "updated": "2023-12-27T10:17:18Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCRevenueHealth2023-11-05/RevenueHealth",
-      "type": "playground"
-    },
-    {
-      "name": "Policy Dashboard - TEST 2023-11-14",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-11-19T05:19:12Z",
-      "url": "https://tableau.office.taboola.com/#/views/PolicyDashboard-TEST2023-11-14/PolicyCasesDashboard",
-      "type": "playground"
-    },
-    {
-      "name": "Jira Tickets 2023-11-12",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2024-09-29T04:15:47Z",
-      "url": "https://tableau.office.taboola.com/#/views/JiraTickets2023-11-12/JiraDashboard",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Historical Business Performance Analysis - 2023-11-14 TEST",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2024-01-28T13:21:31Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysis-2023-11-14TEST/RevenueMTD",
-      "type": "playground"
-    },
-    {
-      "name": "UFR Investigation 2023-08-27",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2024-01-17T06:41:02Z",
-      "url": "https://tableau.office.taboola.com/#/views/UFRInvestigation2023-08-27/LongTailandBreakdown",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Historical Business Performance Analysis - 2023-11-29 NO UPDATE",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2023-12-03T08:16:03Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysis-2023-11-29NOUPDATE/RevenueMTD",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Historical Business Performance Analysis - 2023-12-03",
-      "project": "Guy",
-      "owner": "mor.h",
-      "updated": "2024-07-02T14:54:47Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysis-2023-12-03/RevenueMTD",
-      "type": "playground"
-    },
-    {
-      "name": "PE Shift Left Drilldown",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2024-03-14T03:11:17Z",
-      "url": "https://tableau.office.taboola.com/#/views/PEShiftLeftDrilldown/MainPublisherKPIs",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Revenue Health action test",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2024-01-18T14:01:01Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCRevenueHealthactiontest/RevenueHealth",
-      "type": "playground"
-    },
-    {
-      "name": "PE Dashboard 2024-01-31",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2024-04-03T02:20:30Z",
-      "url": "https://tableau.office.taboola.com/#/views/PEDashboard2024-01-31/PEKPIDashboard",
-      "type": "playground"
-    },
-    {
-      "name": "Implementation Capacity Dashboard - 2024-02-06",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2024-03-22T04:28:52Z",
-      "url": "https://tableau.office.taboola.com/#/views/ImplementationCapacityDashboard-2024-02-06/ImplementationCapacityDashboard",
-      "type": "playground"
-    },
-    {
-      "name": "Level 3 Individual Dashboard RELATIONSHIPS",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2024-03-28T07:05:05Z",
-      "url": "https://tableau.office.taboola.com/#/views/Level3IndividualDashboardRELATIONSHIPS/3rdLevelIndividualDashboard1",
-      "type": "playground"
-    },
-    {
-      "name": "Header Bidding MVP 2024-03-31",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2024-03-31T14:15:58Z",
-      "url": "https://tableau.office.taboola.com/#/views/HeaderBiddingMVP2024-03-31/RevenueMTD",
-      "type": "playground"
-    },
-    {
-      "name": "Hourly WoW - Calendar View GD",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2024-04-24T12:28:10Z",
-      "url": "https://tableau.office.taboola.com/#/views/HourlyWoW-CalendarViewGD/Sheet1",
-      "type": "playground"
-    },
-    {
-      "name": "Apple Untagging Monitoring 2024-06-05 [TEST VERSION]",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2024-07-09T06:00:30Z",
-      "url": "https://tableau.office.taboola.com/#/views/AppleUntaggingMonitoring2024-06-05/AppleUntagging",
-      "type": "playground"
-    },
-    {
-      "name": "Apple Unblocks Monitoring 2024-06-30 [TEST]",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2024-07-09T06:00:48Z",
-      "url": "https://tableau.office.taboola.com/#/views/AppleUnblocksMonitoring2024-06-30/AppleUntagging",
-      "type": "playground"
-    },
-    {
-      "name": "User Data Daily Dashboard - ROC GD 2024-07-31",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2024-07-31T07:32:34Z",
-      "url": "https://tableau.office.taboola.com/#/views/UserDataDailyDashboard-ROCGD2024-07-31/UDOverview",
-      "type": "playground"
-    },
-    {
-      "name": "Funnel 4 Gautam 2024-08-06",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2024-08-06T11:37:49Z",
-      "url": "https://tableau.office.taboola.com/#/views/Funnel4Gautam2024-08-06/Sheet1",
-      "type": "playground"
-    },
-    {
-      "name": "Publisher Analysis [PS-3263] GD",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2024-08-26T10:03:44Z",
-      "url": "https://tableau.office.taboola.com/#/views/PublisherAnalysisPS-3263GD/CaseLevelTable",
-      "type": "playground"
-    },
-    {
-      "name": "STD test GD",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2024-08-18T08:12:05Z",
-      "url": "https://tableau.office.taboola.com/#/views/STDtestGD/Sheet1",
-      "type": "playground"
-    },
-    {
-      "name": "TEST FOR ISNAM",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2024-08-27T07:56:29Z",
-      "url": "https://tableau.office.taboola.com/#/views/TESTFORISNAM/Dashboard12",
-      "type": "playground"
-    },
-    {
-      "name": "Sales Engine Report V0.1 funnel test",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2024-09-01T05:40:52Z",
-      "url": "https://tableau.office.taboola.com/#/views/SalesEngineReportV0_1funneltest/SalesEngineReport",
-      "type": "playground"
-    },
-    {
-      "name": "Header Bidding \"Cases on Rev\" 2024-10-08",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2024-10-08T06:09:55Z",
-      "url": "https://tableau.office.taboola.com/#/views/HeaderBiddingCasesonRev2024-10-08/HeaderBiddingScorecard",
-      "type": "playground"
-    },
-    {
-      "name": "Header Bidding \"Cases on Rev\" 2024-10-09 GD",
-      "project": "Guy",
-      "owner": "gal.k",
-      "updated": "2024-10-09T12:04:32Z",
-      "url": "https://tableau.office.taboola.com/#/views/HeaderBiddingCasesonRev2024-10-09GD/HeaderBiddingScorecard",
-      "type": "playground"
-    },
-    {
-      "name": "Header Bidding \"Cases on Rev\" 2024-10-13 GD",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2024-10-13T11:48:29Z",
-      "url": "https://tableau.office.taboola.com/#/views/HeaderBiddingCasesonRev2024-10-13GD/HeaderBiddingScorecard",
-      "type": "playground"
-    },
-    {
-      "name": "New Enola Data GD 2024-10-29",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2025-01-02T06:21:50Z",
-      "url": "https://tableau.office.taboola.com/#/views/NewEnolaDataGD2024-10-29/Dashboard",
-      "type": "playground"
-    },
-    {
-      "name": "Margin Analysis GD 2024-10-29",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2024-12-13T14:13:30Z",
-      "url": "https://tableau.office.taboola.com/#/views/MarginAnalysisGD2024-10-29/MarginAnalysisDashboard",
-      "type": "playground"
-    },
-    {
-      "name": "AI Tools KPIs 2024-11-11 TEST NO REFRESH",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2024-11-17T12:53:55Z",
-      "url": "https://tableau.office.taboola.com/#/views/AIToolsKPIs2024-11-11TESTNOREFRESH/Guardian",
-      "type": "playground"
-    },
-    {
-      "name": "Bid Op's Scorecard 2024-11-24 TEST FOR GK",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2024-11-24T09:14:58Z",
-      "url": "https://tableau.office.taboola.com/#/views/BidOpsScorecard2024-11-24TESTFORGK/BidOpsScorecard",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Historical Business Performance Analysis (Publisher & Advertiser) GD 2025-01-07",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2025-02-28T14:09:13Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisherAdvertiserGD2025-01-07/RevenueMTD",
-      "type": "playground"
-    },
-    {
-      "name": "Bid Ops Activity Overview GD 20250112",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2025-01-12T09:25:15Z",
-      "url": "https://tableau.office.taboola.com/#/views/BidOpsActivityOverviewGD20250112/ActivityOverview",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Historical Business Performance Analysis (Advertiser: Total, SC, Non-SC) 2025-01-27",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2025-02-28T14:08:41Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiserTotalSCNon-SC2025-01-27/WeeksExplanationText",
-      "type": "playground"
-    },
-    {
-      "name": "Lazy Sankey 2025-02-18",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2025-02-18T11:49:43Z",
-      "url": "https://tableau.office.taboola.com/#/views/LazySankey2025-02-18/Sheet1",
-      "type": "playground"
-    },
-    {
-      "name": "Full Data - Demand GD 2025-03-03",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2025-03-03T11:41:39Z",
-      "url": "https://tableau.office.taboola.com/#/views/FullData-DemandGD2025-03-03/ROCProtocol-FullData",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Historical Business Performance Analysis (Publisher) 2025-03-19 GD",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2025-04-07T05:43:17Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2025-03-19GD/RevenueMTD",
-      "type": "playground"
-    },
-    {
-      "name": "PS Engineering Team - Jira Dashboard TEST FILTERS 2025-04-07",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2025-07-09T04:15:54Z",
-      "url": "https://tableau.office.taboola.com/#/views/PSEngineeringTeam-JiraDashboardTESTFILTERS2025-04-07/Resolvedtickets",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Revenue Status GD",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2025-05-05T11:00:33Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCRevenueStatusGD/Sheet122",
-      "type": "playground"
-    },
-    {
-      "name": "PS Analyst Team - Jira Dashboard 2025-06-04",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2025-06-04T09:15:11Z",
-      "url": "https://tableau.office.taboola.com/#/views/PSAnalystTeam-JiraDashboard2025-06-04/Resolvedtickets",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Historical Business Performance Analysis (Publisher) 2025-06-05",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2025-08-06T13:11:08Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2025-06-05/Month-to-Date",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Historical Business Performance Analysis (Advertiser: Total, SC, Non-SC) 2025-06-10",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2025-08-16T13:09:10Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiserTotalSCNon-SC2025-06-10/Month-to-Date",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Historical Business Performance Analysis GD 2025-07-06",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2025-07-06T09:10:19Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisGD2025-07-06/WeeksExplanationText",
-      "type": "playground"
-    },
-    {
-      "name": "Superstore ROC Agent",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2025-07-29T13:25:59Z",
-      "url": "https://tableau.office.taboola.com/#/views/SuperstoreROCAgent/Overview",
-      "type": "playground"
-    },
-    {
-      "name": "Superstore ROC Agent v2",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2025-07-30T09:08:20Z",
-      "url": "https://tableau.office.taboola.com/#/views/SuperstoreROCAgentv2/Overview",
-      "type": "playground"
-    },
-    {
-      "name": "Superstore ROC Agent v3",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2025-07-31T09:58:22Z",
-      "url": "https://tableau.office.taboola.com/#/views/SuperstoreROCAgentv3/Overview3",
-      "type": "playground"
-    },
-    {
-      "name": "Tableau <> Sage POC",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2025-12-01T05:17:21Z",
-      "url": "https://tableau.office.taboola.com/#/views/TableauSagePOC/TableauSageDemo",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Historical Business Performance Analysis (Publisher) TEST 2025-08-18",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2025-10-15T13:21:23Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisherTEST2025-08-18/Month-to-Date",
-      "type": "playground"
-    },
-    {
-      "name": "CPA Issue 2025-09-18",
-      "project": "Guy",
-      "owner": "mor.h",
-      "updated": "2025-09-21T12:32:31Z",
-      "url": "https://tableau.office.taboola.com/#/views/CPAIssue2025-09-18/allKPIs",
-      "type": "playground"
-    },
-    {
-      "name": "ROC - ROI Dashboard",
-      "project": "Guy",
-      "owner": "guy.d",
-      "updated": "2025-12-01T06:28:16Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROC-ROIDashboard/ROCROIDashboard",
+      "name": "Display",
+      "project": "Playground",
+      "owner": "igor.g",
+      "updated": "2025-12-01T06:37:51Z",
+      "url": "https://tableau.office.taboola.com/#/views/Display/AccountTier_1",
       "type": "playground"
     },
     {
@@ -1451,59 +539,211 @@
       "type": "playground"
     },
     {
-      "name": "Hourly comparison by region",
-      "project": "Yahel",
-      "owner": "yahel.o",
-      "updated": "2024-04-24T05:52:51Z",
-      "url": "https://tableau.office.taboola.com/#/views/Hourlycomparisonbyregion/Hourlycomparisonbyregion",
+      "name": "ROC - ROI Dashboard",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2025-12-01T06:28:16Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROC-ROIDashboard/ROCROIDashboard",
       "type": "playground"
     },
     {
-      "name": "policy_20may",
-      "project": "Yahel",
-      "owner": "yahel.o",
-      "updated": "2024-05-23T04:48:36Z",
-      "url": "https://tableau.office.taboola.com/#/views/policy_20may/GSAVsTier1US",
+      "name": "Display - Test",
+      "project": "Playground",
+      "owner": "igor.g",
+      "updated": "2025-11-30T05:22:45Z",
+      "url": "https://tableau.office.taboola.com/#/views/Display-Test/AlertsOverview",
       "type": "playground"
     },
     {
-      "name": "QBR prep",
-      "project": "Yahel",
-      "owner": "yahel.o",
-      "updated": "2024-07-07T07:27:29Z",
-      "url": "https://tableau.office.taboola.com/#/views/QBRprep/JIRA",
+      "name": "Proactive - TEST TEST",
+      "project": "Playground",
+      "owner": "igor.g",
+      "updated": "2025-11-20T22:38:57Z",
+      "url": "https://tableau.office.taboola.com/#/views/Proactive-TEST_17542145804480/DepletionDistribution",
       "type": "playground"
     },
     {
-      "name": "Holidays",
-      "project": "Yahel",
-      "owner": "yahel.o",
-      "updated": "2024-11-05T10:49:53Z",
-      "url": "https://tableau.office.taboola.com/#/views/HolidaysSeptember/wowcalcinSQL",
+      "name": "Apple 2nd Review Tableau - Test 2",
+      "project": "Playground",
+      "owner": "igor.g",
+      "updated": "2025-11-07T18:24:20Z",
+      "url": "https://tableau.office.taboola.com/#/views/Apple2ndReviewTableau-Test2/Spend",
       "type": "playground"
     },
     {
-      "name": "US Margin",
-      "project": "Yahel",
-      "owner": "yahel.o",
-      "updated": "2024-08-23T05:24:19Z",
-      "url": "https://tableau.office.taboola.com/#/views/USMargin/Dashboard1",
+      "name": "Proactive",
+      "project": "Playground",
+      "owner": "igor.g",
+      "updated": "2025-10-25T04:32:11Z",
+      "url": "https://tableau.office.taboola.com/#/views/CHURN/Overview",
       "type": "playground"
     },
     {
-      "name": "ROC Historical Business Performance Analysis (Advertiser: Total, SC, Non-SC)",
-      "project": "Yahel",
-      "owner": "yahel.o",
-      "updated": "2024-11-28T10:57:24Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiserTotalSCNon-SC/SCSpendMTD",
+      "name": "ROC Historical Business Performance Analysis (Publisher) TEST 2025-08-18",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2025-10-15T13:21:23Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisherTEST2025-08-18/Month-to-Date",
       "type": "playground"
     },
     {
-      "name": "ROC Protocol - Investigation Tool - Brain data",
+      "name": "Adv -  2nd/3rd Slack Consultation Dashboard - TEST",
+      "project": "Playground",
+      "owner": "igor.g",
+      "updated": "2025-10-13T02:08:16Z",
+      "url": "https://tableau.office.taboola.com/#/views/Adv-2nd3rdSlackConsultationDashboard-TEST_17549093535860/2nd3rdSlackConsultationDashboard",
+      "type": "playground"
+    },
+    {
+      "name": "DCC Unified Dashboard - TEST",
+      "project": "Playground",
+      "owner": "igor.g",
+      "updated": "2025-10-10T04:28:58Z",
+      "url": "https://tableau.office.taboola.com/#/views/DCCUnifiedDashboard-TEST_17549202887780/CRT-DCCScopeRate",
+      "type": "playground"
+    },
+    {
+      "name": "CPA Seasonality",
+      "project": "Mor",
+      "owner": "mor.h",
+      "updated": "2025-09-25T09:58:47Z",
+      "url": "https://tableau.office.taboola.com/#/views/CPASeasonality/ClicksWoWTable",
+      "type": "playground"
+    },
+    {
+      "name": "CPA Issue 2025-09-18",
+      "project": "Guy",
+      "owner": "mor.h",
+      "updated": "2025-09-21T12:32:31Z",
+      "url": "https://tableau.office.taboola.com/#/views/CPAIssue2025-09-18/allKPIs",
+      "type": "playground"
+    },
+    {
+      "name": "Full Data - Demand",
       "project": "Yahel",
       "owner": "yahel.o",
-      "updated": "2025-01-06T13:18:16Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCProtocol-InvestigationTool-Braindata/ROCProtocol-DataInvestigation",
+      "updated": "2025-09-06T13:12:06Z",
+      "url": "https://tableau.office.taboola.com/#/views/FullData-Demand/ROCProtocol-FullData",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Historical Business Performance Analysis (Advertiser: Total, SC, Non-SC) 2025-06-10",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2025-08-16T13:09:10Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiserTotalSCNon-SC2025-06-10/Month-to-Date",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Historical Business Performance Analysis (Publisher) 2025-06-05",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2025-08-06T13:11:08Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2025-06-05/Month-to-Date",
+      "type": "playground"
+    },
+    {
+      "name": "Superstore ROC Agent v3",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2025-07-31T09:58:22Z",
+      "url": "https://tableau.office.taboola.com/#/views/SuperstoreROCAgentv3/Overview3",
+      "type": "playground"
+    },
+    {
+      "name": "Superstore ROC Agent v2",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2025-07-30T09:08:20Z",
+      "url": "https://tableau.office.taboola.com/#/views/SuperstoreROCAgentv2/Overview",
+      "type": "playground"
+    },
+    {
+      "name": "Superstore ROC Agent",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2025-07-29T13:25:59Z",
+      "url": "https://tableau.office.taboola.com/#/views/SuperstoreROCAgent/Overview",
+      "type": "playground"
+    },
+    {
+      "name": "Data",
+      "project": "Playground",
+      "owner": "igor.g",
+      "updated": "2025-07-19T04:40:11Z",
+      "url": "https://tableau.office.taboola.com/#/views/Data/RawData",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Historical Business Performance Analysis GD 2025-07-06",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2025-07-06T09:10:19Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisGD2025-07-06/WeeksExplanationText",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Historical Business Performance Analysis (Advertiser: Total, SC, Non-SC) -16 jun font",
+      "project": "Yahel",
+      "owner": "yahel.o",
+      "updated": "2025-06-16T07:20:34Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiserTotalSCNon-SC-16junfont/Month-to-Date",
+      "type": "playground"
+    },
+    {
+      "name": "Playground - ROC Revenue Status",
+      "project": "Mor",
+      "owner": "mor.h",
+      "updated": "2025-06-03T07:02:09Z",
+      "url": "https://tableau.office.taboola.com/#/views/Playground-ROCRevenueStatus/RevenueStatusV1",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Revenue Status GD",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2025-05-05T11:00:33Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCRevenueStatusGD/Sheet122",
+      "type": "playground"
+    },
+    {
+      "name": "CRT TEST",
+      "project": "Playground",
+      "owner": "igor.g",
+      "updated": "2025-05-03T04:45:27Z",
+      "url": "https://tableau.office.taboola.com/#/views/CaseMetricsTrendsAnalysis_17339266166250/CaseResolutionOverview",
+      "type": "playground"
+    },
+    {
+      "name": "DSA Report",
+      "project": "Playground",
+      "owner": "igor.g",
+      "updated": "2025-04-17T13:01:26Z",
+      "url": "https://tableau.office.taboola.com/#/views/DSAReport/DSAReport",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Historical Business Performance Analysis (Publisher) 2025-03-19 GD",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2025-04-07T05:43:17Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2025-03-19GD/RevenueMTD",
+      "type": "playground"
+    },
+    {
+      "name": "Holidays Automation- Playground",
+      "project": "Mor",
+      "owner": "mor.h",
+      "updated": "2025-03-26T12:37:10Z",
+      "url": "https://tableau.office.taboola.com/#/views/HolidaysAutomation/HolidaysPerformance",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Historical Business Performance Analysis (Publisher) - Playground",
+      "project": "Mor",
+      "owner": "mor.h",
+      "updated": "2025-03-18T14:08:57Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher-Playground/RevenueMTD",
       "type": "playground"
     },
     {
@@ -1515,11 +755,19 @@
       "type": "playground"
     },
     {
-      "name": "ROC Protocol - Investigation Tool - Brain data - 12Dec snapshot",
-      "project": "Yahel",
-      "owner": "yahel.o",
-      "updated": "2024-12-12T08:20:13Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCProtocol-InvestigationTool-Braindata-12Decsnapshot/ROCProtocol-DataInvestigation",
+      "name": "ROC Historical Business Performance Analysis (Publisher & Advertiser) GD 2025-01-07",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2025-02-28T14:09:13Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisherAdvertiserGD2025-01-07/RevenueMTD",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Historical Business Performance Analysis (Advertiser: Total, SC, Non-SC) 2025-01-27",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2025-02-28T14:08:41Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiserTotalSCNon-SC2025-01-27/WeeksExplanationText",
       "type": "playground"
     },
     {
@@ -1539,27 +787,275 @@
       "type": "playground"
     },
     {
-      "name": "Full Data - Demand",
+      "name": "ROC Protocol - Investigation Tool - Brain data",
       "project": "Yahel",
       "owner": "yahel.o",
-      "updated": "2025-09-06T13:12:06Z",
-      "url": "https://tableau.office.taboola.com/#/views/FullData-Demand/ROCProtocol-FullData",
+      "updated": "2025-01-06T13:18:16Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCProtocol-InvestigationTool-Braindata/ROCProtocol-DataInvestigation",
       "type": "playground"
     },
     {
-      "name": "ROC Historical Business Performance Analysis (Advertiser: Total, SC, Non-SC) -16 jun font",
-      "project": "Yahel",
-      "owner": "yahel.o",
-      "updated": "2025-06-16T07:20:34Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiserTotalSCNon-SC-16junfont/Month-to-Date",
-      "type": "playground"
-    },
-    {
-      "name": "ROC Daily Alerts",
-      "project": "Yahel",
+      "name": "ROC Revenue Health-Playground",
+      "project": "Mor",
       "owner": "mor.h",
-      "updated": "2025-12-01T19:16:31Z",
-      "url": "https://tableau.office.taboola.com/#/views/ROCDailyAlerts/Dashboard1",
+      "updated": "2025-01-01T15:04:51Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCRevenueHealth-Playground/RevenueHealth-Global",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Protocol - Investigation Tool - Brain data - 12Dec snapshot",
+      "project": "Yahel",
+      "owner": "yahel.o",
+      "updated": "2024-12-12T08:20:13Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCProtocol-InvestigationTool-Braindata-12Decsnapshot/ROCProtocol-DataInvestigation",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Historical Business Performance Analysis (Advertiser: Total, SC, Non-SC)",
+      "project": "Yahel",
+      "owner": "yahel.o",
+      "updated": "2024-11-28T10:57:24Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiserTotalSCNon-SC/SCSpendMTD",
+      "type": "playground"
+    },
+    {
+      "name": "Holidays",
+      "project": "Yahel",
+      "owner": "yahel.o",
+      "updated": "2024-11-05T10:49:53Z",
+      "url": "https://tableau.office.taboola.com/#/views/HolidaysSeptember/wowcalcinSQL",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Historical Business Performance Analysis: SC/Non-SC",
+      "project": "Mor",
+      "owner": "mor.h",
+      "updated": "2024-10-20T16:12:26Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC_17047298212750/SCSpendMTD",
+      "type": "playground"
+    },
+    {
+      "name": "Header Bidding \"Cases on Rev\" 2024-10-09 GD",
+      "project": "Guy",
+      "owner": "gal.k",
+      "updated": "2024-10-09T12:04:32Z",
+      "url": "https://tableau.office.taboola.com/#/views/HeaderBiddingCasesonRev2024-10-09GD/HeaderBiddingScorecard",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Historical Business Performance Analysis (Publisher & Advertiser) -Playground",
+      "project": "Mor",
+      "owner": "mor.h",
+      "updated": "2024-09-01T13:08:38Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisherAdvertiser-PG/RevenueMTD",
+      "type": "playground"
+    },
+    {
+      "name": "US Margin",
+      "project": "Yahel",
+      "owner": "yahel.o",
+      "updated": "2024-08-23T05:24:19Z",
+      "url": "https://tableau.office.taboola.com/#/views/USMargin/Dashboard1",
+      "type": "playground"
+    },
+    {
+      "name": "RT Optimization- beg of month",
+      "project": "Mor",
+      "owner": "mor.h",
+      "updated": "2024-07-31T09:12:52Z",
+      "url": "https://tableau.office.taboola.com/#/views/RTOptimization-begofmonth/RevenueGlobal",
+      "type": "playground"
+    },
+    {
+      "name": "User Data Daily Dashboard - ROC GD 2024-07-31",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2024-07-31T07:32:34Z",
+      "url": "https://tableau.office.taboola.com/#/views/UserDataDailyDashboard-ROCGD2024-07-31/UDOverview",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Jira - KPI Table",
+      "project": "Mor",
+      "owner": "mor.h",
+      "updated": "2024-07-11T07:10:40Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCJira-KPITable/KPITableXLS",
+      "type": "playground"
+    },
+    {
+      "name": "QBR prep",
+      "project": "Yahel",
+      "owner": "yahel.o",
+      "updated": "2024-07-07T07:27:29Z",
+      "url": "https://tableau.office.taboola.com/#/views/QBRprep/JIRA",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Historical Business Performance Analysis - 2023-12-03",
+      "project": "Guy",
+      "owner": "mor.h",
+      "updated": "2024-07-02T14:54:47Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysis-2023-12-03/RevenueMTD",
+      "type": "playground"
+    },
+    {
+      "name": "May 28 Snapshots",
+      "project": "Mor",
+      "owner": "mor.h",
+      "updated": "2024-05-29T08:16:09Z",
+      "url": "https://tableau.office.taboola.com/#/views/May28Snapshots/HighLevel",
+      "type": "playground"
+    },
+    {
+      "name": "policy_20may",
+      "project": "Yahel",
+      "owner": "yahel.o",
+      "updated": "2024-05-23T04:48:36Z",
+      "url": "https://tableau.office.taboola.com/#/views/policy_20may/GSAVsTier1US",
+      "type": "playground"
+    },
+    {
+      "name": "raven alerts analysis",
+      "project": "Mor",
+      "owner": "mor.h",
+      "updated": "2024-04-25T23:11:53Z",
+      "url": "https://tableau.office.taboola.com/#/views/ravenalertsanalysis/Dashboard1",
+      "type": "playground"
+    },
+    {
+      "name": "Hourly WoW - Calendar View",
+      "project": "Mor",
+      "owner": "mor.h",
+      "updated": "2024-04-25T23:04:52Z",
+      "url": "https://tableau.office.taboola.com/#/views/HourlyWoW-CalendarView/MonthlyCalendar",
+      "type": "playground"
+    },
+    {
+      "name": "Hourly comparison by region",
+      "project": "Yahel",
+      "owner": "yahel.o",
+      "updated": "2024-04-24T05:52:51Z",
+      "url": "https://tableau.office.taboola.com/#/views/Hourlycomparisonbyregion/Hourlycomparisonbyregion",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Historical Business Performance Analysis - 2023-11-01 TEST",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2024-02-23T13:14:48Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysis-2023-11-01TEST/RevenueMTD",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Historical Business Performance Analysis - 2023-11-14 TEST",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2024-01-28T13:21:31Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysis-2023-11-14TEST/RevenueMTD",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Revenue Health action test",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2024-01-18T14:01:01Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCRevenueHealthactiontest/RevenueHealth",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Revenue Health 2023-10-19(old)",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2023-12-27T10:17:32Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCRevenueHealth2023-10-19/RevenueHealth",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Revenue Health(old)",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2023-12-27T10:17:24Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCRevenueHealth/RevenueHealth1",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Revenue Health 2023-11-05 (old)",
+      "project": "Guy",
+      "owner": "mor.h",
+      "updated": "2023-12-27T10:17:18Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCRevenueHealth2023-11-05/RevenueHealth",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Historical Business Performance Analysis - 2023-11-29 NO UPDATE",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2023-12-03T08:16:03Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysis-2023-11-29NOUPDATE/RevenueMTD",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Historical Business Performance Analysis - TEST",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2023-11-27T07:38:41Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysis-TEST/RevenueMTD",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Historical Business Performance Analysis 2023-09-11",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2023-11-02T05:28:00Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysis2023-09-11/RevenueMTD",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Historical Business Performance Analysis 2023-09-19",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2023-11-01T05:23:09Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysis2023-09-19/RevenueMTDTable",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Historical Business Performance Analysis - 2023-10-03 TEST",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2023-10-19T10:16:35Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysis-2023-10-03TEST/RevenueMTD",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Historical Business Performance Analysis",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2023-09-21T11:02:47Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysis/RevenueMTD",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Seasonality 2023-08-16 TEST",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2023-09-08T05:31:52Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCSeasonality2023-08-16TEST/RevenueGlobalAllYears",
+      "type": "playground"
+    },
+    {
+      "name": "ROC Seasonality 2023-08-30",
+      "project": "Guy",
+      "owner": "guy.d",
+      "updated": "2023-09-03T05:29:13Z",
+      "url": "https://tableau.office.taboola.com/#/views/ROCSeasonality2023-08-30/RevenueGlobalAllYears",
+      "type": "playground"
+    },
+    {
+      "name": "Adv. DCC AM Created Cases (playground version)",
+      "project": "Playground",
+      "owner": "gal.k",
+      "updated": "2023-03-15T15:24:03Z",
+      "url": "https://tableau.office.taboola.com/#/views/Adv_DCCAMCreatedCasesplaygroundversion/Adoption",
       "type": "playground"
     }
   ]

@@ -73,23 +73,23 @@
 
         .stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-            padding: 25px 30px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 30px;
             background: #f8f9fa;
             border-bottom: 1px solid #e0e0e0;
         }
 
         .stat-card {
             text-align: center;
-            padding: 15px;
+            padding: 20px;
             background: white;
             border-radius: 10px;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .stat-card .number {
-            font-size: 2em;
+            font-size: 2.5em;
             font-weight: bold;
             color: #667eea;
         }
@@ -97,7 +97,7 @@
         .stat-card .label {
             color: #666;
             margin-top: 5px;
-            font-size: 0.9em;
+            font-size: 1em;
         }
 
         .search-bar {
@@ -167,11 +167,6 @@
             color: #2e7d32;
         }
 
-        .section-badge.personal {
-            background: #e3f2fd;
-            color: #1565c0;
-        }
-
         .dashboard-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -199,10 +194,6 @@
 
         .dashboard-card.playground {
             border-left: 4px solid #2e7d32;
-        }
-
-        .dashboard-card.personal {
-            border-left: 4px solid #1565c0;
         }
 
         .dashboard-card h3 {
@@ -271,51 +262,6 @@
             color: #999;
             font-style: italic;
         }
-
-        .personal-link-section {
-            text-align: center;
-            padding: 40px;
-            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-            border-radius: 12px;
-            margin: 0 auto;
-            max-width: 600px;
-        }
-
-        .personal-link-section h3 {
-            font-size: 1.5em;
-            color: #1565c0;
-            margin-bottom: 15px;
-        }
-
-        .personal-link-section p {
-            color: #666;
-            margin-bottom: 20px;
-            font-size: 1.05em;
-        }
-
-        .personal-main-button {
-            display: inline-block;
-            padding: 15px 30px;
-            background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
-            font-size: 1.1em;
-            font-weight: 600;
-            transition: all 0.3s;
-            box-shadow: 0 4px 12px rgba(21, 101, 192, 0.3);
-        }
-
-        .personal-main-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(21, 101, 192, 0.4);
-        }
-
-        .dashboard-count {
-            font-size: 0.9em;
-            color: #888;
-            margin-top: 15px;
-        }
     </style>
 </head>
 <body>
@@ -347,11 +293,7 @@
                 <div class="label">🎮 Playground</div>
             </div>
             <div class="stat-card">
-                <div class="number">53</div>
-                <div class="label">👤 Personal</div>
-            </div>
-            <div class="stat-card">
-                <div class="number">208</div>
+                <div class="number">155</div>
                 <div class="label">📊 Total</div>
             </div>
         </div>
@@ -380,24 +322,6 @@
                 </div>
             </div>
             <div class="dashboard-grid" id="playgroundGrid"></div>
-        </div>
-
-        <!-- Personal Section - Link Only -->
-        <div class="section">
-            <div class="section-header">
-                <div class="section-title">
-                    <h2>👤 My Personal Dashboards</h2>
-                    <span class="section-badge personal">YOUR WORK</span>
-                </div>
-            </div>
-            <div class="personal-link-section">
-                <h3>View Your Personal Dashboards</h3>
-                <p>You have 53 personal dashboards across various projects</p>
-                <a href="https://tableau.office.taboola.com/#/user/mor.h" target="_blank" class="personal-main-button">
-                    🔗 Open My Tableau Profile →
-                </a>
-                <p class="dashboard-count">Including projects: Ad-Hoc, Triage, Mor, Guy, Communications, ROC Protocol, and more</p>
-            </div>
         </div>
     </div>
 
@@ -1706,7 +1630,7 @@
                        (dashboard.owner && dashboard.owner.toLowerCase().includes(search));
             };
 
-            // Production (already sorted by date in Python)
+            // Production
             const prodFiltered = productionDashboards.filter(matchesSearch);
             const prodGrid = document.getElementById('productionGrid');
             if (prodFiltered.length === 0) {
@@ -1715,7 +1639,7 @@
                 prodGrid.innerHTML = prodFiltered.map(d => createDashboardCard(d, 'production')).join('');
             }
 
-            // Playground (already sorted by date in Python)
+            // Playground
             const playgroundFiltered = playgroundDashboards.filter(matchesSearch);
             const playgroundGrid = document.getElementById('playgroundGrid');
             if (playgroundFiltered.length === 0) {
