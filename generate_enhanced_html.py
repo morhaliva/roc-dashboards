@@ -258,10 +258,43 @@ html = f'''<!DOCTYPE html>
             font-size: 0.9em;
         }}
         
+        .data-sources-header {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }}
+        
         .data-sources-title {{
             font-weight: bold;
             color: #555;
-            margin-bottom: 5px;
+        }}
+        
+        .toggle-btn {{
+            background: none;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 2px 8px;
+            cursor: pointer;
+            font-size: 0.85em;
+            color: #666;
+            transition: all 0.2s;
+        }}
+        
+        .toggle-btn:hover {{
+            background: #eee;
+            border-color: #ccc;
+        }}
+        
+        .data-sources-list {{
+            margin-top: 8px;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }}
+        
+        .data-sources-list.collapsed {{
+            max-height: 0;
+            margin-top: 0;
         }}
         
         .data-source {{
@@ -393,14 +426,19 @@ for dashboard in production:
     
     data_sources_html = ''
     if dashboard['data_sources']:
-        data_sources_html = '<div class="data-sources"><div class="data-sources-title">🗄️ Data Sources ({}):</div>'.format(len(dashboard['data_sources']))
+        ds_count = len(dashboard['data_sources'])
+        data_sources_html = f'''<div class="data-sources">
+            <div class="data-sources-header" onclick="toggleDataSources(this)">
+                <span class="data-sources-title">🗄️ Data Sources ({ds_count})</span>
+                <button class="toggle-btn">▼ Show</button>
+            </div>
+            <div class="data-sources-list collapsed">'''
         for ds in dashboard['data_sources']:
             ds_name = ds['name']
             ds_type = ds.get('type', 'unknown').upper()
-            # Show type badge with color
             type_color = '#4CAF50' if ds_type == 'VERTICA' else '#2196F3' if ds_type == 'BIGQUERY' else '#FF9800'
             data_sources_html += f'<div class="data-source"><span style="background: {type_color}; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75em; margin-right: 8px;">{ds_type}</span>{ds_name}</div>'
-        data_sources_html += '</div>'
+        data_sources_html += '</div></div>'
     
     views_html = ''
     if len(dashboard['views']) > 1:
@@ -469,14 +507,19 @@ for dashboard in playground:
     
     data_sources_html = ''
     if dashboard['data_sources']:
-        data_sources_html = '<div class="data-sources"><div class="data-sources-title">🗄️ Data Sources ({}):</div>'.format(len(dashboard['data_sources']))
+        ds_count = len(dashboard['data_sources'])
+        data_sources_html = f'''<div class="data-sources">
+            <div class="data-sources-header" onclick="toggleDataSources(this)">
+                <span class="data-sources-title">🗄️ Data Sources ({ds_count})</span>
+                <button class="toggle-btn">▼ Show</button>
+            </div>
+            <div class="data-sources-list collapsed">'''
         for ds in dashboard['data_sources']:
             ds_name = ds['name']
             ds_type = ds.get('type', 'unknown').upper()
-            # Show type badge with color
             type_color = '#4CAF50' if ds_type == 'VERTICA' else '#2196F3' if ds_type == 'BIGQUERY' else '#FF9800'
             data_sources_html += f'<div class="data-source"><span style="background: {type_color}; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75em; margin-right: 8px;">{ds_type}</span>{ds_name}</div>'
-        data_sources_html += '</div>'
+        data_sources_html += '</div></div>'
     
     views_html = ''
     if len(dashboard['views']) > 1:
@@ -527,6 +570,14 @@ html += '''
     </div>
     
     <script>
+        // Toggle data sources visibility
+        function toggleDataSources(header) {
+            const list = header.nextElementSibling;
+            const btn = header.querySelector('.toggle-btn');
+            list.classList.toggle('collapsed');
+            btn.textContent = list.classList.contains('collapsed') ? '▼ Show' : '▲ Hide';
+        }
+        
         // Search functionality
         const searchInput = document.getElementById('searchInput');
         const filterButtons = document.querySelectorAll('.filter-btn');
