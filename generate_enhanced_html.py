@@ -13,6 +13,10 @@ production = data['production']
 playground = data['playground']
 last_updated = data.get('last_updated', datetime.now().isoformat())
 
+# Sort dashboards by updated date (descending - most recent first)
+production = sorted(production, key=lambda x: x.get('updated', ''), reverse=True)
+playground = sorted(playground, key=lambda x: x.get('updated', ''), reverse=True)
+
 # Format the date nicely
 try:
     dt = datetime.fromisoformat(last_updated.replace('Z', '+00:00'))
