@@ -404,11 +404,14 @@ for dashboard in production:
     if len(dashboard['views']) > 1:
         views_html = '<div class="views-section"><div class="views-title">📑 Sheets ({}):</div><div class="view-links">'.format(len(dashboard['views']))
         for view in dashboard['views']:
-            views_html += f'<a href="{view["url"]}" class="view-link" target="_blank">{view["name"]}</a>'
+            view_count = int(view.get('viewCount', 0) or 0)
+            count_display = f" ({view_count:,}👁)" if view_count > 0 else ""
+            views_html += f'<a href="{view["url"]}" class="view-link" target="_blank">{view["name"]}{count_display}</a>'
         views_html += '</div></div>'
     
     created_date = datetime.fromisoformat(dashboard['created'].replace('Z', '+00:00')).strftime('%b %d, %Y')
     updated_date = datetime.fromisoformat(dashboard['updated'].replace('Z', '+00:00')).strftime('%b %d, %Y')
+    total_views = int(dashboard.get('total_views', 0) or 0)
     
     html += f'''
                 <div class="dashboard-card" data-category="production" 
@@ -424,6 +427,7 @@ for dashboard in production:
                         <div class="meta-item">👤 {dashboard['owner']}</div>
                         <div class="meta-item">📁 {dashboard['project']}</div>
                         <div class="meta-item">📊 {dashboard['sheet_count']} sheets</div>
+                        <div class="meta-item">👁 {total_views:,} views</div>
                     </div>
                     <div class="dashboard-meta">
                         <div class="meta-item">📅 Created: {created_date}</div>
@@ -474,11 +478,14 @@ for dashboard in playground:
     if len(dashboard['views']) > 1:
         views_html = '<div class="views-section"><div class="views-title">📑 Sheets ({}):</div><div class="view-links">'.format(len(dashboard['views']))
         for view in dashboard['views']:
-            views_html += f'<a href="{view["url"]}" class="view-link" target="_blank">{view["name"]}</a>'
+            view_count = int(view.get('viewCount', 0) or 0)
+            count_display = f" ({view_count:,}👁)" if view_count > 0 else ""
+            views_html += f'<a href="{view["url"]}" class="view-link" target="_blank">{view["name"]}{count_display}</a>'
         views_html += '</div></div>'
     
     created_date = datetime.fromisoformat(dashboard['created'].replace('Z', '+00:00')).strftime('%b %d, %Y')
     updated_date = datetime.fromisoformat(dashboard['updated'].replace('Z', '+00:00')).strftime('%b %d, %Y')
+    total_views = int(dashboard.get('total_views', 0) or 0)
     
     html += f'''
                 <div class="dashboard-card" data-category="playground"
@@ -494,6 +501,7 @@ for dashboard in playground:
                         <div class="meta-item">👤 {dashboard['owner']}</div>
                         <div class="meta-item">📁 {dashboard['project']}</div>
                         <div class="meta-item">📊 {dashboard['sheet_count']} sheets</div>
+                        <div class="meta-item">👁 {total_views:,} views</div>
                     </div>
                     <div class="dashboard-meta">
                         <div class="meta-item">📅 Created: {created_date}</div>
