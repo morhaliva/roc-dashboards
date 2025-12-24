@@ -178,6 +178,110 @@
       "url": "https://tableau.office.taboola.com/#/views/ROCDailyAlerts_17617708917560/DailyAnomalies-Sage"
     },
     {
+      "name": "Alerts Analysis Automation",
+      "description": "",
+      "project": "ROC",
+      "owner": "mor.h",
+      "created": "2025-09-30T20:26:25Z",
+      "updated": "2025-12-24T21:14:08Z",
+      "tags": [],
+      "views": [
+        {
+          "name": "Hourly SF Cases",
+          "id": "4d3291e9-81ee-4e35-b098-a9bdd88b0ec5",
+          "url": "https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlySFCases"
+        },
+        {
+          "name": "Hourly Alerts Thresholds",
+          "id": "76ad7d50-0a17-447f-9b3f-84ef82d74618",
+          "url": "https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlyAlertsThresholds"
+        },
+        {
+          "name": "Hourly Optimization - Box Plots",
+          "id": "0e2d164b-1185-414e-a36d-970b32d2857e",
+          "url": "https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlyOptimization-BoxPlots"
+        },
+        {
+          "name": "Hourly Extrapolation Factor",
+          "id": "56ce9a64-bcea-4e3a-844d-b9abd7967e79",
+          "url": "https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlyExtrapolationFactor"
+        },
+        {
+          "name": "Daily Alerts Monitoring",
+          "id": "2eb80145-741b-46e9-bea8-30b2e137edeb",
+          "url": "https://tableau.office.taboola.com/#/views/SFROCAlerts/DailyAlertsMonitoring"
+        }
+      ],
+      "data_sources": [
+        {
+          "name": "office-vrt.taboolasyndication.com",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com"
+        }
+      ],
+      "sheet_count": 5,
+      "size": "9",
+      "category": "production",
+      "url": "https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlySFCases"
+    },
+    {
+      "name": "ROC - Jira Dashboard",
+      "description": "",
+      "project": "ROC",
+      "owner": "guy.d",
+      "created": "2024-09-24T12:26:33Z",
+      "updated": "2025-12-24T17:25:49Z",
+      "tags": [],
+      "views": [
+        {
+          "name": "KPI Table",
+          "id": "e0b32df4-75ee-4cda-ab16-8d8afe2327c6",
+          "url": "https://tableau.office.taboola.com/#/views/ROC-JiraDashboard/KPITable"
+        },
+        {
+          "name": "Flagged Alerts",
+          "id": "7ed3c310-3139-4c57-afac-d6f8fff137f0",
+          "url": "https://tableau.office.taboola.com/#/views/ROC-JiraDashboard/FlaggedAlerts"
+        },
+        {
+          "name": "Detailed RCA and RCA By",
+          "id": "eee596b6-e476-47e8-897f-1c452646aec7",
+          "url": "https://tableau.office.taboola.com/#/views/ROC-JiraDashboard/DetailedRCAandRCABy"
+        },
+        {
+          "name": "RCA Distribution",
+          "id": "d7c98272-8923-4032-8c74-a2974b709055",
+          "url": "https://tableau.office.taboola.com/#/views/ROC-JiraDashboard/RCADistribution"
+        },
+        {
+          "name": "Scope of Work",
+          "id": "7467d50a-dd30-4d36-a48d-10ac1eacc06b",
+          "url": "https://tableau.office.taboola.com/#/views/ROC-JiraDashboard/ScopeofWork"
+        },
+        {
+          "name": "Anomalies Detected",
+          "id": "cb39fc15-5c1e-460b-89b9-7d4b140b636b",
+          "url": "https://tableau.office.taboola.com/#/views/ROC-JiraDashboard/AnomaliesDetected"
+        },
+        {
+          "name": "Closed Issues",
+          "id": "4e938797-aec9-4efd-ba7e-2841518dd808",
+          "url": "https://tableau.office.taboola.com/#/views/ROC-JiraDashboard/ClosedIssues"
+        }
+      ],
+      "data_sources": [
+        {
+          "name": "office-vrt.taboolasyndication.com",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com"
+        }
+      ],
+      "sheet_count": 7,
+      "size": "1",
+      "category": "production",
+      "url": "https://tableau.office.taboola.com/#/views/ROC-JiraDashboard/KPITable"
+    },
+    {
       "name": "User Data Daily Dashboard - ROC",
       "description": "",
       "project": "Triage",
@@ -582,6 +686,65 @@
       "size": "280",
       "category": "production",
       "url": "https://tableau.office.taboola.com/#/views/MarketConstraints/MarketConstraints"
+    },
+    {
+      "name": "ROC - Revenue Loss",
+      "description": "",
+      "project": "ROC",
+      "owner": "guy.d",
+      "created": "2025-10-27T11:40:26Z",
+      "updated": "2025-12-24T06:17:50Z",
+      "tags": [],
+      "views": [
+        {
+          "name": "ROC Revenue Loss",
+          "id": "721713c6-1490-4376-bda6-2c71d77262c4",
+          "url": "https://tableau.office.taboola.com/#/views/ROC-RevenueLoss/ROCRevenueLoss"
+        }
+      ],
+      "data_sources": [
+        {
+          "name": "office-vrt.taboolasyndication.com",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com"
+        },
+        {
+          "name": "ROC ROI Targets.xlsx - Microsoft Excel (Google Drive)",
+          "type": "googledrive",
+          "server": "ROC ROI Targets.xlsx - Microsoft Excel (Google Drive)"
+        }
+      ],
+      "sheet_count": 1,
+      "size": "1",
+      "category": "production",
+      "url": "https://tableau.office.taboola.com/#/views/ROC-RevenueLoss/ROCRevenueLoss"
+    },
+    {
+      "name": "ROC - Roadmap Progression",
+      "description": "",
+      "project": "ROC",
+      "owner": "guy.d",
+      "created": "2025-11-24T13:22:27Z",
+      "updated": "2025-12-24T06:17:40Z",
+      "tags": [],
+      "views": [
+        {
+          "name": "ROC Roadmap Progression",
+          "id": "9482a189-504f-428e-8185-d405f3c2cfbe",
+          "url": "https://tableau.office.taboola.com/#/views/ROC-RoadmapProgression/ROCRoadmapProgression"
+        }
+      ],
+      "data_sources": [
+        {
+          "name": "office-vrt.taboolasyndication.com",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com"
+        }
+      ],
+      "sheet_count": 1,
+      "size": "1",
+      "category": "production",
+      "url": "https://tableau.office.taboola.com/#/views/ROC-RoadmapProgression/ROCRoadmapProgression"
     },
     {
       "name": "ROC Revenue Status",
@@ -5724,5 +5887,5 @@
       "url": "https://tableau.office.taboola.com/#/views/Adv_DCCAMCreatedCasesplaygroundversion/Adoption"
     }
   ],
-  "last_updated": "2025-12-24T23:48:06.700996"
+  "last_updated": "2025-12-24T23:55:05.106724"
 }

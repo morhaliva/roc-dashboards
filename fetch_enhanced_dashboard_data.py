@@ -174,8 +174,8 @@ print("🔐 Authenticating...")
 auth_token, site_id = sign_in()
 print("✅ Authenticated!\n")
 
-# Production Projects - ROC Protocol and Triage
-production_projects = ['ROC Protocol', 'Triage']
+# Production Projects - ROC Protocol, Triage, and ROC
+production_projects = ['ROC Protocol', 'Triage', 'ROC']
 
 print("=" * 80)
 print("🏭 FETCHING PRODUCTION DASHBOARDS")
