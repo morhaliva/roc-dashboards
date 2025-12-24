@@ -1,6 +1,150 @@
 {
   "production": [
     {
+      "name": "Alerts Analysis Automation",
+      "description": "Automated alerting dashboard for proactive issue detection.",
+      "project": "ROC",
+      "owner": "mor.h",
+      "created": "2025-09-30T20:26:25Z",
+      "updated": "2025-12-24T22:07:42Z",
+      "tags": [],
+      "views": [
+        {
+          "name": "Hourly SF Cases",
+          "id": "4d3291e9-81ee-4e35-b098-a9bdd88b0ec5",
+          "url": "https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlySFCases",
+          "viewCount": "46"
+        },
+        {
+          "name": "Daily Alerts Monitoring",
+          "id": "2eb80145-741b-46e9-bea8-30b2e137edeb",
+          "url": "https://tableau.office.taboola.com/#/views/SFROCAlerts/DailyAlertsMonitoring",
+          "viewCount": "29"
+        },
+        {
+          "name": "Hourly Alerts Thresholds",
+          "id": "76ad7d50-0a17-447f-9b3f-84ef82d74618",
+          "url": "https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlyAlertsThresholds",
+          "viewCount": "15"
+        },
+        {
+          "name": "Hourly Optimization - Box Plots",
+          "id": "0e2d164b-1185-414e-a36d-970b32d2857e",
+          "url": "https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlyOptimization-BoxPlots",
+          "viewCount": "11"
+        },
+        {
+          "name": "Hourly Extrapolation Factor",
+          "id": "56ce9a64-bcea-4e3a-844d-b9abd7967e79",
+          "url": "https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlyExtrapolationFactor",
+          "viewCount": "2"
+        }
+      ],
+      "data_sources": [
+        {
+          "name": "ROC Append (Bidding Strategy)",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "7b039cd7-b8c0-4c74-a1e4-1ea2e1820106"
+        },
+        {
+          "name": "ROC Append (Pub Region)",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "59128d01-c9ae-4948-aa8b-6506e955bea6"
+        },
+        {
+          "name": "Hourly Snapshots (spend)",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "ed52d65a-548a-4f53-8795-34b7f820b976"
+        },
+        {
+          "name": "SF - ROC Alerts",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "44c23580-9881-4213-802c-5e61ad7a6976"
+        },
+        {
+          "name": "ROC Append (Country)",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "d89bbb59-0886-4ae0-a444-1bef649533cd"
+        },
+        {
+          "name": "ROC Append (Networks)",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "f281b9ab-e588-4c98-8d0d-4847ed93a192"
+        },
+        {
+          "name": "Bidding Strategy - Historically",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "bf46e07f-5385-48c9-af93-2195a8a9ff2b"
+        },
+        {
+          "name": "Daily Alerts - Optimization",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "3103dd08-1645-4455-a6f9-e8c6aa4d3e2b"
+        },
+        {
+          "name": "Hourly Snapshots (revenue)",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "48f0ed5c-3142-400a-bf24-350b31efc243"
+        }
+      ],
+      "sheet_count": 5,
+      "total_views": 103,
+      "size": "9",
+      "category": "production",
+      "url": "https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlySFCases"
+    },
+    {
+      "name": "Top 5 Networks Hourly Trend",
+      "description": "Monitors hourly trends and real-time performance metrics.",
+      "project": "ROC Protocol",
+      "owner": "mor.h",
+      "created": "2025-08-11T08:25:14Z",
+      "updated": "2025-12-24T22:07:19Z",
+      "tags": [],
+      "views": [
+        {
+          "name": "Hourly - Top Networks",
+          "id": "f7e08629-f620-408d-9d65-8f1e0856031a",
+          "url": "https://tableau.office.taboola.com/#/views/TopNetworksHourlyTrend/Hourly-TopNetworks",
+          "viewCount": "313"
+        }
+      ],
+      "data_sources": [
+        {
+          "name": "ROC_Revenue_Health",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "0e99e57c-8b7d-4a77-910b-894c1361b4d9"
+        },
+        {
+          "name": "country data",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "9fb3587a-d4fe-44e3-8d9e-75c6c1d60fe4"
+        },
+        {
+          "name": "HourlyComp - adjusted",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "34a4c171-4b6a-4363-8c23-545866ad9619"
+        }
+      ],
+      "sheet_count": 1,
+      "total_views": 313,
+      "size": "39",
+      "category": "production",
+      "url": "https://tableau.office.taboola.com/#/views/TopNetworksHourlyTrend/Hourly-TopNetworks"
+    },
+    {
       "name": "ROC Protocol - Investigation Tool - Brain data",
       "description": "Deep-dive analysis tool for investigating performance patterns.",
       "project": "ROC Protocol",
@@ -13,18 +157,19 @@
           "name": "ROC Protocol - Data Investigation",
           "id": "c3c3d7d0-e3a5-420a-93aa-0ff175908ab0",
           "url": "https://tableau.office.taboola.com/#/views/ROCProtocol-InvestigationTool/ROCProtocol-DataInvestigation",
-          "viewCount": "1380"
+          "viewCount": "1381"
         }
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "superQuery2",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "b8e4d3e1-ff7b-4a90-984c-b85570541833"
         }
       ],
       "sheet_count": 1,
-      "total_views": 1380,
+      "total_views": 1381,
       "size": "20",
       "category": "production",
       "url": "https://tableau.office.taboola.com/#/views/ROCProtocol-InvestigationTool/ROCProtocol-DataInvestigation"
@@ -65,9 +210,34 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "country data",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "638b2fa0-f892-476a-948e-ff90aad69405"
+        },
+        {
+          "name": "ROC_Revenue_Health",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "4506e383-915c-40d7-b622-d8c67702a8d9"
+        },
+        {
+          "name": "Spend hourly",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "9b85f963-29d6-45fc-83ad-744338b0534b"
+        },
+        {
+          "name": "Hourly segment",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "a6da96b4-7729-4406-bb85-d5aae5640157"
+        },
+        {
+          "name": "HourlyComp - adjusted",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "ecc2af77-a264-4dc4-92a8-248ce5b7e814"
         }
       ],
       "sheet_count": 4,
@@ -94,9 +264,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "spend_hourly_last_2_days (analysts.spend_hourly_last_2_days) (analysts)",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "7af79e7b-066e-4354-9762-92daf02f4a57"
+        },
+        {
+          "name": "ROC_Revenue_Health",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "c952f87c-1b54-4966-a790-e672cb210136"
         }
       ],
       "sheet_count": 1,
@@ -104,35 +281,6 @@
       "size": "3",
       "category": "production",
       "url": "https://tableau.office.taboola.com/#/views/ROCProtocolHourlyRefresh-SpendInvestigations/ROCProtocol-SpendData-Investigation"
-    },
-    {
-      "name": "Top 5 Networks Hourly Trend",
-      "description": "Monitors hourly trends and real-time performance metrics.",
-      "project": "ROC Protocol",
-      "owner": "mor.h",
-      "created": "2025-08-11T08:25:14Z",
-      "updated": "2025-12-24T21:31:24Z",
-      "tags": [],
-      "views": [
-        {
-          "name": "Hourly - Top Networks",
-          "id": "f7e08629-f620-408d-9d65-8f1e0856031a",
-          "url": "https://tableau.office.taboola.com/#/views/TopNetworksHourlyTrend/Hourly-TopNetworks",
-          "viewCount": "313"
-        }
-      ],
-      "data_sources": [
-        {
-          "name": "office-vrt.taboolasyndication.com",
-          "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
-        }
-      ],
-      "sheet_count": 1,
-      "total_views": 313,
-      "size": "38",
-      "category": "production",
-      "url": "https://tableau.office.taboola.com/#/views/TopNetworksHourlyTrend/Hourly-TopNetworks"
     },
     {
       "name": "Samsung Hourly Trend",
@@ -152,9 +300,22 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "ROC_Revenue_Health",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "338994f0-a3b2-4ea2-be3c-3ed5a90c50d7"
+        },
+        {
+          "name": "country data",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "085891a6-6d6f-431e-8b22-fb9f84c2174e"
+        },
+        {
+          "name": "HourlyComp - adjusted",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "c3506b2e-97c1-4595-b386-7ed7f55c553e"
         }
       ],
       "sheet_count": 1,
@@ -176,74 +337,22 @@
           "name": "Daily Anomalies - Sage",
           "id": "27473ec0-620a-4106-bb5a-df543b181824",
           "url": "https://tableau.office.taboola.com/#/views/ROCDailyAlerts_17617708917560/DailyAnomalies-Sage",
-          "viewCount": "294"
+          "viewCount": "295"
         }
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "roc_daily_investigation_summaries (offstage.roc_daily_investigation_summaries) (offstage)",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "d5ce5982-f7f8-4034-996e-dbe52d25adf3"
         }
       ],
       "sheet_count": 1,
-      "total_views": 294,
+      "total_views": 295,
       "size": "6",
       "category": "production",
       "url": "https://tableau.office.taboola.com/#/views/ROCDailyAlerts_17617708917560/DailyAnomalies-Sage"
-    },
-    {
-      "name": "Alerts Analysis Automation",
-      "description": "Automated alerting dashboard for proactive issue detection.",
-      "project": "ROC",
-      "owner": "mor.h",
-      "created": "2025-09-30T20:26:25Z",
-      "updated": "2025-12-24T21:14:08Z",
-      "tags": [],
-      "views": [
-        {
-          "name": "Hourly SF Cases",
-          "id": "4d3291e9-81ee-4e35-b098-a9bdd88b0ec5",
-          "url": "https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlySFCases",
-          "viewCount": "46"
-        },
-        {
-          "name": "Daily Alerts Monitoring",
-          "id": "2eb80145-741b-46e9-bea8-30b2e137edeb",
-          "url": "https://tableau.office.taboola.com/#/views/SFROCAlerts/DailyAlertsMonitoring",
-          "viewCount": "29"
-        },
-        {
-          "name": "Hourly Alerts Thresholds",
-          "id": "76ad7d50-0a17-447f-9b3f-84ef82d74618",
-          "url": "https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlyAlertsThresholds",
-          "viewCount": "15"
-        },
-        {
-          "name": "Hourly Optimization - Box Plots",
-          "id": "0e2d164b-1185-414e-a36d-970b32d2857e",
-          "url": "https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlyOptimization-BoxPlots",
-          "viewCount": "11"
-        },
-        {
-          "name": "Hourly Extrapolation Factor",
-          "id": "56ce9a64-bcea-4e3a-844d-b9abd7967e79",
-          "url": "https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlyExtrapolationFactor",
-          "viewCount": "2"
-        }
-      ],
-      "data_sources": [
-        {
-          "name": "office-vrt.taboolasyndication.com",
-          "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
-        }
-      ],
-      "sheet_count": 5,
-      "total_views": 103,
-      "size": "9",
-      "category": "production",
-      "url": "https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlySFCases"
     },
     {
       "name": "ROC - Jira Dashboard",
@@ -299,9 +408,22 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Jira Update Time",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "28cb4915-816a-46fe-9b4d-863551a4e3ed"
+        },
+        {
+          "name": "Targets",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "033d1998-e226-4a94-b501-e62fb7b1aa06"
+        },
+        {
+          "name": "Time In Status",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "dd4f3b89-7ae9-44fa-942b-0e977cc6736a"
         }
       ],
       "sheet_count": 7,
@@ -346,9 +468,28 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Data Adoption Data Set",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "e62f1003-440a-4499-9228-e23292cbdfea"
+        },
+        {
+          "name": "Amount of Campaigns",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "ee793888-76af-46c6-a9e8-572eafe27912"
+        },
+        {
+          "name": "Custom SQL Query (analysts)",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "52b48eef-0a65-4490-9617-f10aa18d301b"
+        },
+        {
+          "name": "(New) One Query: DE New Campaigns out of Total New Campaigns",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "9aa71b6d-9cb7-425d-ad63-64dfebb98f8a"
         }
       ],
       "sheet_count": 4,
@@ -387,9 +528,28 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "FullData",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "a1509686-c592-42d2-8a02-5492afc1bf87"
+        },
+        {
+          "name": "Revenue_health",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "61508500-730e-4dd7-a757-3e2e576a7259"
+        },
+        {
+          "name": "ROC_demand_60_days_pub_adv (change_log)",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "64bdb745-1cfb-4941-9481-d8434abc0154"
+        },
+        {
+          "name": "ROC_Full_time_data_Backstage_data",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "5da78970-b103-44d9-8a09-e766a29bd6fc"
         }
       ],
       "sheet_count": 3,
@@ -500,9 +660,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Revenue Relationship",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "cbaea9ba-6334-4765-95b9-3ffa9f375c71"
+        },
+        {
+          "name": "Spend Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "d6097753-343f-4110-ba09-ccbd371a4b07"
         }
       ],
       "sheet_count": 15,
@@ -601,9 +768,22 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Spend Relationship (sc non_sc)",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "a88a4724-ebb4-435e-8b8b-e8c5b2301f74"
+        },
+        {
+          "name": "Spend Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "e02bb4ec-e430-4a2a-9395-a65cfe4d8466"
+        },
+        {
+          "name": "Vertical Tagging",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "33e6d565-b47a-4a15-88d4-c8c10e2a0059"
         }
       ],
       "sheet_count": 13,
@@ -660,9 +840,34 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Revenue Relationship",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "e9714a53-9e7c-43cb-8c42-b4ba6ef43301"
+        },
+        {
+          "name": "Share of Revenue - Regions",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "ede52be1-17a6-4817-808c-89c9fe6ba755"
+        },
+        {
+          "name": "Share of Revenue - Countries",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "f86e56af-2998-4862-bbf5-ee106f906eab"
+        },
+        {
+          "name": "Holidays Performance - Regions",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "cca7f476-fa72-4bc3-bfdf-e48805ffd596"
+        },
+        {
+          "name": "Holidays Performance - Countries",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "fa67ef84-c61b-4f40-b48e-1cd80c808f25"
         }
       ],
       "sheet_count": 6,
@@ -695,9 +900,10 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "db_data",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "11bd2917-11ea-4d46-9688-20d1fb174fd8"
         }
       ],
       "sheet_count": 2,
@@ -730,9 +936,22 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Spend Daily",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "86c8e2f7-2880-4c02-a5ce-65df3d7a64cf"
+        },
+        {
+          "name": "Spend hourly",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "70cb670d-229b-4519-8af9-87bd4e793f22"
+        },
+        {
+          "name": "ROC_Revenue_Health",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "9b5851e4-9705-4aac-8e96-d066c044c931"
         }
       ],
       "sheet_count": 2,
@@ -759,9 +978,10 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Market Constraints-daily",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "6b11f2b3-1652-400a-a91c-a96e93f45a02"
         }
       ],
       "sheet_count": 1,
@@ -788,14 +1008,22 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Jira Update Time",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "710485a5-f45a-49e6-a434-83e53a7d3514"
         },
         {
-          "name": "ROC ROI Targets.xlsx - Microsoft Excel (Google Drive)",
+          "name": "Revenue Loss",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "55d61995-7543-4ce7-abb0-3c07d5721a8c"
+        },
+        {
+          "name": "ROI Targets",
           "type": "googledrive",
-          "server": "ROC ROI Targets.xlsx - Microsoft Excel (Google Drive)"
+          "server": "ROC ROI Targets.xlsx - Microsoft Excel (Google Drive)",
+          "id": "c45469ae-6579-469c-86b6-1909968855b0"
         }
       ],
       "sheet_count": 1,
@@ -822,9 +1050,22 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Time In Status",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "dbdd5144-3e3f-4d77-98ed-b31fe55953f6"
+        },
+        {
+          "name": "Jira Update Time",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "1e8eeaff-7a1a-4f48-b03a-10d067ff01c1"
+        },
+        {
+          "name": "Dim_Issues",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "f43d6773-d7f8-492c-b4eb-99e33d70b53a"
         }
       ],
       "sheet_count": 1,
@@ -851,14 +1092,34 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "2: Seasonality Performance",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "9a7b9022-ac0d-466b-a2bb-9231cba12a9f"
         },
         {
-          "name": "Revenue Status Legend.xlsx - Microsoft Excel (Google Drive)",
+          "name": "3: Last Updated (Jira)",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "4f32ac09-059b-4cec-9ee2-255360de2cf9"
+        },
+        {
+          "name": "5: RCA legend",
           "type": "googledrive",
-          "server": "Revenue Status Legend.xlsx - Microsoft Excel (Google Drive)"
+          "server": "Revenue Status Legend.xlsx - Microsoft Excel (Google Drive)",
+          "id": "23343021-e2e0-4198-8ccc-8572c1917127"
+        },
+        {
+          "name": "1: Health-Daily Alerts, Jira",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "61c7f784-e795-4a11-aa5e-7018d3144749"
+        },
+        {
+          "name": "4: Performance legend",
+          "type": "googledrive",
+          "server": "Revenue Status Legend.xlsx - Microsoft Excel (Google Drive)",
+          "id": "8b5922cd-b837-4f26-aecd-566cf845597e"
         }
       ],
       "sheet_count": 1,
@@ -951,9 +1212,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Product",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "64534ef6-deda-4777-a397-49ec8ba2cf1f"
+        },
+        {
+          "name": "Country + Vertical",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "e54837ee-989f-4981-934a-6f037dbe9331"
         }
       ],
       "sheet_count": 12,
@@ -980,9 +1248,10 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Custom SQL Query (IS_apps)",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "eb164ecb-0f55-4ed3-9b0e-19e94a5ae7f0"
         }
       ],
       "sheet_count": 1,
@@ -1023,9 +1292,10 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Hourly Snapshots",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "41038c30-3491-41e3-8461-601044ae33e3"
         }
       ],
       "sheet_count": 3,
@@ -1052,9 +1322,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "roc_daily_investigation_summaries (offstage.roc_daily_investigation_summaries) (offstage)",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "ed1e9a26-fd60-436a-8679-3d16d86dc9a2"
+        },
+        {
+          "name": "roc_daily_investigation_summaries_publisher_breakdown (offstage.roc_daily_investigation_summaries_publisher_breakdown) (offstage)",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "8b0bfc89-7449-4331-b5e2-fb9708e002d1"
         }
       ],
       "sheet_count": 1,
@@ -1135,19 +1412,40 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Bridge",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "67a2d026-c18c-4f5b-924f-a869b1ef85a8"
         },
         {
-          "name": "NPI Targets.xlsx - Microsoft Excel (Google Drive)",
+          "name": "Bridge Statuses",
           "type": "googledrive",
-          "server": "NPI Targets.xlsx - Microsoft Excel (Google Drive)"
+          "server": "Bridge Statuses.xlsx - Microsoft Excel (Google Drive)",
+          "id": "68e8fff2-d75c-4db7-864b-4f4e9cf6a6c9"
         },
         {
-          "name": "Bridge Statuses.xlsx - Microsoft Excel (Google Drive)",
+          "name": "Cases",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "c4b8f6e0-0287-41cd-a6ea-70f61618aee5"
+        },
+        {
+          "name": "NPI",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "b59671c5-43a0-4edd-a2aa-bc50a6473de1"
+        },
+        {
+          "name": "NPI - JIRA",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "e8dda983-2b97-4fd9-b68a-8cb9e18bf6d0"
+        },
+        {
+          "name": "NPI Statuses",
           "type": "googledrive",
-          "server": "Bridge Statuses.xlsx - Microsoft Excel (Google Drive)"
+          "server": "Bridge Statuses.xlsx - Microsoft Excel (Google Drive)",
+          "id": "e3e2a8c0-2558-430a-a4dc-6b1496adef96"
         }
       ],
       "sheet_count": 10,
@@ -1228,19 +1526,40 @@
       ],
       "data_sources": [
         {
-          "name": "Bridge Statuses.xlsx - Microsoft Excel (Google Drive)",
+          "name": "Bridge Statuses",
           "type": "googledrive",
-          "server": "Bridge Statuses.xlsx - Microsoft Excel (Google Drive)"
+          "server": "Bridge Statuses.xlsx - Microsoft Excel (Google Drive)",
+          "id": "3aa883e7-43a4-4e04-ac35-78fc0c6cf5de"
         },
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "NPI",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "3244b09f-0563-4a19-8fa8-b2ed9ba6b3b0"
         },
         {
-          "name": "NPI Targets.xlsx - Microsoft Excel (Google Drive)",
+          "name": "NPI Statuses",
           "type": "googledrive",
-          "server": "NPI Targets.xlsx - Microsoft Excel (Google Drive)"
+          "server": "Bridge Statuses.xlsx - Microsoft Excel (Google Drive)",
+          "id": "4701603f-71a1-4ad4-9ea9-3eb6aa55a53b"
+        },
+        {
+          "name": "Bridge",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "ad5072c1-f926-4696-8529-f7417a54d3af"
+        },
+        {
+          "name": "Cases",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "74361421-0cf5-489e-b080-ab16ff2817ba"
+        },
+        {
+          "name": "NPI - JIRA",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "5e9e65ef-2b23-44ac-bbdf-7d0e7e184738"
         }
       ],
       "sheet_count": 10,
@@ -1321,19 +1640,40 @@
       ],
       "data_sources": [
         {
-          "name": "Bridge Statuses.xlsx - Microsoft Excel (Google Drive)",
+          "name": "Bridge Statuses",
           "type": "googledrive",
-          "server": "Bridge Statuses.xlsx - Microsoft Excel (Google Drive)"
+          "server": "Bridge Statuses.xlsx - Microsoft Excel (Google Drive)",
+          "id": "6e2f5c9d-3096-413b-8abe-ef771a4bb55c"
         },
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "NPI",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "dda96403-4145-4484-b68a-c1c4dde2cd66"
         },
         {
-          "name": "NPI Targets.xlsx - Microsoft Excel (Google Drive)",
+          "name": "NPI Statuses",
           "type": "googledrive",
-          "server": "NPI Targets.xlsx - Microsoft Excel (Google Drive)"
+          "server": "Bridge Statuses.xlsx - Microsoft Excel (Google Drive)",
+          "id": "13449891-d002-405b-b483-667ca3567306"
+        },
+        {
+          "name": "Bridge",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "b972a229-ce4c-4005-b6dd-6b5919053fa9"
+        },
+        {
+          "name": "Cases",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "72d37115-2291-4e15-890b-75d57d5e7dfc"
+        },
+        {
+          "name": "NPI - JIRA",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "3b64c7e1-d753-4742-ae51-0af03a2b106f"
         }
       ],
       "sheet_count": 10,
@@ -1498,9 +1838,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Revenue Relationship",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "404c67e8-c71a-4f3d-b89c-7db380d0dacd"
+        },
+        {
+          "name": "Spend Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "166bbf0f-7332-4a98-963d-45e643efcf6b"
         }
       ],
       "sheet_count": 24,
@@ -1605,9 +1952,22 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Spend Relationship (sc non_sc)",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "5832fbcb-2318-4175-a850-c40860da552e"
+        },
+        {
+          "name": "Spend Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "b716e779-d907-46d5-ab69-a78ae8f1217b"
+        },
+        {
+          "name": "Vertical Tagging",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "777964a2-a451-4f95-af5d-26ca720cf08c"
         }
       ],
       "sheet_count": 14,
@@ -1634,9 +1994,10 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Market Constraints-daily",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "fcda7722-951f-4e66-bd3b-757173380275"
         }
       ],
       "sheet_count": 1,
@@ -1669,9 +2030,28 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Account Tiers",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "fcb5a11c-5aae-48ec-982f-1745b6306899"
+        },
+        {
+          "name": "Spend",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "e776a64d-4a32-458e-97cc-be4e09a2b4f3"
+        },
+        {
+          "name": "SF - Cases",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "062bb9b6-dbb1-4f3f-bfb9-af2c4260717b"
+        },
+        {
+          "name": "SF - LifeCycle",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "624fa67f-be74-4344-9c18-690b71b50a99"
         }
       ],
       "sheet_count": 2,
@@ -1770,9 +2150,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "DCC - Spend",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "4e5b37ce-549a-40ad-8f1f-26b3d23ab3f7"
+        },
+        {
+          "name": "DCC - Cases",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "b385011b-0165-46c4-8e92-08ce5ce2ab96"
         }
       ],
       "sheet_count": 13,
@@ -1871,9 +2258,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "DCC - Spend",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "1c0ba9cf-866b-4dfc-9e68-dbf7e8570955"
+        },
+        {
+          "name": "DCC - Cases",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "52fbac03-96ad-4908-9bd2-9c8b11adc074"
         }
       ],
       "sheet_count": 13,
@@ -1912,9 +2306,34 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Alerts Spend",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "60a1eb9c-6a19-4196-bfed-f771d1b9329f"
+        },
+        {
+          "name": "Depletion - Detailed",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "895f5298-ea2b-4b8c-b4a5-0c4274148946"
+        },
+        {
+          "name": "Depletion Per Month",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "81f3946b-3172-4fef-8c02-936e872df0a6"
+        },
+        {
+          "name": "Alerts General",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "e32a78a7-3f3b-41d8-a9a8-5ac9fe6c19fb"
+        },
+        {
+          "name": "Alerts - Depletion - Summary",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "ab2580eb-f26e-4b7b-8470-b4be07988bf5"
         }
       ],
       "sheet_count": 3,
@@ -1941,14 +2360,22 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Revenue Loss",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "b9588155-1376-4891-950d-334a602db118"
         },
         {
-          "name": "ROC ROI Targets.xlsx - Microsoft Excel (Google Drive)",
+          "name": "ROI Targets",
           "type": "googledrive",
-          "server": "ROC ROI Targets.xlsx - Microsoft Excel (Google Drive)"
+          "server": "ROC ROI Targets.xlsx - Microsoft Excel (Google Drive)",
+          "id": "f7c3b9d8-a0e8-42f5-bd0d-5e3b7e255a1f"
+        },
+        {
+          "name": "Jira Update Time",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "4d654878-b5e2-4a66-aa9a-33a1b3459293"
         }
       ],
       "sheet_count": 1,
@@ -1975,9 +2402,22 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Dim_Issues",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "70a71c23-5999-4bb1-a47e-fb6c5b9b7736"
+        },
+        {
+          "name": "Time In Status",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "dbb985aa-6422-48a3-a606-27250e96c8ae"
+        },
+        {
+          "name": "Jira Update Time",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "c27539aa-9aae-41d9-bf92-5d2a79a17641"
         }
       ],
       "sheet_count": 1,
@@ -2016,9 +2456,34 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Alerts - Depletion - Summary",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "c9efae3b-d72b-4c81-a9ad-82957c8e6b19"
+        },
+        {
+          "name": "Depletion - Detailed",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "3bc264b2-c6b8-4e57-b0bc-9ebacd270c3a"
+        },
+        {
+          "name": "Depletion Per Month",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "6e8b1fad-2a9e-4cf0-88b8-fbd184eb2d98"
+        },
+        {
+          "name": "Alerts General",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "8e970710-b76d-490d-b396-b3d4843bff53"
+        },
+        {
+          "name": "Alerts Spend",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "af7d3a20-2468-44e5-910b-062aba218cf5"
         }
       ],
       "sheet_count": 3,
@@ -2063,9 +2528,22 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Ent Publisher",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "1fbe7825-fd05-456c-96b0-fb00b7a7712b"
+        },
+        {
+          "name": "Ent Publishers - supply",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "6cabf6ce-7653-43f4-91a9-175eda6a9016"
+        },
+        {
+          "name": "Adv Over Time",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "52968fa0-1fd7-42ec-9e68-70f6f2bab29e"
         }
       ],
       "sheet_count": 4,
@@ -2098,9 +2576,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Custom SQL Query (analysts)",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "279233d5-1898-4f55-a038-6dd4f214edfe"
+        },
+        {
+          "name": "Churn",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "65b6a42c-fcac-4929-8b2b-4f5dd399bdce"
         }
       ],
       "sheet_count": 2,
@@ -2139,9 +2624,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Apple Data",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "5f419609-11c3-4701-a6bb-487f2b3d3de2"
+        },
+        {
+          "name": "Apple",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "e07337e4-6475-4f4b-a6c2-d5fab34530c0"
         }
       ],
       "sheet_count": 3,
@@ -2234,9 +2726,10 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Churn",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "b566db76-9ca5-4a25-a3bc-af2a460cc4dc"
         }
       ],
       "sheet_count": 12,
@@ -2263,9 +2756,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Revenue Relationship",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "b131e4a0-f25c-4f84-abef-04435a178ace"
+        },
+        {
+          "name": "Spend Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "0a37bb2a-51bd-4ec7-a5dc-609fbe924626"
         }
       ],
       "sheet_count": 1,
@@ -2292,9 +2792,10 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Calendar + Affected Product",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "45207ac0-f4f7-49fb-9de8-04c77f8e8c08"
         }
       ],
       "sheet_count": 1,
@@ -2345,9 +2846,10 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Custom SQL Query (analysts)",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "86d2f98b-0001-42a7-ac1a-57a3ea3035a4"
         }
       ],
       "sheet_count": 5,
@@ -2404,9 +2906,10 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Custom SQL Query (IS_apps) (copy)",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "72503529-c300-4ff4-bf8a-d5f275ae83ad"
         }
       ],
       "sheet_count": 6,
@@ -2445,9 +2948,34 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "depletion rate",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "88a599d7-c26c-4b40-9eb2-0115d5cc3792"
+        },
+        {
+          "name": "ROC_demand_60_days_pub_adv (analysts.ROC_demand_60_days_pub_adv) (analysts)",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "aab0c2e8-48fe-4143-af82-f84357071258"
+        },
+        {
+          "name": "Revenue_health",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "dde57280-1863-4267-ab62-88daf7f1d027"
+        },
+        {
+          "name": "FullData",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "a2545b9d-7532-40e4-9f29-b59a66f6456d"
+        },
+        {
+          "name": "ROC_Full_time_data_Backstage_data",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "3949db55-5876-4192-825c-3292acbaa857"
         }
       ],
       "sheet_count": 3,
@@ -2480,9 +3008,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Spend Relationship (sc non_sc)",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "04815797-40f5-4f03-850b-3f5ec3f51605"
+        },
+        {
+          "name": "Spend Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "55618b06-c415-412f-9955-472df50ecb35"
         }
       ],
       "sheet_count": 2,
@@ -2515,9 +3050,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Revenue Relationship",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "6b82a995-32f5-4000-888f-3d430fae83f1"
+        },
+        {
+          "name": "Spend Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "e80dc01b-8c15-4acd-812d-b0cca8579827"
         }
       ],
       "sheet_count": 2,
@@ -2542,7 +3084,26 @@
           "viewCount": "12"
         }
       ],
-      "data_sources": [],
+      "data_sources": [
+        {
+          "name": "Sample - Superstore",
+          "type": "excel-direct",
+          "server": "",
+          "id": "275196e9-5337-4f00-9033-882f15f0e93b"
+        },
+        {
+          "name": "Sales Commission",
+          "type": "textscan",
+          "server": "",
+          "id": "85c430fd-4a46-4fb5-ab1b-01f15b3d33e7"
+        },
+        {
+          "name": "Sales Target",
+          "type": "excel-direct",
+          "server": "",
+          "id": "14fad25c-9524-476b-8fa2-6003698eb8a9"
+        }
+      ],
       "sheet_count": 1,
       "total_views": 12,
       "size": "1",
@@ -2571,7 +3132,26 @@
           "viewCount": "2"
         }
       ],
-      "data_sources": [],
+      "data_sources": [
+        {
+          "name": "Sample - Superstore",
+          "type": "excel-direct",
+          "server": "",
+          "id": "e4d61597-404e-44ef-8ca6-f97161480ff9"
+        },
+        {
+          "name": "Sales Commission",
+          "type": "textscan",
+          "server": "",
+          "id": "2e9ed8d4-2345-47ef-a753-1de0146db214"
+        },
+        {
+          "name": "Sales Target",
+          "type": "excel-direct",
+          "server": "",
+          "id": "0d8e375e-ef4b-47fe-975e-01d539ad76e2"
+        }
+      ],
       "sheet_count": 2,
       "total_views": 5,
       "size": "1",
@@ -2594,7 +3174,26 @@
           "viewCount": "15"
         }
       ],
-      "data_sources": [],
+      "data_sources": [
+        {
+          "name": "Sample - Superstore",
+          "type": "excel-direct",
+          "server": "",
+          "id": "43efb3f3-fc38-463a-9481-f0d0af701e11"
+        },
+        {
+          "name": "Sales Commission",
+          "type": "textscan",
+          "server": "",
+          "id": "b7bfe14f-5641-4913-b6d0-5d30cd333ffc"
+        },
+        {
+          "name": "Sales Target",
+          "type": "excel-direct",
+          "server": "",
+          "id": "577dc217-97bf-4707-af6a-f6b42456df70"
+        }
+      ],
       "sheet_count": 1,
       "total_views": 15,
       "size": "1",
@@ -2625,9 +3224,22 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "DCC - Cases",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "35a04dae-38c7-40e1-975f-2babbc7dd83f"
+        },
+        {
+          "name": "DCC - Spend",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "82e12170-4e86-4e99-8c12-6667cee2863e"
+        },
+        {
+          "name": "Custom SQL Query (IS_salesforce)",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "aac647ff-e037-4e37-882c-cb54504f303e"
         }
       ],
       "sheet_count": 2,
@@ -3164,9 +3776,22 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Vertical Tagging",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "2cd95f35-ab0b-4dfc-b3d7-64d47ad621c8"
+        },
+        {
+          "name": "Spend Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "d1d0180a-f4d9-48cd-8426-d9e27a99a9f6"
+        },
+        {
+          "name": "Spend Relationship (sc non_sc)",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "942e5560-d7d6-4bee-abc3-45a7127c03e4"
         }
       ],
       "sheet_count": 86,
@@ -3193,9 +3818,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Spend Relationship (sc non_sc)",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "adf59061-257f-443e-8fd9-8a4f53ccfc5a"
+        },
+        {
+          "name": "Spend Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "4d77c96e-34f0-4a8b-8eb9-746b3eb6a906"
         }
       ],
       "sheet_count": 1,
@@ -3222,14 +3854,34 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "1: Health-Daily Alerts, Jira",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "0a4384d2-f7c2-4a6d-bba9-07e8dd28c90f"
         },
         {
-          "name": "Revenue Status Legend.xlsx - Microsoft Excel (Google Drive)",
+          "name": "2: Seasonality Performance",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "21b1c154-737e-4637-b5ba-ad41822e03f4"
+        },
+        {
+          "name": "3: Last Updated (Jira)",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "af297e46-3fa4-4a68-9941-31e480fe10fa"
+        },
+        {
+          "name": "4: Performance legend",
           "type": "googledrive",
-          "server": "Revenue Status Legend.xlsx - Microsoft Excel (Google Drive)"
+          "server": "Revenue Status Legend.xlsx - Microsoft Excel (Google Drive)",
+          "id": "8b348b9d-70c4-45b2-9ec5-51ebd71b7da6"
+        },
+        {
+          "name": "5: RCA legend",
+          "type": "googledrive",
+          "server": "Revenue Status Legend.xlsx - Microsoft Excel (Google Drive)",
+          "id": "9d7de558-843e-4fb0-bffa-35b1e9198b17"
         }
       ],
       "sheet_count": 1,
@@ -3424,14 +4076,34 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Health-Daily Alerts, Jira as last part",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "41a8c00c-6fef-49f0-83e8-11f790e9311c"
         },
         {
-          "name": "Revenue Status Legend.xlsx - Microsoft Excel (Google Drive)",
+          "name": "Last Updated",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "06d56386-3eff-4225-8e41-f6cb8e55cbc0"
+        },
+        {
+          "name": "Performance legend",
           "type": "googledrive",
-          "server": "Revenue Status Legend.xlsx - Microsoft Excel (Google Drive)"
+          "server": "Revenue Status Legend.xlsx - Microsoft Excel (Google Drive)",
+          "id": "941ff8ec-89f2-4257-b248-291e9e8030ff"
+        },
+        {
+          "name": "RCA legend",
+          "type": "googledrive",
+          "server": "Revenue Status Legend.xlsx - Microsoft Excel (Google Drive)",
+          "id": "f92f94eb-a47e-41d4-9220-df8b658e830e"
+        },
+        {
+          "name": "Seasonality Performance",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "4f02183c-36f2-4055-ad58-319eb7fc7852"
         }
       ],
       "sheet_count": 29,
@@ -3476,9 +4148,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "CRT - General Data",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "ada83812-7146-481a-bbcf-0b0345e54561"
+        },
+        {
+          "name": "Spend by Region",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "3ba9d2b8-b9cb-42ee-be12-36838bc9a412"
         }
       ],
       "sheet_count": 4,
@@ -3505,9 +4184,10 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "DSA Report",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "937e6123-d8be-4660-9f33-4932a72303b7"
         }
       ],
       "sheet_count": 1,
@@ -3672,9 +4352,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Revenue Relationship",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "ceae8d77-3fda-4cb0-be36-08cae7e1eeb7"
+        },
+        {
+          "name": "Spend Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "ab519b90-2373-4126-8cf3-3b7812407879"
         }
       ],
       "sheet_count": 24,
@@ -3707,9 +4394,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Holidays Automation",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "9670b1ed-efc2-46e9-b0f1-92b854d74aa9"
+        },
+        {
+          "name": "Share",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "e11bfc3a-a7f8-4dbe-8db2-1febb96bf9c6"
         }
       ],
       "sheet_count": 2,
@@ -3820,9 +4514,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Revenue Relationship",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "3b9c8633-1f3d-4257-8a08-a891adee7b43"
+        },
+        {
+          "name": "Spend Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "f0e9e23a-0692-4f2e-92ce-137fdd0dd52f"
         }
       ],
       "sheet_count": 15,
@@ -3849,9 +4550,10 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "db_data",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "c895ad4f-351b-48ce-9137-3a0d34a4897f"
         }
       ],
       "sheet_count": 1,
@@ -4184,9 +4886,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Spend Relationship",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "0bce57c2-9fc4-471d-80e9-eb6512a57851"
+        },
+        {
+          "name": "Spend Relationship (sc non_sc)",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "4a51cc82-deb2-43e9-993f-f0965cd64c8d"
         }
       ],
       "sheet_count": 52,
@@ -4603,9 +5312,34 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "ROC_Full_time_data_Backstage_data",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "c1db0472-fd65-4533-8d8d-49591a878f10"
+        },
+        {
+          "name": "roc_test_yahel (analysts.roc_test_yahel) (analysts)",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "eaa1b2e3-1b69-4ec6-aff3-baad923f401d"
+        },
+        {
+          "name": "ROC_Full_data_demand (analysts.ROC_Full_data_demand) (analysts)",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "92a65ac4-ca40-4199-aafd-3abf213b0113"
+        },
+        {
+          "name": "Revenue_health",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "095a4559-e2d0-4b47-a79d-17bf64439ca0"
+        },
+        {
+          "name": "FullData",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "5b089249-655b-4f9f-9f3e-90171afd24ea"
         }
       ],
       "sheet_count": 66,
@@ -4656,9 +5390,22 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Sheet1 (data_test)",
+          "type": "excel-direct",
+          "server": "",
+          "id": "f7e6e86d-4bab-46ee-8f3c-31c6f24b238e"
+        },
+        {
+          "name": "network data",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "6c538d3f-3842-48d3-9cca-c947ea761129"
+        },
+        {
+          "name": "ROC_impressions (analysts.ROC_impressions) (analysts)",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "ea621cb7-0b92-4404-babe-fd5b90150c52"
         }
       ],
       "sheet_count": 5,
@@ -4685,9 +5432,10 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "superQuery2",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "208ae68f-612b-41f2-879a-e22818e507ce"
         }
       ],
       "sheet_count": 1,
@@ -4714,9 +5462,10 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "superQuery2",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "caa75285-e135-48c3-b1ff-8fae14bfbf15"
         }
       ],
       "sheet_count": 1,
@@ -4803,9 +5552,22 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Spend Relationship",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "1fd28a79-894b-44aa-b765-731eea13eba8"
+        },
+        {
+          "name": "Spend Relationship (sc non_sc)",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "a09ef75f-0760-410a-adc3-a316e5629b2a"
+        },
+        {
+          "name": "Revenue Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "2dc9c878-d57a-46c4-ae63-41d1b98b1493"
         }
       ],
       "sheet_count": 11,
@@ -4832,9 +5594,10 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Custom SQL Query (analysts)",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "cb2aab0a-7696-4877-8199-82c03dde336b"
         }
       ],
       "sheet_count": 1,
@@ -4915,9 +5678,22 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Revenue Relationship",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "be24df4a-12cb-4e15-bfbc-7fd00e45bb14"
+        },
+        {
+          "name": "Spend Relationship (sc non_sc)",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "359987ec-0458-4313-a74c-528186ce1ed1"
+        },
+        {
+          "name": "Spend Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "d1ceb4f5-194f-43db-8c5c-ad8ec2af28c4"
         }
       ],
       "sheet_count": 10,
@@ -4956,9 +5732,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Headbidding Revenue",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "733c01de-da7e-41b1-a7f0-789be6f7a995"
+        },
+        {
+          "name": "HB Cases",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "7f065866-aa96-4e33-bc7d-ec1ce6d4e5ef"
         }
       ],
       "sheet_count": 3,
@@ -4983,7 +5766,20 @@
           "viewCount": "2"
         }
       ],
-      "data_sources": [],
+      "data_sources": [
+        {
+          "name": "SelectionTable (Apple News US - Net & Margin)",
+          "type": "excel-direct",
+          "server": "",
+          "id": "31ef7fa5-ed8a-4015-8b3f-8fb56e7f1eac"
+        },
+        {
+          "name": "SelectionTable (Publishers - Dynamic Table (3))",
+          "type": "excel-direct",
+          "server": "",
+          "id": "29de802a-7fb7-48ab-bb8f-221dabe35a53"
+        }
+      ],
       "sheet_count": 1,
       "total_views": 2,
       "size": "1",
@@ -5038,9 +5834,58 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Sheet1 (hourlly alerts)",
+          "type": "excel-direct",
+          "server": "",
+          "id": "d16af1f4-6e1f-4c9c-a3f1-8b228afeb14e"
+        },
+        {
+          "name": "Mor new method",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "8d748e1a-ddef-43f3-816a-c85f5ae9ebba"
+        },
+        {
+          "name": "Global (March-July)",
+          "type": "excel-direct",
+          "server": "",
+          "id": "d0e3a858-bfa9-496a-9a46-e8a82bbadd14"
+        },
+        {
+          "name": "Anomalies ROC (Jira) (1)",
+          "type": "textscan",
+          "server": "",
+          "id": "30e92e7b-8633-4133-873c-ab7ab01785a0"
+        },
+        {
+          "name": "Sheet1 (test_qbr)",
+          "type": "excel-direct",
+          "server": "",
+          "id": "a828db19-be7b-48a1-adff-2d6c3eddc534"
+        },
+        {
+          "name": "Segment (Adv side- April-July)",
+          "type": "excel-direct",
+          "server": "",
+          "id": "8e8f9861-664b-4501-8f48-f7acead36680"
+        },
+        {
+          "name": "Regional (March-July)",
+          "type": "excel-direct",
+          "server": "",
+          "id": "346f9bae-1255-4d0a-b2d0-5b08752b5062"
+        },
+        {
+          "name": "Global (Adv side- April-July)",
+          "type": "excel-direct",
+          "server": "",
+          "id": "becb98ad-53b7-4bb6-a0f6-54397a2e304d"
+        },
+        {
+          "name": "Result 1 (raven alerts since april 1)",
+          "type": "excel-direct",
+          "server": "",
+          "id": "649e9927-50b7-4fe9-a0be-11daf3ef52ff"
         }
       ],
       "sheet_count": 6,
@@ -5085,9 +5930,10 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Data Adoption Data Set",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "a523c9eb-6b2e-4dc6-8dc1-4fa269e95ef8"
         }
       ],
       "sheet_count": 4,
@@ -5126,9 +5972,40 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Dim_Issues",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "cd635556-d1ea-4a3b-88be-ab4ee6abb17d"
+        },
+        {
+          "name": "ROC Scope of Work",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "c3afd163-fd32-41bb-94cf-781a03653c3c"
+        },
+        {
+          "name": "Time In Status",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "1282633c-d92a-4fdb-a7b0-47e029c8caab"
+        },
+        {
+          "name": "Snapshot based on History",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "70baf49f-a071-4c2a-964a-98bdc85b29a3"
+        },
+        {
+          "name": "PS ROC Board (Vertica)",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "b8229b59-8193-4415-ab76-a3f71ea655a8"
+        },
+        {
+          "name": "XLS: Jira Tickets - Temp",
+          "type": "excel-direct",
+          "server": "",
+          "id": "a288f324-f36b-46a3-bb8b-d43e1bfdd9f2"
         }
       ],
       "sheet_count": 3,
@@ -5159,7 +6036,26 @@
           "viewCount": "14"
         }
       ],
-      "data_sources": [],
+      "data_sources": [
+        {
+          "name": "Anomalies ROC (Jira) (1)",
+          "type": "textscan",
+          "server": "",
+          "id": "3e3a007b-89c0-4cfa-ab70-bcbef18dbad8"
+        },
+        {
+          "name": "Sheet1 (hourlly alerts)",
+          "type": "excel-direct",
+          "server": "",
+          "id": "a5be0038-55dc-4228-8e2d-f5f58e1829fb"
+        },
+        {
+          "name": "Sheet1 (test_qbr)",
+          "type": "excel-direct",
+          "server": "",
+          "id": "ea05e096-969c-46bd-99a7-a66fc7c02f3f"
+        }
+      ],
       "sheet_count": 2,
       "total_views": 31,
       "size": "83",
@@ -5292,9 +6188,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Revenue Relationship",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "a4772e15-a5b8-4fb4-9d10-3b8bdb76e86d"
+        },
+        {
+          "name": "Spend Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "31e947d8-966c-4be8-8f69-ad83e706acdd"
         }
       ],
       "sheet_count": 19,
@@ -5343,7 +6246,14 @@
           "viewCount": "0"
         }
       ],
-      "data_sources": [],
+      "data_sources": [
+        {
+          "name": "Sheet1 (May 28 Snapshots)",
+          "type": "excel-direct",
+          "server": "",
+          "id": "e11a80a4-c0d4-4427-b423-e9ecbac5a71f"
+        }
+      ],
       "sheet_count": 5,
       "total_views": 3,
       "size": "1",
@@ -5378,7 +6288,38 @@
           "viewCount": "5"
         }
       ],
-      "data_sources": [],
+      "data_sources": [
+        {
+          "name": "26 categories (joined_data_16_may)",
+          "type": "excel-direct",
+          "server": "",
+          "id": "1db96f58-429e-4b95-b37c-d03bfce266e5"
+        },
+        {
+          "name": "without the 26 cat (joined_data_16_may)",
+          "type": "excel-direct",
+          "server": "",
+          "id": "df0e258e-0f52-450e-9031-6a5e5efc72cd"
+        },
+        {
+          "name": "Taboola IAB Categories (joined_data_16_may)",
+          "type": "excel-direct",
+          "server": "",
+          "id": "f51e31ec-a594-4fd8-bc42-d9f82427598b"
+        },
+        {
+          "name": "320 IAB Category (joined_data_16_may)",
+          "type": "excel-direct",
+          "server": "",
+          "id": "38b473ac-ea2f-437a-a440-b9bfbcf32644"
+        },
+        {
+          "name": "Sheet1 (spend_data_categories)",
+          "type": "excel-direct",
+          "server": "",
+          "id": "84a6a322-94ca-4ad6-8340-63923a83bf03"
+        }
+      ],
       "sheet_count": 3,
       "total_views": 28,
       "size": "1",
@@ -5401,7 +6342,14 @@
           "viewCount": "3"
         }
       ],
-      "data_sources": [],
+      "data_sources": [
+        {
+          "name": "Amount of hourly alerts per day",
+          "type": "excel-direct",
+          "server": "",
+          "id": "51208c30-108e-4075-8551-7c6cdd3e8063"
+        }
+      ],
       "sheet_count": 1,
       "total_views": 3,
       "size": "1",
@@ -5432,9 +6380,10 @@
       ],
       "data_sources": [
         {
-          "name": "PS-3029 ROC Real Time Alerts Optimization.xlsx - Microsoft Excel (Google Drive)",
+          "name": "GD Data (PS-3029 ROC Real Time Alerts Optimization)",
           "type": "googledrive",
-          "server": "PS-3029 ROC Real Time Alerts Optimization.xlsx - Microsoft Excel (Google Drive)"
+          "server": "PS-3029 ROC Real Time Alerts Optimization.xlsx - Microsoft Excel (Google Drive)",
+          "id": "acd08f4e-802c-49ad-973d-bb6f8888ce6d"
         }
       ],
       "sheet_count": 2,
@@ -5461,9 +6410,10 @@
       ],
       "data_sources": [
         {
-          "name": "localhost",
+          "name": "HourlyComp",
           "type": "sqlproxy",
-          "server": "localhost"
+          "server": "localhost",
+          "id": "2b85e0d8-20e8-41ef-b3d0-605961c04520"
         }
       ],
       "sheet_count": 1,
@@ -5592,9 +6542,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Revenue Relationship",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "c2fd38dc-19c6-441a-93d4-6b4b7f41ec88"
+        },
+        {
+          "name": "Spend Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "a2cacb0d-1bbe-4ba7-b800-1dadfa82635c"
         }
       ],
       "sheet_count": 18,
@@ -5723,9 +6680,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Revenue Relationship",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "678250be-c2d5-4828-bb13-c6dcff501ae9"
+        },
+        {
+          "name": "Spend Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "ef2e3069-91d5-4937-980f-de45f67ddde0"
         }
       ],
       "sheet_count": 18,
@@ -5752,9 +6716,10 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Revenue Relationship",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "77cf280e-589c-4d54-9a1a-eedddceab706"
         }
       ],
       "sheet_count": 1,
@@ -5781,9 +6746,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Revenue Relationship",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "80778695-126d-4688-bcb6-8807e668399f"
+        },
+        {
+          "name": "Revenue (test)",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "ea32dd73-f522-461d-87b8-b656a5283d81"
         }
       ],
       "sheet_count": 1,
@@ -5810,9 +6782,22 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Revenue Relationship",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "bbc57e1c-1169-439b-9759-07a158351767"
+        },
+        {
+          "name": "Spend Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "be74f7a7-9217-4e48-8e44-1c6224ce568d"
+        },
+        {
+          "name": "Revenue (test)",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "319ae88e-425d-4777-b6af-94e112ac090f"
         }
       ],
       "sheet_count": 1,
@@ -5851,9 +6836,10 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Revenue Relationship",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "32cc0594-a408-4ae2-b45a-0bcfc48b446a"
         }
       ],
       "sheet_count": 3,
@@ -5988,9 +6974,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Revenue Relationship",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "a95af736-6163-4036-8514-1f30988a7b64"
+        },
+        {
+          "name": "Spend Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "e78b7fa0-f144-4fc6-a43b-1033269620f8"
         }
       ],
       "sheet_count": 19,
@@ -6107,9 +7100,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Revenue Relationship",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "2fa70ec3-8b11-40d5-83b6-722fd4f6d3e0"
+        },
+        {
+          "name": "Spend Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "6467fd6a-c2ae-4d99-8598-1de2ac15ee7a"
         }
       ],
       "sheet_count": 16,
@@ -6220,9 +7220,22 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Revenue (test)",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "9f377508-c7d4-47c3-83c0-ad703e042da1"
+        },
+        {
+          "name": "Spend Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "3de4962a-e3fc-4969-bd46-6a0c4d077a38"
+        },
+        {
+          "name": "Revenue Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "14484457-4919-44db-833d-0063381275b3"
         }
       ],
       "sheet_count": 15,
@@ -6345,9 +7358,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Revenue Relationship",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "8845ced4-8c68-4248-b19a-f25efb98776c"
+        },
+        {
+          "name": "Spend Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "9a0c6a8f-3fc5-4778-a9ff-1d4c4f6d8305"
         }
       ],
       "sheet_count": 17,
@@ -6476,9 +7496,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Spend Relationship",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "9b8e97c6-d710-47ab-b350-bb60af6a100c"
+        },
+        {
+          "name": "Revenue Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "33639465-b439-4db2-9246-9e6bc781fdd7"
         }
       ],
       "sheet_count": 18,
@@ -6505,9 +7532,16 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Revenue Relationship",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "8689e58c-c524-443b-a2db-0702a33e1d49"
+        },
+        {
+          "name": "Spend Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "8d6abead-c147-416f-a179-c17b28449a66"
         }
       ],
       "sheet_count": 1,
@@ -6582,9 +7616,22 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Revenue Relationship",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "280b5a03-10a4-40ef-a83b-c48f4bd08bab"
+        },
+        {
+          "name": "Spend Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "8e7b8ba0-b138-48db-b85d-61ffec835ced"
+        },
+        {
+          "name": "Revenue",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "96faf160-161c-46dd-81b2-f19023a71965"
         }
       ],
       "sheet_count": 9,
@@ -6677,9 +7724,22 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "Revenue (test)",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "4c19450f-7f01-482c-8631-9b6d437adc5b"
+        },
+        {
+          "name": "Revenue Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "3bb0cdf1-3cb0-4646-9319-6ca7c4968b6e"
+        },
+        {
+          "name": "Spend Relationship",
+          "type": "vertica",
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "b228a5ff-0335-4858-be48-3eb999b537a3"
         }
       ],
       "sheet_count": 12,
@@ -6724,9 +7784,10 @@
       ],
       "data_sources": [
         {
-          "name": "office-vrt.taboolasyndication.com",
+          "name": "DCC by AM",
           "type": "vertica",
-          "server": "office-vrt.taboolasyndication.com"
+          "server": "office-vrt.taboolasyndication.com",
+          "id": "66fd68d3-1555-46f7-b870-d9519e700ff5"
         }
       ],
       "sheet_count": 4,
@@ -6736,5 +7797,5 @@
       "url": "https://tableau.office.taboola.com/#/views/Adv_DCCAMCreatedCasesplaygroundversion/Adoption"
     }
   ],
-  "last_updated": "2025-12-25T00:02:23.005962"
+  "last_updated": "2025-12-25T00:09:45.257399"
 }

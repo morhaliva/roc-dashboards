@@ -161,7 +161,7 @@ def generate_description(name, project, data_sources):
             return f"Analytics dashboard for {project} insights and monitoring."
 
 def get_data_sources_for_workbook(auth_token, site_id, workbook_id):
-    """Get data source information for a workbook"""
+    """Get data source information for a workbook with datasource names"""
     try:
         url = f"{SERVER}/api/{API_VERSION}/sites/{site_id}/workbooks/{workbook_id}/connections"
         response = requests.get(url, headers={"X-Tableau-Auth": auth_token, "Accept": "application/json"})
@@ -172,26 +172,26 @@ def get_data_sources_for_workbook(auth_token, site_id, workbook_id):
         seen = set()
         
         for conn in connections:
-            # Build a unique identifier for the data source
             ds_type = conn.get('type', 'Unknown')
             server_address = conn.get('serverAddress', '')
-            db_name = conn.get('datasourceName', '') or conn.get('dbname', '')
             
-            # Create a readable name
-            if db_name and db_name not in seen:
+            # Get the actual datasource name from the nested datasource object
+            datasource_obj = conn.get('datasource', {})
+            ds_name = datasource_obj.get('name', '') if isinstance(datasource_obj, dict) else ''
+            ds_id = datasource_obj.get('id', '') if isinstance(datasource_obj, dict) else ''
+            
+            # Fallback to other fields if datasource name is empty
+            if not ds_name:
+                ds_name = conn.get('datasourceName', '') or conn.get('dbname', '') or server_address
+            
+            if ds_name and ds_name not in seen:
                 data_sources.append({
-                    'name': db_name,
+                    'name': ds_name,
                     'type': ds_type,
-                    'server': server_address
+                    'server': server_address,
+                    'id': ds_id
                 })
-                seen.add(db_name)
-            elif server_address and server_address not in seen:
-                data_sources.append({
-                    'name': server_address,
-                    'type': ds_type,
-                    'server': server_address
-                })
-                seen.add(server_address)
+                seen.add(ds_name)
         
         return data_sources
     except Exception as e:

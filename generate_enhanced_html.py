@@ -393,11 +393,13 @@ for dashboard in production:
     
     data_sources_html = ''
     if dashboard['data_sources']:
-        data_sources_html = '<div class="data-sources"><div class="data-sources-title">📊 Data Sources:</div>'
+        data_sources_html = '<div class="data-sources"><div class="data-sources-title">🗄️ Data Sources ({}):</div>'.format(len(dashboard['data_sources']))
         for ds in dashboard['data_sources']:
             ds_name = ds['name']
-            ds_type = ds['type']
-            data_sources_html += f'<div class="data-source">• {ds_name} <span style="color: #999;">({ds_type})</span></div>'
+            ds_type = ds.get('type', 'unknown').upper()
+            # Show type badge with color
+            type_color = '#4CAF50' if ds_type == 'VERTICA' else '#2196F3' if ds_type == 'BIGQUERY' else '#FF9800'
+            data_sources_html += f'<div class="data-source"><span style="background: {type_color}; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75em; margin-right: 8px;">{ds_type}</span>{ds_name}</div>'
         data_sources_html += '</div>'
     
     views_html = ''
@@ -467,11 +469,13 @@ for dashboard in playground:
     
     data_sources_html = ''
     if dashboard['data_sources']:
-        data_sources_html = '<div class="data-sources"><div class="data-sources-title">📊 Data Sources:</div>'
+        data_sources_html = '<div class="data-sources"><div class="data-sources-title">🗄️ Data Sources ({}):</div>'.format(len(dashboard['data_sources']))
         for ds in dashboard['data_sources']:
             ds_name = ds['name']
-            ds_type = ds['type']
-            data_sources_html += f'<div class="data-source">• {ds_name} <span style="color: #999;">({ds_type})</span></div>'
+            ds_type = ds.get('type', 'unknown').upper()
+            # Show type badge with color
+            type_color = '#4CAF50' if ds_type == 'VERTICA' else '#2196F3' if ds_type == 'BIGQUERY' else '#FF9800'
+            data_sources_html += f'<div class="data-source"><span style="background: {type_color}; color: white; padding: 2px 6px; border-radius: 4px; font-size: 0.75em; margin-right: 8px;">{ds_type}</span>{ds_name}</div>'
         data_sources_html += '</div>'
     
     views_html = ''
