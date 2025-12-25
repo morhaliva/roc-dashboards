@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROC Alerts Directory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a24;
+            --bg-card-hover: #22222e;
+            --accent-blue: #3b82f6;
+            --accent-purple: #8b5cf6;
+            --accent-cyan: #06b6d4;
+            --accent-green: #10b981;
+            --accent-orange: #f59e0b;
+            --accent-red: #ef4444;
+            --accent-pink: #ec4899;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border: #2a2a3a;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+        }
+
+        .bg-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(ellipse at 20% 20%, rgba(245, 158, 11, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(239, 68, 68, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .back-button:hover {
+            background: var(--accent-orange);
+            color: var(--bg-primary);
+            transform: translateX(-5px);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--accent-orange), var(--accent-red));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            color: var(--text-secondary);
+            font-size: 1.1em;
+        }
+
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 15px 25px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--accent-orange);
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            font-size: 0.9em;
+        }
+
+        .search-filter {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 14px 20px 14px 45px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--accent-orange);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 12px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--accent-orange);
+            color: var(--accent-orange);
+        }
+
+        .filter-btn.active {
+            background: var(--accent-orange);
+            border-color: var(--accent-orange);
+            color: var(--bg-primary);
+        }
+
+        .alerts-grid {
+            display: grid;
+            gap: 15px;
+        }
+
+        .alert-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .alert-card:hover {
+            border-color: var(--accent-orange);
+            transform: translateX(5px);
+        }
+
+        .alert-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 12px;
+        }
+
+        .alert-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .alert-icon.revenue { background: linear-gradient(135deg, #10b981, #059669); }
+        .alert-icon.spend { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+        .alert-icon.region { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+        .alert-icon.country { background: linear-gradient(135deg, #ec4899, #db2777); }
+        .alert-icon.special { background: linear-gradient(135deg, #f59e0b, #d97706); }
+
+        .alert-title {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: var(--text-primary);
+            flex: 1;
+        }
+
+        .alert-type-badge {
+            font-size: 0.75em;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+        }
+
+        .badge-publisher { background: rgba(16, 185, 129, 0.2); color: #10b981; }
+        .badge-advertiser { background: rgba(59, 130, 246, 0.2); color: #3b82f6; }
+        .badge-user-data { background: rgba(139, 92, 246, 0.2); color: #8b5cf6; }
+
+        .alert-description {
+            color: var(--text-secondary);
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .alert-details {
+            display: none;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border);
+        }
+
+        .alert-card.expanded .alert-details {
+            display: block;
+        }
+
+        .detail-row {
+            display: flex;
+            margin-bottom: 8px;
+        }
+
+        .detail-label {
+            width: 120px;
+            color: var(--text-muted);
+            font-size: 0.85em;
+        }
+
+        .detail-value {
+            color: var(--text-secondary);
+            font-size: 0.85em;
+            flex: 1;
+        }
+
+        .alert-footer {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .alert-tag {
+            font-size: 0.8em;
+            padding: 4px 10px;
+            background: var(--bg-secondary);
+            border-radius: 6px;
+            color: var(--text-muted);
+        }
+
+        .expand-hint {
+            margin-left: auto;
+            color: var(--text-muted);
+            font-size: 0.85em;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-muted);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px;
+            margin-top: 40px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+            
+            .back-button {
+                top: 10px;
+                left: 10px;
+                padding: 10px 15px;
+            }
+            
+            .stats-bar {
+                gap: 15px;
+            }
+            
+            .stat {
+                padding: 12px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-pattern"></div>
+    
+    <a href="knowledge-base.html" class="back-button">← Back to Knowledge Base</a>
+    
+    <div class="container">
+        <header class="header">
+            <h1>🚨 ROC Alerts Directory</h1>
+            <p>All ROC monitoring alerts from Raven - Click any alert for more details</p>
+        </header>
+
+        <div class="stats-bar">
+            <div class="stat">
+                <div class="stat-value" id="total-count">33</div>
+                <div class="stat-label">Total Alerts</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="revenue-count">5</div>
+                <div class="stat-label">Revenue Alerts</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="spend-count">6</div>
+                <div class="stat-label">Spend Alerts</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="region-count">11</div>
+                <div class="stat-label">Regional Alerts</div>
+            </div>
+        </div>
+
+        <div class="search-filter">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-input" id="searchInput" placeholder="Search alerts...">
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="revenue">Revenue</button>
+                <button class="filter-btn" data-filter="spend">Spend</button>
+                <button class="filter-btn" data-filter="region">Regional</button>
+                <button class="filter-btn" data-filter="country">Country</button>
+                <button class="filter-btn" data-filter="special">Special</button>
+            </div>
+        </div>
+
+        <div class="alerts-grid" id="alertsGrid">
+            <!-- Revenue Drop Alerts -->
+            <div class="alert-card" data-category="revenue" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon revenue">📉</div>
+                    <div class="alert-title">ROC Alert - Revenue Drop - Global Hourly (days 1-7)</div>
+                    <span class="alert-type-badge badge-publisher">Publisher</span>
+                </div>
+                <div class="alert-description">Alert to detect supply/tech issues in today's performance (Gross revenue drops more than x% WoW)</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">Hourly</span>
+                    <span class="alert-tag">Days 1-7</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Email Title:</span><span class="detail-value">ALERT !! KPIs dropped WoW</span></div>
+                    <div class="detail-row"><span class="detail-label">Table Title:</span><span class="detail-value">ROC Alert - Global Revenue Hourly (days 1-7)</span></div>
+                    <div class="detail-row"><span class="detail-label">Threshold:</span><span class="detail-value">Dynamic based on day of month</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="revenue" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon revenue">📉</div>
+                    <div class="alert-title">ROC Alert - Revenue Drop - Global Hourly (days 8-31)</div>
+                    <span class="alert-type-badge badge-publisher">Publisher</span>
+                </div>
+                <div class="alert-description">Alert to detect supply/tech issues in today's performance (Gross revenue drops more than x% WoW OR all KPIs dropped)</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">Hourly</span>
+                    <span class="alert-tag">Days 8-31</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Email Title:</span><span class="detail-value">ALERT !! KPIs dropped WoW</span></div>
+                    <div class="detail-row"><span class="detail-label">Table Title:</span><span class="detail-value">ROC Alert - Global Revenue Hourly (days 8-31)</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="revenue" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon revenue">📉</div>
+                    <div class="alert-title">ROC Alert - Revenue Drop - Global 4 Hours (days 8-31)</div>
+                    <span class="alert-type-badge badge-publisher">Publisher</span>
+                </div>
+                <div class="alert-description">Alert to detect supply/tech issues (Gross Revenue drops by 4% or more for 4 hours in a row). Different thresholds for December.</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">4-Hour Trend</span>
+                    <span class="alert-tag">Days 8-31</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Email Title:</span><span class="detail-value">ALERT !! KPIs dropped WoW</span></div>
+                    <div class="detail-row"><span class="detail-label">Table Title:</span><span class="detail-value">ROC Alert - Global Revenue 4 Hours (days 8-31)</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="revenue" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon revenue">📉</div>
+                    <div class="alert-title">ROC Alert - Revenue Drop - Exc. Y! 4 Hours (days 1-7)</div>
+                    <span class="alert-type-badge badge-publisher">Publisher</span>
+                </div>
+                <div class="alert-description">Alert to detect supply/tech issues (Exc. Yahoo revenue drops more than the threshold for 4 hours in a row)</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">4-Hour Trend</span>
+                    <span class="alert-tag">Exc. Yahoo</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Email Title:</span><span class="detail-value">ALERT !! KPIs dropped WoW</span></div>
+                    <div class="detail-row"><span class="detail-label">Table Title:</span><span class="detail-value">ROC Alert - Exc. Y! Revenue 4 Hours (days 1-7)</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="revenue" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon revenue">📉</div>
+                    <div class="alert-title">ROC Alert - Revenue Drop - Global Exc. Y! Hourly (days 1-7)</div>
+                    <span class="alert-type-badge badge-publisher">Publisher</span>
+                </div>
+                <div class="alert-description">Alert to detect supply/tech issues in today's performance (Gross revenue excluding Yahoo drops more than x% WoW)</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">Hourly</span>
+                    <span class="alert-tag">Exc. Yahoo</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Email Title:</span><span class="detail-value">ALERT !! KPIs dropped WoW</span></div>
+                    <div class="detail-row"><span class="detail-label">Table Title:</span><span class="detail-value">ROC Alert - Exc. Y! Revenue Hourly (days 1-7)</span></div>
+                </div>
+            </div>
+
+            <!-- Spend Drop Alerts -->
+            <div class="alert-card" data-category="spend" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon spend">💰</div>
+                    <div class="alert-title">ROC Alert - Spend Drop - Global Hourly (days 1-7)</div>
+                    <span class="alert-type-badge badge-advertiser">Advertiser</span>
+                </div>
+                <div class="alert-description">Alert to detect demand/tech issues in today's performance (Spend drops more than x% WoW)</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">Hourly</span>
+                    <span class="alert-tag">Days 1-7</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Email Title:</span><span class="detail-value">ALERT !! KPIs dropped WoW</span></div>
+                    <div class="detail-row"><span class="detail-label">Table Title:</span><span class="detail-value">ROC Alert - Global Spend Hourly (days 1-7)</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="spend" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon spend">💰</div>
+                    <div class="alert-title">ROC Alert - Spend Drop - Global Hourly (days 8-31)</div>
+                    <span class="alert-type-badge badge-advertiser">Advertiser</span>
+                </div>
+                <div class="alert-description">Thresholds: 10% for 1-hour drop</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">Hourly</span>
+                    <span class="alert-tag">Days 8-31</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Email Title:</span><span class="detail-value">ALERT !! KPIs dropped WoW</span></div>
+                    <div class="detail-row"><span class="detail-label">Table Title:</span><span class="detail-value">ROC Alert - Global Spend Hourly (days 8-31)</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="spend" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon spend">💰</div>
+                    <div class="alert-title">ROC Alert - Spend Drop - Global 4 Hours (days 8-31)</div>
+                    <span class="alert-type-badge badge-advertiser">Advertiser</span>
+                </div>
+                <div class="alert-description">Alert to detect demand/tech issues (Spend drops by 4% or more for 4 hours in a row). Different threshold for December.</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">4-Hour Trend</span>
+                    <span class="alert-tag">Days 8-31</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Email Title:</span><span class="detail-value">ALERT !! KPIs dropped WoW</span></div>
+                    <div class="detail-row"><span class="detail-label">Table Title:</span><span class="detail-value">ROC Alert - Global Spend 4 Hours (days 8-31)</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="spend" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon spend">💰</div>
+                    <div class="alert-title">ROC Alert - Spend Drop - Strategic 4 Hours (days 1-7)</div>
+                    <span class="alert-type-badge badge-advertiser">Advertiser</span>
+                </div>
+                <div class="alert-description">Alert to detect demand/tech issues (Strategic Spend drops more than the threshold for 4 hours in a row)</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">4-Hour Trend</span>
+                    <span class="alert-tag">Strategic</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Email Title:</span><span class="detail-value">ALERT !! KPIs dropped WoW</span></div>
+                    <div class="detail-row"><span class="detail-label">Table Title:</span><span class="detail-value">ROC Alert - Strategic Spend 4 Hours (days 1-7)</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="spend" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon spend">💰</div>
+                    <div class="alert-title">ROC Alert - Spend Drop - Global Exc. Strategic (days 1-7)</div>
+                    <span class="alert-type-badge badge-advertiser">Advertiser</span>
+                </div>
+                <div class="alert-description">Alert to detect demand/tech issues (Exc. Strategic Spend drops more than the threshold for 4 hours in a row)</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">4-Hour Trend</span>
+                    <span class="alert-tag">Exc. Strategic</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Email Title:</span><span class="detail-value">ALERT !! KPIs dropped WoW</span></div>
+                    <div class="detail-row"><span class="detail-label">Table Title:</span><span class="detail-value">ROC Alert - Exc. Strategic Spend 4 Hours (days 1-7)</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="spend" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon spend">💰</div>
+                    <div class="alert-title">ROC Alert - Spend Drop - Bidding Strategy</div>
+                    <span class="alert-type-badge badge-advertiser">Advertiser</span>
+                </div>
+                <div class="alert-description">Monitors spend drops by bidding strategy type</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">Bidding</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Focus:</span><span class="detail-value">Bidding strategy performance monitoring</span></div>
+                </div>
+            </div>
+
+            <!-- Regional Alerts -->
+            <div class="alert-card" data-category="region" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon region">🌍</div>
+                    <div class="alert-title">ROC Alert - EMEA region</div>
+                    <span class="alert-type-badge badge-publisher">Publisher</span>
+                </div>
+                <div class="alert-description">This query checks the 4 hours trend for EMEA and alerts if there is a 4 hours drop of more than 20% or if there is a drop of more than 40% hourly for one hour</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">EMEA</span>
+                    <span class="alert-tag">4-Hour Trend</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Email Title:</span><span class="detail-value">ALERT! Gross revenue drop - EMEA</span></div>
+                    <div class="detail-row"><span class="detail-label">Table Title:</span><span class="detail-value">ROC EMEA Alert</span></div>
+                    <div class="detail-row"><span class="detail-label">Thresholds:</span><span class="detail-value">20% (4 hours) or 40% (1 hour)</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="region" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon region">🌎</div>
+                    <div class="alert-title">ROC Alert - US region</div>
+                    <span class="alert-type-badge badge-publisher">Publisher</span>
+                </div>
+                <div class="alert-description">This query checks the 4 hours trend for US and alerts if there is a 4 hours drop of more than 20% or if there is a drop of more than 40% hourly for one hour</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">US</span>
+                    <span class="alert-tag">4-Hour Trend</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Email Title:</span><span class="detail-value">ALERT! Gross revenue drop - US region</span></div>
+                    <div class="detail-row"><span class="detail-label">Table Title:</span><span class="detail-value">ROC US Region Alert</span></div>
+                    <div class="detail-row"><span class="detail-label">Thresholds:</span><span class="detail-value">20% (4 hours) or 40% (1 hour)</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="region" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon region">🌏</div>
+                    <div class="alert-title">ROC Alert - APAC region</div>
+                    <span class="alert-type-badge badge-publisher">Publisher</span>
+                </div>
+                <div class="alert-description">Regional monitoring for APAC region performance</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">APAC</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Region:</span><span class="detail-value">Asia-Pacific</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="region" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon region">🌎</div>
+                    <div class="alert-title">ROC Alert - LATAM Region</div>
+                    <span class="alert-type-badge badge-publisher">Publisher</span>
+                </div>
+                <div class="alert-description">Regional monitoring for Latin America performance</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">LATAM</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Region:</span><span class="detail-value">Latin America</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="region" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon region">🌏</div>
+                    <div class="alert-title">ROC Alert - Greater China Region</div>
+                    <span class="alert-type-badge badge-publisher">Publisher</span>
+                </div>
+                <div class="alert-description">Regional monitoring for Greater China performance</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">China</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Region:</span><span class="detail-value">Greater China</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="region" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon region">📰</div>
+                    <div class="alert-title">ROC Alert - Yahoo Group Region</div>
+                    <span class="alert-type-badge badge-publisher">Publisher</span>
+                </div>
+                <div class="alert-description">This query tracks two alerts: 4 hour trend and 1 hour drop. Thresholds change between the first week of the quarter and the rest.</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">Yahoo</span>
+                    <span class="alert-tag">4-Hour Trend</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Email Title:</span><span class="detail-value">ALERT! Gross revenue drop - Yahoo Group</span></div>
+                    <div class="detail-row"><span class="detail-label">Table Title:</span><span class="detail-value">ROC Yahoo Group Alert</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="region" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon region">📰</div>
+                    <div class="alert-title">ROC Alert - MSN Region</div>
+                    <span class="alert-type-badge badge-publisher">Publisher</span>
+                </div>
+                <div class="alert-description">This query tracks two alerts: 4 hour trend and 1 hour drop. Thresholds change between the first week of the quarter and the rest.</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">MSN</span>
+                    <span class="alert-tag">4-Hour Trend</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Email Title:</span><span class="detail-value">ALERT! Gross revenue drop - MSN</span></div>
+                    <div class="detail-row"><span class="detail-label">Table Title:</span><span class="detail-value">ROC MSN Alert</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="region" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon region">🍎</div>
+                    <div class="alert-title">ROC Alert - Apple News Region</div>
+                    <span class="alert-type-badge badge-publisher">Publisher</span>
+                </div>
+                <div class="alert-description">Thresholds: 50% for 1 hour or 40% for 4 hours</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">Apple News</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Email Title:</span><span class="detail-value">ALERT! Gross revenue drop - Apple News</span></div>
+                    <div class="detail-row"><span class="detail-label">Table Title:</span><span class="detail-value">ROC Apple News Alert</span></div>
+                    <div class="detail-row"><span class="detail-label">Thresholds:</span><span class="detail-value">50% (1 hour) or 40% (4 hours)</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="region" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon region">📱</div>
+                    <div class="alert-title">ROC Alert - Samsung Network</div>
+                    <span class="alert-type-badge badge-publisher">Publisher</span>
+                </div>
+                <div class="alert-description">Network monitoring for Samsung devices</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">Samsung</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Focus:</span><span class="detail-value">Samsung network performance</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="region" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon region">📰</div>
+                    <div class="alert-title">ROC Alert - Taboola News Region</div>
+                    <span class="alert-type-badge badge-publisher">Publisher</span>
+                </div>
+                <div class="alert-description">Regional monitoring for Taboola News performance</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">Taboola News</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Focus:</span><span class="detail-value">Taboola News network</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="region" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon region">📊</div>
+                    <div class="alert-title">ROC Alert - Performance Pubs region</div>
+                    <span class="alert-type-badge badge-publisher">Publisher</span>
+                </div>
+                <div class="alert-description">Regional monitoring for Performance Publishers</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">Performance Pubs</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Focus:</span><span class="detail-value">Performance publisher segment</span></div>
+                </div>
+            </div>
+
+            <!-- Country Alerts -->
+            <div class="alert-card" data-category="country" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon country">🇺🇸</div>
+                    <div class="alert-title">ROC Alert - United States country</div>
+                    <span class="alert-type-badge badge-publisher">Publisher</span>
+                </div>
+                <div class="alert-description">Country-level monitoring for United States</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">Country</span>
+                    <span class="alert-tag">US</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Country:</span><span class="detail-value">United States</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="country" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon country">🇬🇧</div>
+                    <div class="alert-title">ROC Alert - United Kingdom country</div>
+                    <span class="alert-type-badge badge-publisher">Publisher</span>
+                </div>
+                <div class="alert-description">Country-level monitoring for United Kingdom</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">Country</span>
+                    <span class="alert-tag">UK</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Country:</span><span class="detail-value">United Kingdom</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="country" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon country">🇩🇪</div>
+                    <div class="alert-title">ROC Alert - Germany country</div>
+                    <span class="alert-type-badge badge-publisher">Publisher</span>
+                </div>
+                <div class="alert-description">Country-level monitoring for Germany</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">Country</span>
+                    <span class="alert-tag">DE</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Country:</span><span class="detail-value">Germany</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="country" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon country">🇫🇷</div>
+                    <div class="alert-title">ROC Alert - France country</div>
+                    <span class="alert-type-badge badge-publisher">Publisher</span>
+                </div>
+                <div class="alert-description">Country-level monitoring for France</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">Country</span>
+                    <span class="alert-tag">FR</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Country:</span><span class="detail-value">France</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="country" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon country">🇨🇦</div>
+                    <div class="alert-title">ROC Alert - Canada country</div>
+                    <span class="alert-type-badge badge-publisher">Publisher</span>
+                </div>
+                <div class="alert-description">Country-level monitoring for Canada</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">Country</span>
+                    <span class="alert-tag">CA</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Country:</span><span class="detail-value">Canada</span></div>
+                </div>
+            </div>
+
+            <!-- Special Alerts -->
+            <div class="alert-card" data-category="special" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon special">⚡</div>
+                    <div class="alert-title">ROC Alert - Declining Networks/Advertisers</div>
+                    <span class="alert-type-badge badge-publisher">Publisher</span>
+                </div>
+                <div class="alert-description">Alert triggers: Networks experiencing at least a 10% negative impact on the global change, showing at least -10% WoW change, with normalization.</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">Networks</span>
+                    <span class="alert-tag">Advertisers</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Email Title:</span><span class="detail-value">ROC Top Declining Networks</span></div>
+                    <div class="detail-row"><span class="detail-label">Criteria:</span><span class="detail-value">≥10% negative global impact, ≥-10% WoW change</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="special" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon special">🔝</div>
+                    <div class="alert-title">ROC Alert - Top 5 Networks in EMEA & US</div>
+                    <span class="alert-type-badge badge-publisher">Publisher</span>
+                </div>
+                <div class="alert-description">This query checks the top 5 networks in EMEA and US and alerts if there is a massive drop of more than 50%-70% hourly for one hour</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">Top Networks</span>
+                    <span class="alert-tag">EMEA & US</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Email Title:</span><span class="detail-value">ALERT! Gross revenue drop - Top Networks in EMEA & US</span></div>
+                    <div class="detail-row"><span class="detail-label">Threshold:</span><span class="detail-value">50%-70% hourly drop</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="special" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon special">📈</div>
+                    <div class="alert-title">ROC Alert - HIGH WoW % Change for Pub Regions</div>
+                    <span class="alert-type-badge badge-publisher">Publisher</span>
+                </div>
+                <div class="alert-description">Alert to detect high increase in the hourly WoW % of publisher regions</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">High Change</span>
+                    <span class="alert-tag">Pub Regions</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Email Title:</span><span class="detail-value">ALERT !! High % Change for Pub Regions</span></div>
+                    <div class="detail-row"><span class="detail-label">Focus:</span><span class="detail-value">Unusual positive changes that may indicate issues</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="special" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon special">📊</div>
+                    <div class="alert-title">ROC Alert - Data Adoption</div>
+                    <span class="alert-type-badge badge-user-data">User Data</span>
+                </div>
+                <div class="alert-description">4 conclusions: Data Adoption MoM dropped more than 2% and/or PoP dropped more than 10%. Runs every 3rd of the month.</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">Monthly</span>
+                    <span class="alert-tag">User Data</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Email Title:</span><span class="detail-value">ALERT !! Data Adoption dropped PoP</span></div>
+                    <div class="detail-row"><span class="detail-label">Schedule:</span><span class="detail-value">Every 3rd of the month</span></div>
+                    <div class="detail-row"><span class="detail-label">Thresholds:</span><span class="detail-value">MoM >2% or PoP >10%</span></div>
+                </div>
+            </div>
+
+            <div class="alert-card" data-category="special" onclick="toggleAlert(this)">
+                <div class="alert-header">
+                    <div class="alert-icon special">🆕</div>
+                    <div class="alert-title">ROC Alert - New Campaigns Performance</div>
+                    <span class="alert-type-badge badge-user-data">User Data</span>
+                </div>
+                <div class="alert-description">DE ratio out of total spend ≤20% for 3 days in a row OR DE ratio out of Data campaigns ≤45% for 3 days in a row</div>
+                <div class="alert-footer">
+                    <span class="alert-tag">New Campaigns</span>
+                    <span class="alert-tag">DE Ratio</span>
+                    <span class="expand-hint">Click for details ▼</span>
+                </div>
+                <div class="alert-details">
+                    <div class="detail-row"><span class="detail-label">Email Title:</span><span class="detail-value">ALERT !! Default Exclude Ratios Dropped</span></div>
+                    <div class="detail-row"><span class="detail-label">Thresholds:</span><span class="detail-value">DE ≤20% (total) or ≤45% (data campaigns) for 3 days</span></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="no-results" id="noResults" style="display: none;">
+            <h3>No alerts found</h3>
+            <p>Try adjusting your search or filter</p>
+        </div>
+
+        <footer class="footer">
+            <p>Data sourced from Raven Alerts System</p>
+            <p style="margin-top: 10px;">Created by <strong style="color: var(--accent-orange);">Mor Haliva</strong> | ROC Team © 2025</p>
+        </footer>
+    </div>
+
+    <script>
+        // Toggle alert details
+        function toggleAlert(card) {
+            card.classList.toggle('expanded');
+            const hint = card.querySelector('.expand-hint');
+            hint.textContent = card.classList.contains('expanded') ? 'Click to collapse ▲' : 'Click for details ▼';
+        }
+
+        // Search and filter
+        const searchInput = document.getElementById('searchInput');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const alertCards = document.querySelectorAll('.alert-card');
+        const noResults = document.getElementById('noResults');
+        let currentFilter = 'all';
+
+        function updateDisplay() {
+            const searchTerm = searchInput.value.toLowerCase();
+            let visibleCount = 0;
+
+            alertCards.forEach(card => {
+                const category = card.dataset.category;
+                const text = card.textContent.toLowerCase();
+                const matchesSearch = text.includes(searchTerm);
+                const matchesFilter = currentFilter === 'all' || category === currentFilter;
+
+                if (matchesSearch && matchesFilter) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+        }
+
+        searchInput.addEventListener('input', updateDisplay);
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.dataset.filter;
+                updateDisplay();
+            });
+        });
+    </script>
+</body>
+</html>
+
