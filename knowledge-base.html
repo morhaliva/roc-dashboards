@@ -407,7 +407,7 @@
 
         <div class="search-container">
             <div class="search-box">
-                <input type="text" class="search-input" placeholder="Search resources, docs, dashboards..." id="searchInput">
+                <input type="text" class="search-input" placeholder="🔍  Search dashboards, alerts, docs, tools...  (⌘K)" id="searchInput">
                 <button class="search-btn">🔍</button>
             </div>
         </div>
@@ -568,6 +568,14 @@
                 </div>
                 <ul class="resource-list">
                     <li class="resource-item">
+                        <a href="https://drive.google.com/drive/u/0/folders/0ANnoxsXc8YhXUk9PVA" class="resource-link" target="_blank">
+                            <span class="icon">📂</span>
+                            <span class="name">ROC Google Drive</span>
+                            <span class="resource-tag tag-live">LIVE</span>
+                            <span class="arrow">→</span>
+                        </a>
+                    </li>
+                    <li class="resource-item">
                         <a href="https://tbla.atlassian.net/jira/software/c/projects/PS/boards/1914" class="resource-link" target="_blank">
                             <span class="icon">📋</span>
                             <span class="name">ROC JIRA Board</span>
@@ -608,13 +616,88 @@
     </div>
 
     <script>
-        // Simple search functionality
-        document.getElementById('searchInput').addEventListener('input', function(e) {
-            const term = e.target.value.toLowerCase();
-            document.querySelectorAll('.resource-item').forEach(item => {
-                const text = item.textContent.toLowerCase();
-                item.style.display = text.includes(term) ? 'block' : 'none';
+        // Enhanced search functionality
+        const searchInput = document.getElementById('searchInput');
+        const categories = document.querySelectorAll('.category');
+        const resourceItems = document.querySelectorAll('.resource-item');
+        
+        // Create no results message
+        const noResultsDiv = document.createElement('div');
+        noResultsDiv.id = 'no-results';
+        noResultsDiv.innerHTML = `
+            <div style="text-align: center; padding: 60px 20px; color: var(--text-muted);">
+                <div style="font-size: 4em; margin-bottom: 20px; opacity: 0.5;">🔍</div>
+                <div style="font-size: 1.2em;">No results found</div>
+                <div style="font-size: 0.9em; margin-top: 10px;">Try different keywords or browse the categories below</div>
+            </div>
+        `;
+        noResultsDiv.style.display = 'none';
+        document.querySelector('.categories').before(noResultsDiv);
+        
+        // Search counter
+        const searchCounter = document.createElement('div');
+        searchCounter.id = 'search-counter';
+        searchCounter.style.cssText = 'text-align: center; color: var(--text-muted); font-size: 0.9em; margin-bottom: 20px; display: none;';
+        document.querySelector('.search-container').after(searchCounter);
+        
+        searchInput.addEventListener('input', function(e) {
+            const term = e.target.value.toLowerCase().trim();
+            let visibleCount = 0;
+            let visibleCategories = 0;
+            
+            if (term === '') {
+                // Reset to show all
+                resourceItems.forEach(item => item.style.display = '');
+                categories.forEach(cat => cat.style.display = '');
+                noResultsDiv.style.display = 'none';
+                searchCounter.style.display = 'none';
+                return;
+            }
+            
+            categories.forEach(category => {
+                const items = category.querySelectorAll('.resource-item');
+                let categoryHasMatch = false;
+                
+                items.forEach(item => {
+                    const text = item.textContent.toLowerCase();
+                    const matches = text.includes(term);
+                    item.style.display = matches ? '' : 'none';
+                    if (matches) {
+                        visibleCount++;
+                        categoryHasMatch = true;
+                    }
+                });
+                
+                // Hide entire category if no matches
+                category.style.display = categoryHasMatch ? '' : 'none';
+                if (categoryHasMatch) visibleCategories++;
             });
+            
+            // Show/hide no results message
+            noResultsDiv.style.display = visibleCount === 0 ? 'block' : 'none';
+            
+            // Show search counter
+            if (visibleCount > 0) {
+                searchCounter.textContent = `Found ${visibleCount} result${visibleCount !== 1 ? 's' : ''} in ${visibleCategories} categor${visibleCategories !== 1 ? 'ies' : 'y'}`;
+                searchCounter.style.display = 'block';
+            } else {
+                searchCounter.style.display = 'none';
+            }
+        });
+        
+        // Keyboard shortcut (Cmd/Ctrl + K) to focus search
+        document.addEventListener('keydown', function(e) {
+            if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+                e.preventDefault();
+                searchInput.focus();
+                searchInput.select();
+            }
+            // Escape to clear search
+            if (e.key === 'Escape' && document.activeElement === searchInput) {
+                searchInput.value = '';
+                searchInput.dispatchEvent(new Event('input'));
+                searchInput.blur();
+            }
         });
     </script>
 </body>
