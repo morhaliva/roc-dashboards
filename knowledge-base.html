@@ -503,9 +503,9 @@
 <body>
     <div class="bg-pattern"></div>
     
-    <!-- Taboola Logo -->
+    <!-- Taboola Logo (Official from taboola.com/branding) -->
     <a href="https://www.taboola.com" target="_blank" class="taboola-logo" title="Taboola">
-        <span class="taboola-text">taboola</span>
+        <img src="https://www.taboola.com/wp-content/themes/developer-flavor-flavor/flavor/assets/images/icons/taboola-logo.svg" alt="Taboola" onerror="this.onerror=null; this.src='https://cdn.taboola.com/libtrc/static/thumbnails/49e498c97a6c15e0d433ffe19e5d3e2a.png';" />
     </a>
     
     <style>
@@ -516,19 +516,22 @@
             z-index: 1000;
             text-decoration: none;
             transition: all 0.3s ease;
+            opacity: 0.8;
         }
         
-        .taboola-text {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.4em;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            color: rgba(255, 255, 255, 0.5);
-            transition: all 0.3s ease;
+        .taboola-logo img {
+            height: 26px;
+            width: auto;
+            filter: brightness(0) invert(1);
         }
         
-        .taboola-logo:hover .taboola-text {
-            color: #00d4ff;
+        .taboola-logo:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+        
+        .taboola-logo:hover img {
+            filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(160deg);
         }
         
         @media (max-width: 768px) {
@@ -537,8 +540,8 @@
                 left: 15px;
             }
             
-            .taboola-text {
-                font-size: 1.1em;
+            .taboola-logo img {
+                height: 20px;
             }
         }
     </style>
