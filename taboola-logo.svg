@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50">
+  <defs>
+    <style>
+      .logo-text { fill: #ffffff; font-family: Arial, sans-serif; font-weight: bold; font-size: 32px; }
+    </style>
+  </defs>
+  <!-- T -->
+  <text x="5" y="36" class="logo-text">Tab</text>
+  <!-- Double O with smiley face -->
+  <g transform="translate(68, 8)">
+    <!-- Left O (eye) -->
+    <circle cx="14" cy="18" r="13" fill="none" stroke="#ffffff" stroke-width="4"/>
+    <circle cx="14" cy="15" r="3" fill="#ffffff"/>
+    <!-- Right O (eye) -->
+    <circle cx="42" cy="18" r="13" fill="none" stroke="#ffffff" stroke-width="4"/>
+    <circle cx="42" cy="15" r="3" fill="#ffffff"/>
+    <!-- Smile connecting the O's -->
+    <path d="M 8 24 Q 28 38 48 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <!-- la -->
+  <text x="132" y="36" class="logo-text">la</text>
+</svg>
+
