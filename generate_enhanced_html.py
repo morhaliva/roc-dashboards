@@ -358,6 +358,30 @@ html = f'''<!DOCTYPE html>
             font-size: 1.2em;
         }}
         
+        .back-button {{
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+            z-index: 1000;
+        }}
+        
+        .back-button:hover {{
+            background: #667eea;
+            color: white;
+            transform: translateX(-5px);
+        }}
+        
         @media (max-width: 768px) {{
             .dashboard-grid {{
                 grid-template-columns: 1fr;
@@ -366,10 +390,19 @@ html = f'''<!DOCTYPE html>
             .header h1 {{
                 font-size: 2em;
             }}
+            
+            .back-button {{
+                top: 10px;
+                left: 10px;
+                padding: 10px 15px;
+                font-size: 0.9em;
+            }}
         }}
     </style>
 </head>
 <body>
+    <a href="knowledge-base.html" class="back-button">← Back to Knowledge Base</a>
+    
     <div class="container">
         <div class="header">
             <h1>📊 ROC Tableau Dashboards</h1>
