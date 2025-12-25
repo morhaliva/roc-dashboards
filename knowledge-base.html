@@ -308,6 +308,13 @@
         .tag-live { background: rgba(16, 185, 129, 0.2); color: #10b981; }
         .tag-new { background: rgba(59, 130, 246, 0.2); color: #3b82f6; }
         .tag-beta { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+        .tag-tbd { background: rgba(107, 114, 128, 0.2); color: #9ca3af; }
+
+        .resource-link.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
 
         /* Quick Stats */
         .quick-stats {
@@ -548,18 +555,18 @@
                 </div>
                 <ul class="resource-list">
                     <li class="resource-item">
-                        <a href="#" class="resource-link">
+                        <a href="#" class="resource-link disabled">
                             <span class="icon">📖</span>
                             <span class="name">ROC Playbook</span>
-                            <span class="resource-tag tag-beta">SOON</span>
+                            <span class="resource-tag tag-tbd">TBD</span>
                             <span class="arrow">→</span>
                         </a>
                     </li>
                     <li class="resource-item">
-                        <a href="#" class="resource-link">
+                        <a href="#" class="resource-link disabled">
                             <span class="icon">📋</span>
                             <span class="name">Standard Operating Procedures</span>
-                            <span class="resource-tag tag-beta">SOON</span>
+                            <span class="resource-tag tag-tbd">TBD</span>
                             <span class="arrow">→</span>
                         </a>
                     </li>
@@ -590,10 +597,10 @@
                         </a>
                     </li>
                     <li class="resource-item">
-                        <a href="#" class="resource-link">
+                        <a href="#" class="resource-link disabled">
                             <span class="icon">💬</span>
                             <span class="name">Slack Channels</span>
-                            <span class="resource-tag tag-new">NEW</span>
+                            <span class="resource-tag tag-tbd">TBD</span>
                             <span class="arrow">→</span>
                         </a>
                     </li>
@@ -604,7 +611,7 @@
         <footer class="footer">
             <div class="footer-links">
                 <a href="mailto:mor.h@taboola.com">Contact</a>
-                <a href="#">Feedback</a>
+                <a href="#" style="opacity: 0.5; pointer-events: none;">Feedback (TBD)</a>
                 <a href="https://github.com/morhaliva/roc-dashboards">GitHub</a>
             </div>
             <p style="margin-top: 15px; color: var(--text-secondary);">
