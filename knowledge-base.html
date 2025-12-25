@@ -503,43 +503,6 @@
 <body>
     <div class="bg-pattern"></div>
     
-    <!-- Taboola Logo -->
-    <a href="https://www.taboola.com" target="_blank" class="taboola-logo" title="Taboola">
-        <img src="taboola-logo.svg" alt="Taboola" class="taboola-img">
-    </a>
-    
-    <style>
-        .taboola-logo {
-            position: fixed;
-            top: 20px;
-            left: 25px;
-            z-index: 1000;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            opacity: 0.7;
-        }
-        
-        .taboola-img {
-            height: 32px;
-            width: auto;
-        }
-        
-        .taboola-logo:hover {
-            opacity: 1;
-            transform: scale(1.05);
-        }
-        
-        @media (max-width: 768px) {
-            .taboola-logo {
-                top: 12px;
-                left: 15px;
-            }
-            
-            .taboola-img {
-                height: 24px;
-            }
-        }
-    </style>
     
     <div class="container">
         <header class="header">
@@ -730,9 +693,9 @@
                         </a>
                     </li>
                     <li class="resource-item">
-                        <a href="http://sage-stage.spd.svc.kube.taboolasyndication.com:8000/agents?search=ROC" class="resource-link" target="_blank">
+                        <a href="http://sage-stage.spd.svc.kube.taboolasyndication.com:8000/agents" class="resource-link" target="_blank">
                             <span class="icon">🤖</span>
-                            <span class="name">Sage AI Agents (ROC)</span>
+                            <span class="name">Sage AI Agents</span>
                             <span class="resource-tag tag-live">LIVE</span>
                             <span class="arrow">→</span>
                         </a>
@@ -1281,7 +1244,7 @@ Alerts Directory: https://morhaliva.github.io/roc-dashboards/roc-alerts.html
 - JIRA: https://tbla.atlassian.net/jira/software/c/projects/PS/boards/1914
 - Google Drive: https://drive.google.com/drive/u/0/folders/0ANnoxsXc8YhXUk9PVA
 - Raven UI: https://raven.taboolasyndication.com/
-- Sage AI Agents: http://sage-stage.spd.svc.kube.taboolasyndication.com:8000/agents?search=ROC`;
+- Sage AI Agents: http://sage-stage.spd.svc.kube.taboolasyndication.com:8000/agents`;
 
     function toggleAIChat() {
         const panel = document.getElementById('aiChatPanel');
