@@ -304,13 +304,33 @@ html = f'''<!DOCTYPE html>
         
         .views-section {{
             margin-bottom: 15px;
+            padding: 10px;
+            background: #f0f4ff;
+            border-radius: 6px;
+        }}
+        
+        .views-header {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
         }}
         
         .views-title {{
             font-weight: bold;
             color: #555;
-            margin-bottom: 8px;
             font-size: 0.95em;
+        }}
+        
+        .views-list {{
+            margin-top: 8px;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }}
+        
+        .views-list.collapsed {{
+            max-height: 0;
+            margin-top: 0;
         }}
         
         .view-links {{
@@ -475,12 +495,18 @@ for dashboard in production:
     
     views_html = ''
     if len(dashboard['views']) > 1:
-        views_html = '<div class="views-section"><div class="views-title">📑 Sheets ({}):</div><div class="view-links">'.format(len(dashboard['views']))
+        view_count_total = len(dashboard['views'])
+        views_html = f'''<div class="views-section">
+            <div class="views-header" onclick="toggleViews(this)">
+                <span class="views-title">📑 Sheets ({view_count_total})</span>
+                <button class="toggle-btn">▼ Show</button>
+            </div>
+            <div class="views-list collapsed"><div class="view-links">'''
         for view in dashboard['views']:
             view_count = int(view.get('viewCount', 0) or 0)
             count_display = f" ({view_count:,}👁)" if view_count > 0 else ""
             views_html += f'<a href="{view["url"]}" class="view-link" target="_blank">{view["name"]}{count_display}</a>'
-        views_html += '</div></div>'
+        views_html += '</div></div></div>'
     
     created_date = datetime.fromisoformat(dashboard['created'].replace('Z', '+00:00')).strftime('%b %d, %Y')
     updated_date = datetime.fromisoformat(dashboard['updated'].replace('Z', '+00:00')).strftime('%b %d, %Y')
@@ -556,12 +582,18 @@ for dashboard in playground:
     
     views_html = ''
     if len(dashboard['views']) > 1:
-        views_html = '<div class="views-section"><div class="views-title">📑 Sheets ({}):</div><div class="view-links">'.format(len(dashboard['views']))
+        view_count_total = len(dashboard['views'])
+        views_html = f'''<div class="views-section">
+            <div class="views-header" onclick="toggleViews(this)">
+                <span class="views-title">📑 Sheets ({view_count_total})</span>
+                <button class="toggle-btn">▼ Show</button>
+            </div>
+            <div class="views-list collapsed"><div class="view-links">'''
         for view in dashboard['views']:
             view_count = int(view.get('viewCount', 0) or 0)
             count_display = f" ({view_count:,}👁)" if view_count > 0 else ""
             views_html += f'<a href="{view["url"]}" class="view-link" target="_blank">{view["name"]}{count_display}</a>'
-        views_html += '</div></div>'
+        views_html += '</div></div></div>'
     
     created_date = datetime.fromisoformat(dashboard['created'].replace('Z', '+00:00')).strftime('%b %d, %Y')
     updated_date = datetime.fromisoformat(dashboard['updated'].replace('Z', '+00:00')).strftime('%b %d, %Y')
@@ -605,6 +637,14 @@ html += '''
     <script>
         // Toggle data sources visibility
         function toggleDataSources(header) {
+            const list = header.nextElementSibling;
+            const btn = header.querySelector('.toggle-btn');
+            list.classList.toggle('collapsed');
+            btn.textContent = list.classList.contains('collapsed') ? '▼ Show' : '▲ Hide';
+        }
+        
+        // Toggle views/sheets visibility
+        function toggleViews(header) {
             const list = header.nextElementSibling;
             const btn = header.querySelector('.toggle-btn');
             list.classList.toggle('collapsed');
