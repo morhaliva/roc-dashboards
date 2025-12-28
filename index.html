@@ -66,7 +66,7 @@
         .container {
             max-width: 1500px;
             margin: 0 auto;
-            padding: 30px 40px 60px;
+            padding: 60px 40px 60px;
         }
 
         /* Back Button */
@@ -136,6 +136,25 @@
             font-size: 0.9em;
             color: var(--text-muted);
             font-family: 'JetBrains Mono', monospace;
+        }
+
+        .update-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            color: white;
+            text-align: center;
+            padding: 8px 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            z-index: 1001;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .update-banner strong {
+            font-weight: 600;
         }
 
         /* Stats */
@@ -608,9 +627,13 @@
     </style>
 </head>
 <body>
+    <div class="update-banner">
+        🔄 <strong>Last Updated:</strong> December 28, 2025 at 11:04 PM
+    </div>
+
     <div class="bg-pattern"></div>
     
-    <a href="knowledge-base.html" class="back-button">
+    <a href="knowledge-base.html" class="back-button" style="top: 55px;">
         <span>←</span> Back to Knowledge Base
     </a>
 
