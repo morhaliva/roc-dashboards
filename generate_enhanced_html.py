@@ -36,24 +36,24 @@ html = f'''<!DOCTYPE html>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {{
-            --bg-primary: #0a0a0f;
-            --bg-secondary: #12121a;
-            --bg-card: #1a1a24;
-            --bg-card-hover: #22222e;
-            --border: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(255, 255, 255, 0.15);
-            --text-primary: #f8f8f8;
-            --text-secondary: #a0a0b0;
-            --text-muted: #6b6b7b;
-            --accent-cyan: #00d4ff;
-            --accent-purple: #a855f7;
-            --accent-green: #10b981;
-            --accent-orange: #f59e0b;
-            --accent-pink: #ec4899;
-            --accent-blue: #3b82f6;
-            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            --gradient-2: linear-gradient(135deg, #00d4ff 0%, #a855f7 100%);
-            --shadow-glow: 0 0 40px rgba(0, 212, 255, 0.15);
+            --bg-primary: #f8fafc;
+            --bg-secondary: #ffffff;
+            --bg-card: #ffffff;
+            --bg-card-hover: #f1f5f9;
+            --border: rgba(0, 0, 0, 0.08);
+            --border-hover: rgba(0, 0, 0, 0.15);
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --text-muted: #94a3b8;
+            --accent-cyan: #0891b2;
+            --accent-purple: #7c3aed;
+            --accent-green: #059669;
+            --accent-orange: #d97706;
+            --accent-pink: #db2777;
+            --accent-blue: #2563eb;
+            --gradient-1: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            --gradient-2: linear-gradient(135deg, #0891b2 0%, #7c3aed 100%);
+            --shadow-glow: 0 4px 20px rgba(0, 0, 0, 0.08);
         }}
 
         * {{
@@ -79,8 +79,8 @@ html = f'''<!DOCTYPE html>
             height: 100%;
             z-index: -1;
             background: 
-                radial-gradient(ellipse at 20% 20%, rgba(102, 126, 234, 0.15) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 80%, rgba(168, 85, 247, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 20% 20%, rgba(8, 145, 178, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(124, 58, 237, 0.05) 0%, transparent 50%),
                 radial-gradient(ellipse at 50% 50%, rgba(0, 212, 255, 0.05) 0%, transparent 70%);
             animation: bgPulse 15s ease-in-out infinite;
         }}
@@ -112,7 +112,7 @@ html = f'''<!DOCTYPE html>
             font-weight: 600;
             font-size: 0.95em;
             border: 1px solid var(--border);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
             z-index: 1000;
             backdrop-filter: blur(10px);
@@ -338,7 +338,7 @@ html = f'''<!DOCTYPE html>
         .dashboard-card:hover {{
             border-color: var(--border-hover);
             transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
         }}
 
         .dashboard-card[data-category="production"]:hover {{
@@ -347,8 +347,8 @@ html = f'''<!DOCTYPE html>
         }}
 
         .dashboard-card[data-category="playground"]:hover {{
-            border-color: rgba(168, 85, 247, 0.4);
-            box-shadow: 0 20px 40px rgba(168, 85, 247, 0.1);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 12px 30px rgba(8, 145, 178, 0.1);
         }}
 
         .dashboard-name {{
@@ -405,7 +405,7 @@ html = f'''<!DOCTYPE html>
         }}
 
         .tag {{
-            background: rgba(168, 85, 247, 0.15);
+            background: rgba(124, 58, 237, 0.1);
             color: var(--accent-purple);
             padding: 5px 12px;
             border-radius: 8px;
@@ -431,7 +431,7 @@ html = f'''<!DOCTYPE html>
         }}
 
         .collapsible-header:hover {{
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(0, 0, 0, 0.02);
         }}
 
         .collapsible-title {{
