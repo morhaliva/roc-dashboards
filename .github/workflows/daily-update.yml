@@ -1,31 +1,34 @@
-  name: Daily Dashboard Update
+name: Daily Dashboard Update
 
 on:
   schedule:
-    - cron: '0 6 * * *'  # 8 AM Israel time
-  workflow_dispatch:  # Manual trigger
+    - cron: '0 6 * * *'
+  workflow_dispatch:
 
 jobs:
   update-dashboards:
     runs-on: ubuntu-latest
-    
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
       
-      - uses: actions/setup-python@v5
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       
-      - run: pip install requests
+      - name: Install dependencies
+        run: pip install requests
       
       - name: Create credentials
         run: |
-          cat > mcp.json << 'EOF'
-          {"mcpServers":{"tableau":{"env":{"SERVER":"${{ secrets.TABLEAU_SERVER }}","SITE_NAME":"${{ secrets.TABLEAU_SITE_NAME }}","PAT_NAME":"${{ secrets.TABLEAU_PAT_NAME }}","PAT_VALUE":"${{ secrets.TABLEAU_PAT_VALUE }}"}}}}
-          EOF
+          echo '{"mcpServers":{"tableau":{"env":{"SERVER":"${{ secrets.TABLEAU_SERVER }}","SITE_NAME":"${{ secrets.TABLEAU_SITE_NAME }}","PAT_NAME":"${{ secrets.TABLEAU_PAT_NAME }}","PAT_VALUE":"${{ secrets.TABLEAU_PAT_VALUE }}"}}}}' > mcp.json
       
-      - run: python fetch_enhanced_dashboard_data.py
-      - run: python generate_enhanced_html.py
+      - name: Fetch dashboard data
+        run: python fetch_enhanced_dashboard_data.py
+      
+      - name: Generate HTML
+        run: python generate_enhanced_html.py
       
       - name: Update files
         run: |
@@ -33,7 +36,7 @@ jobs:
           CURRENT_DATE=$(TZ='Asia/Jerusalem' date '+%B %d, %Y at %I:%M %p')
           sed -i "s/Last updated:.*/Last updated: $CURRENT_DATE<\/p>/" index.html knowledge-base.html
       
-      - name: Commit & Push
+      - name: Commit and Push
         run: |
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git config user.name "github-actions[bot]"
