@@ -9,24 +9,24 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-primary: #f8fafc;
-            --bg-secondary: #ffffff;
-            --bg-card: #ffffff;
-            --bg-card-hover: #f1f5f9;
-            --border: rgba(0, 0, 0, 0.08);
-            --border-hover: rgba(0, 0, 0, 0.15);
-            --text-primary: #1e293b;
-            --text-secondary: #64748b;
-            --text-muted: #94a3b8;
-            --accent-cyan: #0891b2;
-            --accent-purple: #7c3aed;
-            --accent-green: #059669;
-            --accent-orange: #d97706;
-            --accent-pink: #db2777;
-            --accent-blue: #2563eb;
-            --gradient-1: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-            --gradient-2: linear-gradient(135deg, #0891b2 0%, #7c3aed 100%);
-            --shadow-glow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a24;
+            --bg-card-hover: #22222e;
+            --border: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(255, 255, 255, 0.15);
+            --text-primary: #f8f8f8;
+            --text-secondary: #a0a0b0;
+            --text-muted: #6b6b7b;
+            --accent-cyan: #00d4ff;
+            --accent-purple: #a855f7;
+            --accent-green: #10b981;
+            --accent-orange: #f59e0b;
+            --accent-pink: #ec4899;
+            --accent-blue: #3b82f6;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #00d4ff 0%, #a855f7 100%);
+            --shadow-glow: 0 0 40px rgba(0, 212, 255, 0.15);
         }
 
         * {
@@ -52,9 +52,9 @@
             height: 100%;
             z-index: -1;
             background: 
-                radial-gradient(ellipse at 20% 20%, rgba(8, 145, 178, 0.06) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 80%, rgba(124, 58, 237, 0.05) 0%, transparent 50%),
-                radial-gradient(ellipse at 50% 50%, rgba(59, 130, 246, 0.03) 0%, transparent 70%);
+                radial-gradient(ellipse at 20% 20%, rgba(102, 126, 234, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 80%, rgba(168, 85, 247, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(0, 212, 255, 0.05) 0%, transparent 70%);
             animation: bgPulse 15s ease-in-out infinite;
         }
 
@@ -85,16 +85,17 @@
             font-weight: 600;
             font-size: 0.95em;
             border: 1px solid var(--border);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
             z-index: 1000;
+            backdrop-filter: blur(10px);
         }
 
         .back-button:hover {
             background: var(--accent-cyan);
-            color: #ffffff;
+            color: var(--bg-primary);
             transform: translateX(-5px);
-            box-shadow: 0 4px 20px rgba(8, 145, 178, 0.25);
+            box-shadow: 0 0 25px rgba(0, 212, 255, 0.4);
         }
 
         /* Header */
@@ -154,12 +155,11 @@
             text-align: center;
             transition: all 0.3s ease;
             min-width: 160px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
         }
 
         .stat-card:hover {
             border-color: var(--accent-cyan);
-            box-shadow: 0 8px 25px rgba(8, 145, 178, 0.12);
+            box-shadow: var(--shadow-glow);
             transform: translateY(-3px);
         }
 
@@ -306,13 +306,12 @@
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
         }
 
         .dashboard-card:hover {
-            border-color: var(--accent-cyan);
+            border-color: var(--border-hover);
             transform: translateY(-4px);
-            box-shadow: 0 12px 30px rgba(8, 145, 178, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
         .dashboard-card[data-category="production"]:hover {
@@ -405,7 +404,7 @@
         }
 
         .collapsible-header:hover {
-            background: rgba(0, 0, 0, 0.02);
+            background: rgba(255, 255, 255, 0.03);
         }
 
         .collapsible-title {
@@ -620,7 +619,7 @@
             <div class="header-icon">📊</div>
             <h1>ROC Tableau Dashboards</h1>
             <p class="header-subtitle">Revenue Operations Center Dashboard Portal</p>
-            <p class="header-date">Last updated: December 25, 2025 at 12:09 AM</p>
+            <p class="header-date">Last updated: December 28, 2025 at 11:02 PM</p>
         </div>
 
         <div class="stats">
@@ -629,11 +628,11 @@
                 <div class="stat-label">🏭 Production</div>
             </div>
             <div class="stat-card playground">
-                <div class="stat-number">75</div>
+                <div class="stat-number">76</div>
                 <div class="stat-label">🎮 Playground</div>
             </div>
             <div class="stat-card total">
-                <div class="stat-number">96</div>
+                <div class="stat-number">97</div>
                 <div class="stat-label">📈 Total</div>
             </div>
         </div>
@@ -660,138 +659,6 @@
             <div class="dashboard-grid" id="production-grid">
 
             <div class="dashboard-card" data-category="production" 
-                 data-name="alerts analysis automation"
-                 data-description="automated alerting dashboard for proactive issue detection."
-                 data-tags=""
-                 data-owner="mor.h"
-                 data-sources="roc append (bidding strategy) roc append (pub region) hourly snapshots (spend) sf - roc alerts roc append (country) roc append (networks) bidding strategy - historically daily alerts - optimization hourly snapshots (revenue)">
-                <div class="dashboard-name">Alerts Analysis Automation</div>
-                <div class="dashboard-description ">Automated alerting dashboard for proactive issue detection.</div>
-                
-                <div class="dashboard-meta">
-                    <div class="meta-item"><span class="icon">👤</span> mor.h</div>
-                    <div class="meta-item"><span class="icon">📁</span> ROC</div>
-                    <div class="meta-item"><span class="icon">📊</span> 5 sheets</div>
-                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">103</span> views</div>
-                </div>
-                <div class="dashboard-meta">
-                    <div class="meta-item"><span class="icon">📅</span> Created: Sep 30, 2025</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
-                </div>
-                
-            <div class="collapsible-section">
-                <div class="collapsible-header" onclick="toggleSection(this)">
-                    <span class="collapsible-title">🗄️ Data Sources (9)</span>
-                    <span class="toggle-icon">▼</span>
-                </div>
-                <div class="collapsible-content">
-                    <div class="collapsible-inner"><div class="data-source"><span class="ds-badge vertica">VERTICA</span>ROC Append (Bidding Strategy)</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>ROC Append (Pub Region)</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>Hourly Snapshots (spend)</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>SF - ROC Alerts</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>ROC Append (Country)</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>ROC Append (Networks)</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>Bidding Strategy - Historically</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>Daily Alerts - Optimization</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>Hourly Snapshots (revenue)</div></div>
-                </div>
-            </div>
-                
-            <div class="collapsible-section">
-                <div class="collapsible-header" onclick="toggleSection(this)">
-                    <span class="collapsible-title">📑 Sheets (5)</span>
-                    <span class="toggle-icon">▼</span>
-                </div>
-                <div class="collapsible-content">
-                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlySFCases" class="view-link" target="_blank">Hourly SF Cases <span class="view-count">(46👁)</span></a><a href="https://tableau.office.taboola.com/#/views/SFROCAlerts/DailyAlertsMonitoring" class="view-link" target="_blank">Daily Alerts Monitoring <span class="view-count">(29👁)</span></a><a href="https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlyAlertsThresholds" class="view-link" target="_blank">Hourly Alerts Thresholds <span class="view-count">(15👁)</span></a><a href="https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlyOptimization-BoxPlots" class="view-link" target="_blank">Hourly Optimization - Box Plots <span class="view-count">(11👁)</span></a><a href="https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlyExtrapolationFactor" class="view-link" target="_blank">Hourly Extrapolation Factor <span class="view-count">(2👁)</span></a></div></div>
-                </div>
-            </div>
-                <a href="https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlySFCases" class="dashboard-link" target="_blank">
-                    View Dashboard <span>→</span>
-                </a>
-            </div>
-
-            <div class="dashboard-card" data-category="production" 
-                 data-name="top 5 networks hourly trend"
-                 data-description="monitors hourly trends and real-time performance metrics."
-                 data-tags=""
-                 data-owner="mor.h"
-                 data-sources="roc_revenue_health country data hourlycomp - adjusted">
-                <div class="dashboard-name">Top 5 Networks Hourly Trend</div>
-                <div class="dashboard-description ">Monitors hourly trends and real-time performance metrics.</div>
-                
-                <div class="dashboard-meta">
-                    <div class="meta-item"><span class="icon">👤</span> mor.h</div>
-                    <div class="meta-item"><span class="icon">📁</span> ROC Protocol</div>
-                    <div class="meta-item"><span class="icon">📊</span> 1 sheets</div>
-                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">313</span> views</div>
-                </div>
-                <div class="dashboard-meta">
-                    <div class="meta-item"><span class="icon">📅</span> Created: Aug 11, 2025</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
-                </div>
-                
-            <div class="collapsible-section">
-                <div class="collapsible-header" onclick="toggleSection(this)">
-                    <span class="collapsible-title">🗄️ Data Sources (3)</span>
-                    <span class="toggle-icon">▼</span>
-                </div>
-                <div class="collapsible-content">
-                    <div class="collapsible-inner"><div class="data-source"><span class="ds-badge vertica">VERTICA</span>ROC_Revenue_Health</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>country data</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>HourlyComp - adjusted</div></div>
-                </div>
-            </div>
-                
-            <div class="collapsible-section">
-                <div class="collapsible-header" onclick="toggleSection(this)">
-                    <span class="collapsible-title">📑 Sheets (1)</span>
-                    <span class="toggle-icon">▼</span>
-                </div>
-                <div class="collapsible-content">
-                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/TopNetworksHourlyTrend/Hourly-TopNetworks" class="view-link" target="_blank">Hourly - Top Networks <span class="view-count">(313👁)</span></a></div></div>
-                </div>
-            </div>
-                <a href="https://tableau.office.taboola.com/#/views/TopNetworksHourlyTrend/Hourly-TopNetworks" class="dashboard-link" target="_blank">
-                    View Dashboard <span>→</span>
-                </a>
-            </div>
-
-            <div class="dashboard-card" data-category="production" 
-                 data-name="roc protocol - investigation tool - brain data"
-                 data-description="deep-dive analysis tool for investigating performance patterns."
-                 data-tags=""
-                 data-owner="mor.h"
-                 data-sources="superquery2">
-                <div class="dashboard-name">ROC Protocol - Investigation Tool - Brain data</div>
-                <div class="dashboard-description ">Deep-dive analysis tool for investigating performance patterns.</div>
-                
-                <div class="dashboard-meta">
-                    <div class="meta-item"><span class="icon">👤</span> mor.h</div>
-                    <div class="meta-item"><span class="icon">📁</span> ROC Protocol</div>
-                    <div class="meta-item"><span class="icon">📊</span> 1 sheets</div>
-                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">1,381</span> views</div>
-                </div>
-                <div class="dashboard-meta">
-                    <div class="meta-item"><span class="icon">📅</span> Created: Sep 29, 2024</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
-                </div>
-                
-            <div class="collapsible-section">
-                <div class="collapsible-header" onclick="toggleSection(this)">
-                    <span class="collapsible-title">🗄️ Data Sources (1)</span>
-                    <span class="toggle-icon">▼</span>
-                </div>
-                <div class="collapsible-content">
-                    <div class="collapsible-inner"><div class="data-source"><span class="ds-badge vertica">VERTICA</span>superQuery2</div></div>
-                </div>
-            </div>
-                
-            <div class="collapsible-section">
-                <div class="collapsible-header" onclick="toggleSection(this)">
-                    <span class="collapsible-title">📑 Sheets (1)</span>
-                    <span class="toggle-icon">▼</span>
-                </div>
-                <div class="collapsible-content">
-                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/ROCProtocol-InvestigationTool/ROCProtocol-DataInvestigation" class="view-link" target="_blank">ROC Protocol - Data Investigation <span class="view-count">(1,381👁)</span></a></div></div>
-                </div>
-            </div>
-                <a href="https://tableau.office.taboola.com/#/views/ROCProtocol-InvestigationTool/ROCProtocol-DataInvestigation" class="dashboard-link" target="_blank">
-                    View Dashboard <span>→</span>
-                </a>
-            </div>
-
-            <div class="dashboard-card" data-category="production" 
                  data-name="roc protocol hourly refresh - brain data"
                  data-description="monitors hourly trends and real-time performance metrics."
                  data-tags=""
@@ -804,11 +671,11 @@
                     <div class="meta-item"><span class="icon">👤</span> mor.h</div>
                     <div class="meta-item"><span class="icon">📁</span> ROC Protocol</div>
                     <div class="meta-item"><span class="icon">📊</span> 4 sheets</div>
-                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">3,320</span> views</div>
+                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">3,329</span> views</div>
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: Sep 29, 2024</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -827,7 +694,7 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="collapsible-content">
-                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/ROCProtocolHourlyRefresh/Hourly-Region" class="view-link" target="_blank">Hourly - Region <span class="view-count">(2,304👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCProtocolHourlyRefresh/Hourly-Spend" class="view-link" target="_blank">Hourly - Spend <span class="view-count">(450👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCProtocolHourlyRefresh/Hourly-Segment" class="view-link" target="_blank">Hourly - Segment <span class="view-count">(346👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCProtocolHourlyRefresh/Hourly-Country" class="view-link" target="_blank">Hourly - Country <span class="view-count">(220👁)</span></a></div></div>
+                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/ROCProtocolHourlyRefresh/Hourly-Region" class="view-link" target="_blank">Hourly - Region <span class="view-count">(2,307👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCProtocolHourlyRefresh/Hourly-Spend" class="view-link" target="_blank">Hourly - Spend <span class="view-count">(450👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCProtocolHourlyRefresh/Hourly-Segment" class="view-link" target="_blank">Hourly - Segment <span class="view-count">(346👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCProtocolHourlyRefresh/Hourly-Country" class="view-link" target="_blank">Hourly - Country <span class="view-count">(226👁)</span></a></div></div>
                 </div>
             </div>
                 <a href="https://tableau.office.taboola.com/#/views/ROCProtocolHourlyRefresh/Hourly-Region" class="dashboard-link" target="_blank">
@@ -848,11 +715,11 @@
                     <div class="meta-item"><span class="icon">👤</span> mor.h</div>
                     <div class="meta-item"><span class="icon">📁</span> ROC Protocol</div>
                     <div class="meta-item"><span class="icon">📊</span> 1 sheets</div>
-                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">1,128</span> views</div>
+                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">1,131</span> views</div>
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: Jun 08, 2025</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -871,10 +738,98 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="collapsible-content">
-                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/ROCProtocolHourlyRefresh-SpendInvestigations/ROCProtocol-SpendData-Investigation" class="view-link" target="_blank">ROC Protocol - Spend Data - Investigation <span class="view-count">(1,128👁)</span></a></div></div>
+                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/ROCProtocolHourlyRefresh-SpendInvestigations/ROCProtocol-SpendData-Investigation" class="view-link" target="_blank">ROC Protocol - Spend Data - Investigation <span class="view-count">(1,131👁)</span></a></div></div>
                 </div>
             </div>
                 <a href="https://tableau.office.taboola.com/#/views/ROCProtocolHourlyRefresh-SpendInvestigations/ROCProtocol-SpendData-Investigation" class="dashboard-link" target="_blank">
+                    View Dashboard <span>→</span>
+                </a>
+            </div>
+
+            <div class="dashboard-card" data-category="production" 
+                 data-name="roc protocol - investigation tool - brain data"
+                 data-description="deep-dive analysis tool for investigating performance patterns."
+                 data-tags=""
+                 data-owner="mor.h"
+                 data-sources="superquery2">
+                <div class="dashboard-name">ROC Protocol - Investigation Tool - Brain data</div>
+                <div class="dashboard-description ">Deep-dive analysis tool for investigating performance patterns.</div>
+                
+                <div class="dashboard-meta">
+                    <div class="meta-item"><span class="icon">👤</span> mor.h</div>
+                    <div class="meta-item"><span class="icon">📁</span> ROC Protocol</div>
+                    <div class="meta-item"><span class="icon">📊</span> 1 sheets</div>
+                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">1,388</span> views</div>
+                </div>
+                <div class="dashboard-meta">
+                    <div class="meta-item"><span class="icon">📅</span> Created: Sep 29, 2024</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
+                </div>
+                
+            <div class="collapsible-section">
+                <div class="collapsible-header" onclick="toggleSection(this)">
+                    <span class="collapsible-title">🗄️ Data Sources (1)</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-inner"><div class="data-source"><span class="ds-badge vertica">VERTICA</span>superQuery2</div></div>
+                </div>
+            </div>
+                
+            <div class="collapsible-section">
+                <div class="collapsible-header" onclick="toggleSection(this)">
+                    <span class="collapsible-title">📑 Sheets (1)</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/ROCProtocol-InvestigationTool/ROCProtocol-DataInvestigation" class="view-link" target="_blank">ROC Protocol - Data Investigation <span class="view-count">(1,388👁)</span></a></div></div>
+                </div>
+            </div>
+                <a href="https://tableau.office.taboola.com/#/views/ROCProtocol-InvestigationTool/ROCProtocol-DataInvestigation" class="dashboard-link" target="_blank">
+                    View Dashboard <span>→</span>
+                </a>
+            </div>
+
+            <div class="dashboard-card" data-category="production" 
+                 data-name="top 5 networks hourly trend"
+                 data-description="monitors hourly trends and real-time performance metrics."
+                 data-tags=""
+                 data-owner="mor.h"
+                 data-sources="roc_revenue_health country data hourlycomp - adjusted">
+                <div class="dashboard-name">Top 5 Networks Hourly Trend</div>
+                <div class="dashboard-description ">Monitors hourly trends and real-time performance metrics.</div>
+                
+                <div class="dashboard-meta">
+                    <div class="meta-item"><span class="icon">👤</span> mor.h</div>
+                    <div class="meta-item"><span class="icon">📁</span> ROC Protocol</div>
+                    <div class="meta-item"><span class="icon">📊</span> 1 sheets</div>
+                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">314</span> views</div>
+                </div>
+                <div class="dashboard-meta">
+                    <div class="meta-item"><span class="icon">📅</span> Created: Aug 11, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
+                </div>
+                
+            <div class="collapsible-section">
+                <div class="collapsible-header" onclick="toggleSection(this)">
+                    <span class="collapsible-title">🗄️ Data Sources (3)</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-inner"><div class="data-source"><span class="ds-badge vertica">VERTICA</span>ROC_Revenue_Health</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>country data</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>HourlyComp - adjusted</div></div>
+                </div>
+            </div>
+                
+            <div class="collapsible-section">
+                <div class="collapsible-header" onclick="toggleSection(this)">
+                    <span class="collapsible-title">📑 Sheets (1)</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/TopNetworksHourlyTrend/Hourly-TopNetworks" class="view-link" target="_blank">Hourly - Top Networks <span class="view-count">(314👁)</span></a></div></div>
+                </div>
+            </div>
+                <a href="https://tableau.office.taboola.com/#/views/TopNetworksHourlyTrend/Hourly-TopNetworks" class="dashboard-link" target="_blank">
                     View Dashboard <span>→</span>
                 </a>
             </div>
@@ -896,7 +851,7 @@
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: Jul 17, 2025</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -936,11 +891,11 @@
                     <div class="meta-item"><span class="icon">👤</span> mor.h</div>
                     <div class="meta-item"><span class="icon">📁</span> ROC Protocol</div>
                     <div class="meta-item"><span class="icon">📊</span> 1 sheets</div>
-                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">295</span> views</div>
+                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">302</span> views</div>
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: Oct 29, 2025</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -959,10 +914,54 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="collapsible-content">
-                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/ROCDailyAlerts_17617708917560/DailyAnomalies-Sage" class="view-link" target="_blank">Daily Anomalies - Sage <span class="view-count">(295👁)</span></a></div></div>
+                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/ROCDailyAlerts_17617708917560/DailyAnomalies-Sage" class="view-link" target="_blank">Daily Anomalies - Sage <span class="view-count">(302👁)</span></a></div></div>
                 </div>
             </div>
                 <a href="https://tableau.office.taboola.com/#/views/ROCDailyAlerts_17617708917560/DailyAnomalies-Sage" class="dashboard-link" target="_blank">
+                    View Dashboard <span>→</span>
+                </a>
+            </div>
+
+            <div class="dashboard-card" data-category="production" 
+                 data-name="alerts analysis automation"
+                 data-description="automated alerting dashboard for proactive issue detection."
+                 data-tags=""
+                 data-owner="mor.h"
+                 data-sources="roc append (bidding strategy) sf - roc alerts roc append (country) roc append (networks) bidding strategy - historically daily alerts - optimization hourly snapshots (revenue) roc append (pub region) hourly snapshots (spend)">
+                <div class="dashboard-name">Alerts Analysis Automation</div>
+                <div class="dashboard-description ">Automated alerting dashboard for proactive issue detection.</div>
+                
+                <div class="dashboard-meta">
+                    <div class="meta-item"><span class="icon">👤</span> mor.h</div>
+                    <div class="meta-item"><span class="icon">📁</span> ROC</div>
+                    <div class="meta-item"><span class="icon">📊</span> 5 sheets</div>
+                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">133</span> views</div>
+                </div>
+                <div class="dashboard-meta">
+                    <div class="meta-item"><span class="icon">📅</span> Created: Sep 30, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
+                </div>
+                
+            <div class="collapsible-section">
+                <div class="collapsible-header" onclick="toggleSection(this)">
+                    <span class="collapsible-title">🗄️ Data Sources (9)</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-inner"><div class="data-source"><span class="ds-badge vertica">VERTICA</span>ROC Append (Bidding Strategy)</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>SF - ROC Alerts</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>ROC Append (Country)</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>ROC Append (Networks)</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>Bidding Strategy - Historically</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>Daily Alerts - Optimization</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>Hourly Snapshots (revenue)</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>ROC Append (Pub Region)</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>Hourly Snapshots (spend)</div></div>
+                </div>
+            </div>
+                
+            <div class="collapsible-section">
+                <div class="collapsible-header" onclick="toggleSection(this)">
+                    <span class="collapsible-title">📑 Sheets (5)</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlySFCases" class="view-link" target="_blank">Hourly SF Cases <span class="view-count">(65👁)</span></a><a href="https://tableau.office.taboola.com/#/views/SFROCAlerts/DailyAlertsMonitoring" class="view-link" target="_blank">Daily Alerts Monitoring <span class="view-count">(30👁)</span></a><a href="https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlyAlertsThresholds" class="view-link" target="_blank">Hourly Alerts Thresholds <span class="view-count">(18👁)</span></a><a href="https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlyOptimization-BoxPlots" class="view-link" target="_blank">Hourly Optimization - Box Plots <span class="view-count">(16👁)</span></a><a href="https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlyExtrapolationFactor" class="view-link" target="_blank">Hourly Extrapolation Factor <span class="view-count">(4👁)</span></a></div></div>
+                </div>
+            </div>
+                <a href="https://tableau.office.taboola.com/#/views/SFROCAlerts/HourlySFCases" class="dashboard-link" target="_blank">
                     View Dashboard <span>→</span>
                 </a>
             </div>
@@ -980,11 +979,11 @@
                     <div class="meta-item"><span class="icon">👤</span> guy.d</div>
                     <div class="meta-item"><span class="icon">📁</span> ROC</div>
                     <div class="meta-item"><span class="icon">📊</span> 7 sheets</div>
-                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">1,388</span> views</div>
+                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">1,389</span> views</div>
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: Sep 24, 2024</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -1003,7 +1002,7 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="collapsible-content">
-                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/ROC-JiraDashboard/KPITable" class="view-link" target="_blank">KPI Table <span class="view-count">(275👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROC-JiraDashboard/AnomaliesDetected" class="view-link" target="_blank">Anomalies Detected <span class="view-count">(274👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROC-JiraDashboard/RCADistribution" class="view-link" target="_blank">RCA Distribution <span class="view-count">(231👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROC-JiraDashboard/DetailedRCAandRCABy" class="view-link" target="_blank">Detailed RCA and RCA By <span class="view-count">(225👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROC-JiraDashboard/FlaggedAlerts" class="view-link" target="_blank">Flagged Alerts <span class="view-count">(202👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROC-JiraDashboard/ScopeofWork" class="view-link" target="_blank">Scope of Work <span class="view-count">(121👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROC-JiraDashboard/ClosedIssues" class="view-link" target="_blank">Closed Issues <span class="view-count">(60👁)</span></a></div></div>
+                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/ROC-JiraDashboard/KPITable" class="view-link" target="_blank">KPI Table <span class="view-count">(276👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROC-JiraDashboard/AnomaliesDetected" class="view-link" target="_blank">Anomalies Detected <span class="view-count">(274👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROC-JiraDashboard/RCADistribution" class="view-link" target="_blank">RCA Distribution <span class="view-count">(231👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROC-JiraDashboard/DetailedRCAandRCABy" class="view-link" target="_blank">Detailed RCA and RCA By <span class="view-count">(225👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROC-JiraDashboard/FlaggedAlerts" class="view-link" target="_blank">Flagged Alerts <span class="view-count">(202👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROC-JiraDashboard/ScopeofWork" class="view-link" target="_blank">Scope of Work <span class="view-count">(121👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROC-JiraDashboard/ClosedIssues" class="view-link" target="_blank">Closed Issues <span class="view-count">(60👁)</span></a></div></div>
                 </div>
             </div>
                 <a href="https://tableau.office.taboola.com/#/views/ROC-JiraDashboard/KPITable" class="dashboard-link" target="_blank">
@@ -1024,11 +1023,11 @@
                     <div class="meta-item"><span class="icon">👤</span> mor.h</div>
                     <div class="meta-item"><span class="icon">📁</span> Triage</div>
                     <div class="meta-item"><span class="icon">📊</span> 4 sheets</div>
-                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">1,131</span> views</div>
+                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">1,132</span> views</div>
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: May 21, 2024</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -1047,7 +1046,7 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="collapsible-content">
-                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/UserDataDailyDashboard-ROC_17162846060560/YoYComparison" class="view-link" target="_blank">YoY Comparison <span class="view-count">(572👁)</span></a><a href="https://tableau.office.taboola.com/#/views/UserDataDailyDashboard-ROC_17162846060560/DataAdoption" class="view-link" target="_blank">Data Adoption <span class="view-count">(233👁)</span></a><a href="https://tableau.office.taboola.com/#/views/UserDataDailyDashboard-ROC_17162846060560/UDOverview" class="view-link" target="_blank">UD Overview <span class="view-count">(211👁)</span></a><a href="https://tableau.office.taboola.com/#/views/UserDataDailyDashboard-ROC_17162846060560/DailyReport-NewCampaignsPerformance" class="view-link" target="_blank">Daily Report - New Campaigns Performance <span class="view-count">(115👁)</span></a></div></div>
+                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/UserDataDailyDashboard-ROC_17162846060560/YoYComparison" class="view-link" target="_blank">YoY Comparison <span class="view-count">(573👁)</span></a><a href="https://tableau.office.taboola.com/#/views/UserDataDailyDashboard-ROC_17162846060560/DataAdoption" class="view-link" target="_blank">Data Adoption <span class="view-count">(233👁)</span></a><a href="https://tableau.office.taboola.com/#/views/UserDataDailyDashboard-ROC_17162846060560/UDOverview" class="view-link" target="_blank">UD Overview <span class="view-count">(211👁)</span></a><a href="https://tableau.office.taboola.com/#/views/UserDataDailyDashboard-ROC_17162846060560/DailyReport-NewCampaignsPerformance" class="view-link" target="_blank">Daily Report - New Campaigns Performance <span class="view-count">(115👁)</span></a></div></div>
                 </div>
             </div>
                 <a href="https://tableau.office.taboola.com/#/views/UserDataDailyDashboard-ROC_17162846060560/YoYComparison" class="dashboard-link" target="_blank">
@@ -1068,11 +1067,11 @@
                     <div class="meta-item"><span class="icon">👤</span> mor.h</div>
                     <div class="meta-item"><span class="icon">📁</span> ROC Protocol</div>
                     <div class="meta-item"><span class="icon">📊</span> 3 sheets</div>
-                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">2,915</span> views</div>
+                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">2,917</span> views</div>
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: Sep 29, 2024</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -1091,7 +1090,7 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="collapsible-content">
-                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/FullData/ROCProtocol-FullData" class="view-link" target="_blank">ROC Protocol - Full Data <span class="view-count">(2,153👁)</span></a><a href="https://tableau.office.taboola.com/#/views/FullData/ROCProtocol-Demand" class="view-link" target="_blank">ROC Protocol - Demand <span class="view-count">(619👁)</span></a><a href="https://tableau.office.taboola.com/#/views/FullData/ROCProtocol-FullData-overtime" class="view-link" target="_blank">ROC Protocol - Full Data - over time <span class="view-count">(143👁)</span></a></div></div>
+                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/FullData/ROCProtocol-FullData" class="view-link" target="_blank">ROC Protocol - Full Data <span class="view-count">(2,155👁)</span></a><a href="https://tableau.office.taboola.com/#/views/FullData/ROCProtocol-Demand" class="view-link" target="_blank">ROC Protocol - Demand <span class="view-count">(619👁)</span></a><a href="https://tableau.office.taboola.com/#/views/FullData/ROCProtocol-FullData-overtime" class="view-link" target="_blank">ROC Protocol - Full Data - over time <span class="view-count">(143👁)</span></a></div></div>
                 </div>
             </div>
                 <a href="https://tableau.office.taboola.com/#/views/FullData/ROCProtocol-FullData" class="dashboard-link" target="_blank">
@@ -1112,11 +1111,11 @@
                     <div class="meta-item"><span class="icon">👤</span> guy.d</div>
                     <div class="meta-item"><span class="icon">📁</span> Triage</div>
                     <div class="meta-item"><span class="icon">📊</span> 15 sheets</div>
-                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">4,944</span> views</div>
+                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">4,946</span> views</div>
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: Aug 23, 2023</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -1135,7 +1134,7 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="collapsible-content">
-                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/Global" class="view-link" target="_blank">Global <span class="view-count">(1,461👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/GlobalAllYears" class="view-link" target="_blank">Global All Years <span class="view-count">(827👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/Global2024allregions" class="view-link" target="_blank">Global all regions <span class="view-count">(489👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/SelectRegion" class="view-link" target="_blank">Select Region <span class="view-count">(418👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/Month-to-Date" class="view-link" target="_blank">Month-to-Date <span class="view-count">(353👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/US" class="view-link" target="_blank">US <span class="view-count">(312👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/EMEA" class="view-link" target="_blank">EMEA <span class="view-count">(237👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/MainRegions" class="view-link" target="_blank">Main Regions <span class="view-count">(178👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/AllMetrics" class="view-link" target="_blank">All Metrics <span class="view-count">(167👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/GrossRevenueGlobalYIncrementality" class="view-link" target="_blank">Revenue Global, Y! Incrementality <span class="view-count">(157👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/MainRegionsAllYears" class="view-link" target="_blank">Main Regions All Years <span class="view-count">(113👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/RevenueIndexSeasonality" class="view-link" target="_blank">Revenue Index Seasonality <span class="view-count">(90👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/CumulativeRevenue28dSeasonality" class="view-link" target="_blank">Cumulative Revenue (28d) Seasonality <span class="view-count">(80👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/StrategicPartners" class="view-link" target="_blank">Strategic Partners <span class="view-count">(39👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/StrategicPartnersAllYears" class="view-link" target="_blank">Strategic Partners All Years <span class="view-count">(23👁)</span></a></div></div>
+                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/Global" class="view-link" target="_blank">Global <span class="view-count">(1,462👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/GlobalAllYears" class="view-link" target="_blank">Global All Years <span class="view-count">(827👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/Global2024allregions" class="view-link" target="_blank">Global all regions <span class="view-count">(489👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/SelectRegion" class="view-link" target="_blank">Select Region <span class="view-count">(418👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/Month-to-Date" class="view-link" target="_blank">Month-to-Date <span class="view-count">(354👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/US" class="view-link" target="_blank">US <span class="view-count">(312👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/EMEA" class="view-link" target="_blank">EMEA <span class="view-count">(237👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/MainRegions" class="view-link" target="_blank">Main Regions <span class="view-count">(178👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/AllMetrics" class="view-link" target="_blank">All Metrics <span class="view-count">(167👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/GrossRevenueGlobalYIncrementality" class="view-link" target="_blank">Revenue Global, Y! Incrementality <span class="view-count">(157👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/MainRegionsAllYears" class="view-link" target="_blank">Main Regions All Years <span class="view-count">(113👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/RevenueIndexSeasonality" class="view-link" target="_blank">Revenue Index Seasonality <span class="view-count">(90👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/CumulativeRevenue28dSeasonality" class="view-link" target="_blank">Cumulative Revenue (28d) Seasonality <span class="view-count">(80👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/StrategicPartners" class="view-link" target="_blank">Strategic Partners <span class="view-count">(39👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/StrategicPartnersAllYears" class="view-link" target="_blank">Strategic Partners All Years <span class="view-count">(23👁)</span></a></div></div>
                 </div>
             </div>
                 <a href="https://tableau.office.taboola.com/#/views/ROCSeasonality/Global" class="dashboard-link" target="_blank">
@@ -1156,11 +1155,11 @@
                     <div class="meta-item"><span class="icon">👤</span> guy.d</div>
                     <div class="meta-item"><span class="icon">📁</span> Triage</div>
                     <div class="meta-item"><span class="icon">📊</span> 13 sheets</div>
-                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">1,550</span> views</div>
+                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">1,553</span> views</div>
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: Dec 27, 2023</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -1179,7 +1178,7 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="collapsible-content">
-                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/SpendTotalSCNon-SC" class="view-link" target="_blank">Spend (Total, SC, Non-SC) <span class="view-count">(325👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/SCSpendAllYears" class="view-link" target="_blank">SC Spend All Years <span class="view-count">(284👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/Month-to-Date" class="view-link" target="_blank">Month-to-Date <span class="view-count">(204👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/SCSpend" class="view-link" target="_blank">SC Spend <span class="view-count">(198👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/VerticalTagging" class="view-link" target="_blank">Vertical Tagging <span class="view-count">(150👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/SCSpendOmniVsNon-Omni" class="view-link" target="_blank">SC Spend Omni Vs Non-Omni <span class="view-count">(132👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/SCSpendGrowth" class="view-link" target="_blank">SC Spend Growth <span class="view-count">(78👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/SCSpendEnterprise" class="view-link" target="_blank">SC Spend Enterprise <span class="view-count">(64👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/SpendbreakdownbyMediaType" class="view-link" target="_blank">Spend breakdown by Media Type <span class="view-count">(32👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/SpendAllYearsbreakdownbyMediaType" class="view-link" target="_blank">Spend All Years breakdown by Media Type <span class="view-count">(32👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/Period-over-Period" class="view-link" target="_blank">Period-over-Period <span class="view-count">(24👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/SCSpendGlobalSalesAlliances" class="view-link" target="_blank">SC Spend Global Sales Alliances <span class="view-count">(23👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/SCSpendGrowthExc_Search" class="view-link" target="_blank">SC Spend Growth Exc. Search <span class="view-count">(4👁)</span></a></div></div>
+                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/SpendTotalSCNon-SC" class="view-link" target="_blank">Spend (Total, SC, Non-SC) <span class="view-count">(325👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/SCSpendAllYears" class="view-link" target="_blank">SC Spend All Years <span class="view-count">(284👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/Month-to-Date" class="view-link" target="_blank">Month-to-Date <span class="view-count">(205👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/SCSpend" class="view-link" target="_blank">SC Spend <span class="view-count">(198👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/VerticalTagging" class="view-link" target="_blank">Vertical Tagging <span class="view-count">(152👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/SCSpendOmniVsNon-Omni" class="view-link" target="_blank">SC Spend Omni Vs Non-Omni <span class="view-count">(132👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/SCSpendGrowth" class="view-link" target="_blank">SC Spend Growth <span class="view-count">(78👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/SCSpendEnterprise" class="view-link" target="_blank">SC Spend Enterprise <span class="view-count">(64👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/SpendbreakdownbyMediaType" class="view-link" target="_blank">Spend breakdown by Media Type <span class="view-count">(32👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/SpendAllYearsbreakdownbyMediaType" class="view-link" target="_blank">Spend All Years breakdown by Media Type <span class="view-count">(32👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/Period-over-Period" class="view-link" target="_blank">Period-over-Period <span class="view-count">(24👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/SCSpendGlobalSalesAlliances" class="view-link" target="_blank">SC Spend Global Sales Alliances <span class="view-count">(23👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/SCSpendGrowthExc_Search" class="view-link" target="_blank">SC Spend Growth Exc. Search <span class="view-count">(4👁)</span></a></div></div>
                 </div>
             </div>
                 <a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisAdvertiser-SC/SpendTotalSCNon-SC" class="dashboard-link" target="_blank">
@@ -1204,7 +1203,7 @@
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: Dec 20, 2023</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -1248,7 +1247,7 @@
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: Oct 13, 2024</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -1292,7 +1291,7 @@
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: Feb 23, 2025</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -1332,11 +1331,11 @@
                     <div class="meta-item"><span class="icon">👤</span> mor.h</div>
                     <div class="meta-item"><span class="icon">📁</span> ROC Protocol</div>
                     <div class="meta-item"><span class="icon">📊</span> 1 sheets</div>
-                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">541</span> views</div>
+                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">548</span> views</div>
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: Aug 21, 2025</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -1355,54 +1354,10 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="collapsible-content">
-                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/MarketConstraints/MarketConstraints" class="view-link" target="_blank">Market Constraints <span class="view-count">(541👁)</span></a></div></div>
+                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/MarketConstraints/MarketConstraints" class="view-link" target="_blank">Market Constraints <span class="view-count">(548👁)</span></a></div></div>
                 </div>
             </div>
                 <a href="https://tableau.office.taboola.com/#/views/MarketConstraints/MarketConstraints" class="dashboard-link" target="_blank">
-                    View Dashboard <span>→</span>
-                </a>
-            </div>
-
-            <div class="dashboard-card" data-category="production" 
-                 data-name="roc - revenue loss"
-                 data-description="revenue tracking and financial performance monitoring."
-                 data-tags=""
-                 data-owner="guy.d"
-                 data-sources="jira update time revenue loss roi targets">
-                <div class="dashboard-name">ROC - Revenue Loss</div>
-                <div class="dashboard-description ">Revenue tracking and financial performance monitoring.</div>
-                
-                <div class="dashboard-meta">
-                    <div class="meta-item"><span class="icon">👤</span> guy.d</div>
-                    <div class="meta-item"><span class="icon">📁</span> ROC</div>
-                    <div class="meta-item"><span class="icon">📊</span> 1 sheets</div>
-                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">23</span> views</div>
-                </div>
-                <div class="dashboard-meta">
-                    <div class="meta-item"><span class="icon">📅</span> Created: Oct 27, 2025</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
-                </div>
-                
-            <div class="collapsible-section">
-                <div class="collapsible-header" onclick="toggleSection(this)">
-                    <span class="collapsible-title">🗄️ Data Sources (3)</span>
-                    <span class="toggle-icon">▼</span>
-                </div>
-                <div class="collapsible-content">
-                    <div class="collapsible-inner"><div class="data-source"><span class="ds-badge vertica">VERTICA</span>Jira Update Time</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>Revenue Loss</div><div class="data-source"><span class="ds-badge other">GOOGLEDRIVE</span>ROI Targets</div></div>
-                </div>
-            </div>
-                
-            <div class="collapsible-section">
-                <div class="collapsible-header" onclick="toggleSection(this)">
-                    <span class="collapsible-title">📑 Sheets (1)</span>
-                    <span class="toggle-icon">▼</span>
-                </div>
-                <div class="collapsible-content">
-                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/ROC-RevenueLoss/ROCRevenueLoss" class="view-link" target="_blank">ROC Revenue Loss <span class="view-count">(23👁)</span></a></div></div>
-                </div>
-            </div>
-                <a href="https://tableau.office.taboola.com/#/views/ROC-RevenueLoss/ROCRevenueLoss" class="dashboard-link" target="_blank">
                     View Dashboard <span>→</span>
                 </a>
             </div>
@@ -1420,11 +1375,11 @@
                     <div class="meta-item"><span class="icon">👤</span> guy.d</div>
                     <div class="meta-item"><span class="icon">📁</span> ROC</div>
                     <div class="meta-item"><span class="icon">📊</span> 1 sheets</div>
-                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">57</span> views</div>
+                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">59</span> views</div>
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: Nov 24, 2025</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -1443,10 +1398,54 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="collapsible-content">
-                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/ROC-RoadmapProgression/ROCRoadmapProgression" class="view-link" target="_blank">ROC Roadmap Progression <span class="view-count">(57👁)</span></a></div></div>
+                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/ROC-RoadmapProgression/ROCRoadmapProgression" class="view-link" target="_blank">ROC Roadmap Progression <span class="view-count">(59👁)</span></a></div></div>
                 </div>
             </div>
                 <a href="https://tableau.office.taboola.com/#/views/ROC-RoadmapProgression/ROCRoadmapProgression" class="dashboard-link" target="_blank">
+                    View Dashboard <span>→</span>
+                </a>
+            </div>
+
+            <div class="dashboard-card" data-category="production" 
+                 data-name="roc - revenue loss"
+                 data-description="revenue tracking and financial performance monitoring."
+                 data-tags=""
+                 data-owner="guy.d"
+                 data-sources="jira update time revenue loss roi targets">
+                <div class="dashboard-name">ROC - Revenue Loss</div>
+                <div class="dashboard-description ">Revenue tracking and financial performance monitoring.</div>
+                
+                <div class="dashboard-meta">
+                    <div class="meta-item"><span class="icon">👤</span> guy.d</div>
+                    <div class="meta-item"><span class="icon">📁</span> ROC</div>
+                    <div class="meta-item"><span class="icon">📊</span> 1 sheets</div>
+                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">29</span> views</div>
+                </div>
+                <div class="dashboard-meta">
+                    <div class="meta-item"><span class="icon">📅</span> Created: Oct 27, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
+                </div>
+                
+            <div class="collapsible-section">
+                <div class="collapsible-header" onclick="toggleSection(this)">
+                    <span class="collapsible-title">🗄️ Data Sources (3)</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-inner"><div class="data-source"><span class="ds-badge vertica">VERTICA</span>Jira Update Time</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>Revenue Loss</div><div class="data-source"><span class="ds-badge other">GOOGLEDRIVE</span>ROI Targets</div></div>
+                </div>
+            </div>
+                
+            <div class="collapsible-section">
+                <div class="collapsible-header" onclick="toggleSection(this)">
+                    <span class="collapsible-title">📑 Sheets (1)</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/ROC-RevenueLoss/ROCRevenueLoss" class="view-link" target="_blank">ROC Revenue Loss <span class="view-count">(29👁)</span></a></div></div>
+                </div>
+            </div>
+                <a href="https://tableau.office.taboola.com/#/views/ROC-RevenueLoss/ROCRevenueLoss" class="dashboard-link" target="_blank">
                     View Dashboard <span>→</span>
                 </a>
             </div>
@@ -1591,7 +1590,7 @@
                 <div class="section-title playground">
                     <span>🎮</span> Playground Dashboards
                 </div>
-                <div class="section-count playground" id="playground-count">75</div>
+                <div class="section-count playground" id="playground-count">76</div>
             </div>
             <div class="dashboard-grid" id="playground-grid">
 
@@ -1612,7 +1611,7 @@
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: Nov 15, 2025</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -1656,7 +1655,7 @@
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: Aug 11, 2025</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -1700,7 +1699,7 @@
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: Dec 07, 2025</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -1744,7 +1743,7 @@
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: Nov 26, 2025</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -1788,7 +1787,7 @@
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: Nov 23, 2025</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -1816,6 +1815,50 @@
             </div>
 
             <div class="dashboard-card" data-category="playground" 
+                 data-name="roc - roadmap progression and capacityyyyy"
+                 data-description="project tracking dashboard for jira tickets and roadmap progress."
+                 data-tags=""
+                 data-owner="guy.d"
+                 data-sources="dim_issues time in status jira update time">
+                <div class="dashboard-name">ROC - Roadmap Progression AND CAPACITYYYYY</div>
+                <div class="dashboard-description ">Project tracking dashboard for Jira tickets and roadmap progress.</div>
+                
+                <div class="dashboard-meta">
+                    <div class="meta-item"><span class="icon">👤</span> guy.d</div>
+                    <div class="meta-item"><span class="icon">📁</span> Playground</div>
+                    <div class="meta-item"><span class="icon">📊</span> 2 sheets</div>
+                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">0</span> views</div>
+                </div>
+                <div class="dashboard-meta">
+                    <div class="meta-item"><span class="icon">📅</span> Created: Dec 28, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
+                </div>
+                
+            <div class="collapsible-section">
+                <div class="collapsible-header" onclick="toggleSection(this)">
+                    <span class="collapsible-title">🗄️ Data Sources (3)</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-inner"><div class="data-source"><span class="ds-badge vertica">VERTICA</span>Dim_Issues</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>Time In Status</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>Jira Update Time</div></div>
+                </div>
+            </div>
+                
+            <div class="collapsible-section">
+                <div class="collapsible-header" onclick="toggleSection(this)">
+                    <span class="collapsible-title">📑 Sheets (2)</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/ROC-RoadmapProgressionANDCAPACITYYYYY/ROCRoadmapProgression" class="view-link" target="_blank">ROC Roadmap Progression</a><a href="https://tableau.office.taboola.com/#/views/ROC-RoadmapProgressionANDCAPACITYYYYY/ROCRoadmapProgression2" class="view-link" target="_blank">ROC Roadmap Progression (2)</a></div></div>
+                </div>
+            </div>
+                <a href="https://tableau.office.taboola.com/#/views/ROC-RoadmapProgressionANDCAPACITYYYYY/ROCRoadmapProgression" class="dashboard-link" target="_blank">
+                    View Dashboard <span>→</span>
+                </a>
+            </div>
+
+            <div class="dashboard-card" data-category="playground" 
                  data-name="roc historical business performance analysis (publisher) 2026 prep"
                  data-description="deep-dive analysis tool for investigating performance patterns."
                  data-tags=""
@@ -1828,11 +1871,11 @@
                     <div class="meta-item"><span class="icon">👤</span> guy.d</div>
                     <div class="meta-item"><span class="icon">📁</span> Guy</div>
                     <div class="meta-item"><span class="icon">📊</span> 24 sheets</div>
-                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">5</span> views</div>
+                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">6</span> views</div>
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: Dec 07, 2025</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -1851,7 +1894,7 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="collapsible-content">
-                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/Global" class="view-link" target="_blank">Global <span class="view-count">(3👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/Month-to-Date" class="view-link" target="_blank">Month-to-Date <span class="view-count">(2👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/RevenueMTD" class="view-link" target="_blank">Revenue MTD</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/SpendMTD" class="view-link" target="_blank">Spend MTD</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/CumulativeRevenue28dSeasonality" class="view-link" target="_blank">Cumulative Revenue (28d) Seasonality</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/RevenueIndexSeasonality" class="view-link" target="_blank">Revenue Index Seasonality</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/Globalallregions" class="view-link" target="_blank">Global all regions</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/GlobalAllYears" class="view-link" target="_blank">Global All Years</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/MainRegionsAllYears" class="view-link" target="_blank">Main Regions All Years</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/StrategicPartnersAllYears" class="view-link" target="_blank">Strategic Partners All Years</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/Globalalternative" class="view-link" target="_blank">Global(alternative)</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/RevenueGlobalYIncrementality" class="view-link" target="_blank">Revenue Global, Y! Incrementality</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/MainRegions" class="view-link" target="_blank">Main Regions</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/StrategicPartners" class="view-link" target="_blank">Strategic Partners</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/US" class="view-link" target="_blank">US</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/EMEA" class="view-link" target="_blank">EMEA</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/SelectRegion" class="view-link" target="_blank">Select Region</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/AllMetrics" class="view-link" target="_blank">All Metrics</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/SpendGlobalAllYears" class="view-link" target="_blank">Spend Global All Years</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/SpendGlobal" class="view-link" target="_blank">Spend Global</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/SpendEnterprise" class="view-link" target="_blank">Spend Enterprise</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/SpendGrowth" class="view-link" target="_blank">Spend Growth</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/SpendGlobalSalesAlliances" class="view-link" target="_blank">Spend Global Sales Alliances</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/SpendGrowthExc_Search" class="view-link" target="_blank">Spend Growth Exc. Search</a></div></div>
+                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/Global" class="view-link" target="_blank">Global <span class="view-count">(3👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/Month-to-Date" class="view-link" target="_blank">Month-to-Date <span class="view-count">(3👁)</span></a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/RevenueMTD" class="view-link" target="_blank">Revenue MTD</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/SpendMTD" class="view-link" target="_blank">Spend MTD</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/CumulativeRevenue28dSeasonality" class="view-link" target="_blank">Cumulative Revenue (28d) Seasonality</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/RevenueIndexSeasonality" class="view-link" target="_blank">Revenue Index Seasonality</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/Globalallregions" class="view-link" target="_blank">Global all regions</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/GlobalAllYears" class="view-link" target="_blank">Global All Years</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/MainRegionsAllYears" class="view-link" target="_blank">Main Regions All Years</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/StrategicPartnersAllYears" class="view-link" target="_blank">Strategic Partners All Years</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/Globalalternative" class="view-link" target="_blank">Global(alternative)</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/RevenueGlobalYIncrementality" class="view-link" target="_blank">Revenue Global, Y! Incrementality</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/MainRegions" class="view-link" target="_blank">Main Regions</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/StrategicPartners" class="view-link" target="_blank">Strategic Partners</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/US" class="view-link" target="_blank">US</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/EMEA" class="view-link" target="_blank">EMEA</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/SelectRegion" class="view-link" target="_blank">Select Region</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/AllMetrics" class="view-link" target="_blank">All Metrics</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/SpendGlobalAllYears" class="view-link" target="_blank">Spend Global All Years</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/SpendGlobal" class="view-link" target="_blank">Spend Global</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/SpendEnterprise" class="view-link" target="_blank">Spend Enterprise</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/SpendGrowth" class="view-link" target="_blank">Spend Growth</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/SpendGlobalSalesAlliances" class="view-link" target="_blank">Spend Global Sales Alliances</a><a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/SpendGrowthExc_Search" class="view-link" target="_blank">Spend Growth Exc. Search</a></div></div>
                 </div>
             </div>
                 <a href="https://tableau.office.taboola.com/#/views/ROCHistoricalBusinessPerformanceAnalysisPublisher2026prep/Global" class="dashboard-link" target="_blank">
@@ -1876,7 +1919,7 @@
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: Dec 07, 2025</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -1920,7 +1963,7 @@
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: Aug 12, 2025</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -1948,50 +1991,6 @@
             </div>
 
             <div class="dashboard-card" data-category="playground" 
-                 data-name="display"
-                 data-description="analytics dashboard for playground insights and monitoring."
-                 data-tags=""
-                 data-owner="igor.g"
-                 data-sources="account tiers spend sf - cases sf - lifecycle">
-                <div class="dashboard-name">Display</div>
-                <div class="dashboard-description ">Analytics dashboard for Playground insights and monitoring.</div>
-                
-                <div class="dashboard-meta">
-                    <div class="meta-item"><span class="icon">👤</span> igor.g</div>
-                    <div class="meta-item"><span class="icon">📁</span> Playground</div>
-                    <div class="meta-item"><span class="icon">📊</span> 2 sheets</div>
-                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">43</span> views</div>
-                </div>
-                <div class="dashboard-meta">
-                    <div class="meta-item"><span class="icon">📅</span> Created: Oct 05, 2025</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
-                </div>
-                
-            <div class="collapsible-section">
-                <div class="collapsible-header" onclick="toggleSection(this)">
-                    <span class="collapsible-title">🗄️ Data Sources (4)</span>
-                    <span class="toggle-icon">▼</span>
-                </div>
-                <div class="collapsible-content">
-                    <div class="collapsible-inner"><div class="data-source"><span class="ds-badge vertica">VERTICA</span>Account Tiers</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>Spend</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>SF - Cases</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>SF - LifeCycle</div></div>
-                </div>
-            </div>
-                
-            <div class="collapsible-section">
-                <div class="collapsible-header" onclick="toggleSection(this)">
-                    <span class="collapsible-title">📑 Sheets (2)</span>
-                    <span class="toggle-icon">▼</span>
-                </div>
-                <div class="collapsible-content">
-                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/Display/SpendDrop" class="view-link" target="_blank">Spend Drop  <span class="view-count">(31👁)</span></a><a href="https://tableau.office.taboola.com/#/views/Display/AccountTier_1" class="view-link" target="_blank">Account Tier <span class="view-count">(12👁)</span></a></div></div>
-                </div>
-            </div>
-                <a href="https://tableau.office.taboola.com/#/views/Display/SpendDrop" class="dashboard-link" target="_blank">
-                    View Dashboard <span>→</span>
-                </a>
-            </div>
-
-            <div class="dashboard-card" data-category="playground" 
                  data-name="dcc unified dashboard - before igor last change"
                  data-description="analytics dashboard for playground insights and monitoring."
                  data-tags=""
@@ -2008,7 +2007,7 @@
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: Dec 18, 2025</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -2052,7 +2051,7 @@
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: Aug 11, 2025</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 24, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -2080,6 +2079,50 @@
             </div>
 
             <div class="dashboard-card" data-category="playground" 
+                 data-name="display"
+                 data-description="analytics dashboard for playground insights and monitoring."
+                 data-tags=""
+                 data-owner="igor.g"
+                 data-sources="account tiers spend sf - cases sf - lifecycle">
+                <div class="dashboard-name">Display</div>
+                <div class="dashboard-description ">Analytics dashboard for Playground insights and monitoring.</div>
+                
+                <div class="dashboard-meta">
+                    <div class="meta-item"><span class="icon">👤</span> igor.g</div>
+                    <div class="meta-item"><span class="icon">📁</span> Playground</div>
+                    <div class="meta-item"><span class="icon">📊</span> 2 sheets</div>
+                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">44</span> views</div>
+                </div>
+                <div class="dashboard-meta">
+                    <div class="meta-item"><span class="icon">📅</span> Created: Oct 05, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 28, 2025</div>
+                </div>
+                
+            <div class="collapsible-section">
+                <div class="collapsible-header" onclick="toggleSection(this)">
+                    <span class="collapsible-title">🗄️ Data Sources (4)</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-inner"><div class="data-source"><span class="ds-badge vertica">VERTICA</span>Account Tiers</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>Spend</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>SF - Cases</div><div class="data-source"><span class="ds-badge vertica">VERTICA</span>SF - LifeCycle</div></div>
+                </div>
+            </div>
+                
+            <div class="collapsible-section">
+                <div class="collapsible-header" onclick="toggleSection(this)">
+                    <span class="collapsible-title">📑 Sheets (2)</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/Display/SpendDrop" class="view-link" target="_blank">Spend Drop  <span class="view-count">(32👁)</span></a><a href="https://tableau.office.taboola.com/#/views/Display/AccountTier_1" class="view-link" target="_blank">Account Tier <span class="view-count">(12👁)</span></a></div></div>
+                </div>
+            </div>
+                <a href="https://tableau.office.taboola.com/#/views/Display/SpendDrop" class="dashboard-link" target="_blank">
+                    View Dashboard <span>→</span>
+                </a>
+            </div>
+
+            <div class="dashboard-card" data-category="playground" 
                  data-name="display alerts dashboard  - test new"
                  data-description="automated alerting dashboard for proactive issue detection."
                  data-tags=""
@@ -2092,11 +2135,11 @@
                     <div class="meta-item"><span class="icon">👤</span> igor.g</div>
                     <div class="meta-item"><span class="icon">📁</span> Playground</div>
                     <div class="meta-item"><span class="icon">📊</span> 3 sheets</div>
-                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">19</span> views</div>
+                    <div class="meta-item"><span class="icon">👁</span> <span class="meta-highlight">26</span> views</div>
                 </div>
                 <div class="dashboard-meta">
                     <div class="meta-item"><span class="icon">📅</span> Created: Dec 23, 2025</div>
-                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 23, 2025</div>
+                    <div class="meta-item"><span class="icon">🔄</span> Updated: Dec 27, 2025</div>
                 </div>
                 
             <div class="collapsible-section">
@@ -2115,10 +2158,10 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="collapsible-content">
-                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/DisplayAlertsDashboard-TESTNEW/SpendAlerts" class="view-link" target="_blank">Spend Alerts <span class="view-count">(8👁)</span></a><a href="https://tableau.office.taboola.com/#/views/DisplayAlertsDashboard-TESTNEW/AlertsOverview" class="view-link" target="_blank">Alerts Overview <span class="view-count">(7👁)</span></a><a href="https://tableau.office.taboola.com/#/views/DisplayAlertsDashboard-TESTNEW/DepletionAlerts" class="view-link" target="_blank">Depletion Alerts <span class="view-count">(4👁)</span></a></div></div>
+                    <div class="collapsible-inner"><div class="view-links"><a href="https://tableau.office.taboola.com/#/views/DisplayAlertsDashboard-TESTNEW/AlertsOverview" class="view-link" target="_blank">Alerts Overview <span class="view-count">(11👁)</span></a><a href="https://tableau.office.taboola.com/#/views/DisplayAlertsDashboard-TESTNEW/SpendAlerts" class="view-link" target="_blank">Spend Alerts <span class="view-count">(9👁)</span></a><a href="https://tableau.office.taboola.com/#/views/DisplayAlertsDashboard-TESTNEW/DepletionAlerts" class="view-link" target="_blank">Depletion Alerts <span class="view-count">(6👁)</span></a></div></div>
                 </div>
             </div>
-                <a href="https://tableau.office.taboola.com/#/views/DisplayAlertsDashboard-TESTNEW/SpendAlerts" class="dashboard-link" target="_blank">
+                <a href="https://tableau.office.taboola.com/#/views/DisplayAlertsDashboard-TESTNEW/AlertsOverview" class="dashboard-link" target="_blank">
                     View Dashboard <span>→</span>
                 </a>
             </div>
