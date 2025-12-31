@@ -1,0 +1,13 @@
+[
+  {
+    "name": "ROC Alert - Revenue Drop Analysis",
+    "creator": "mor.h",
+    "description": "Analyzes revenue drops and generates alerts for ROC team",
+    "schedule": "Hourly",
+    "last_run": "2025-12-31 10:00",
+    "status": "Active",
+    "url": "https://kiwi.taboolasyndication.com/reports/view_query/202",
+    "category": "Revenue"
+  }
+]
+
