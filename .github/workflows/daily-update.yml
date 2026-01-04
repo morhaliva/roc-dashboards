@@ -1,9 +1,10 @@
 name: Daily Dashboard Update
 
 on:
-  schedule:
-    - cron: '0 6 * * *'
-  workflow_dispatch:
+  # DISABLED - Daily schedule removed per user request
+  # schedule:
+  #   - cron: '0 6 * * *'
+  workflow_dispatch:  # Still allows manual trigger if needed
 
 jobs:
   update-dashboards:
