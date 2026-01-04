@@ -135,12 +135,164 @@
             font-family: inherit;
             text-decoration: none;
             display: inline-block;
+            border: none;
         }
 
         .catchup-btn:hover {
             background: rgba(255, 255, 255, 0.35);
             transform: scale(1.05);
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Catchup Modal */
+        .catchup-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .catchup-modal.open {
+            display: flex;
+        }
+
+        .catchup-modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: modalSlideIn 0.3s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .catchup-modal h2 {
+            margin-bottom: 10px;
+            color: var(--text-primary);
+            font-size: 1.8em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .catchup-modal p {
+            color: var(--text-secondary);
+            margin-bottom: 25px;
+            line-height: 1.6;
+            font-size: 1.05em;
+        }
+
+        .catchup-steps {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 4px solid var(--accent-cyan);
+        }
+
+        .catchup-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .catchup-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-number {
+            background: var(--accent-cyan);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+            font-size: 1em;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content strong {
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.05em;
+        }
+
+        .step-content span {
+            color: var(--text-secondary);
+            font-size: 0.95em;
+        }
+
+        .catchup-action-btn {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .catchup-action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(8, 145, 178, 0.4);
+        }
+
+        .catchup-modal .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #f1f5f9;
+            border: none;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 1.3em;
+            cursor: pointer;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .catchup-modal .close-btn:hover {
+            background: #e2e8f0;
+            color: var(--text-primary);
         }
 
         /* Header */
@@ -655,9 +807,46 @@
 <body>
     <div class="update-banner">
         <span>🔄 <strong>Last Updated:</strong> December 31, 2025 at 11:14 PM</span>
-        <a href="https://github.com/morhaliva/roc-dashboards/actions/workflows/manual-refresh.yml" target="_blank" class="catchup-btn" title="Click to refresh all dashboard data">
+        <button class="catchup-btn" onclick="openCatchupModal()" title="Click to refresh all dashboard data">
             🔄 Catchup
-        </a>
+        </button>
+    </div>
+
+    <!-- Catchup Modal -->
+    <div class="catchup-modal" id="catchupModal">
+        <div class="catchup-modal-content">
+            <button class="close-btn" onclick="closeCatchupModal()">×</button>
+            <h2>🔄 Refresh Dashboard Data</h2>
+            <p>Click the button below to update all dashboard information. This will refresh data from Tableau and update the page automatically.</p>
+            
+            <div class="catchup-steps">
+                <div class="catchup-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <strong>Click the button below</strong>
+                        <span>This will open GitHub Actions</span>
+                    </div>
+                </div>
+                <div class="catchup-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <strong>Click "Run workflow"</strong>
+                        <span>Then click the green "Run workflow" button</span>
+                    </div>
+                </div>
+                <div class="catchup-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <strong>Wait 2-3 minutes</strong>
+                        <span>The page will automatically update when done</span>
+                    </div>
+                </div>
+            </div>
+
+            <a href="https://github.com/morhaliva/roc-dashboards/actions/workflows/manual-refresh.yml" target="_blank" class="catchup-action-btn" onclick="closeCatchupModal()">
+                🚀 Go to Refresh Page →
+            </a>
+        </div>
     </div>
 
     <div class="bg-pattern"></div>
@@ -5005,6 +5194,29 @@
     </div>
 
     <script>
+        // Catchup Modal Functions
+        function openCatchupModal() {
+            document.getElementById('catchupModal').classList.add('open');
+        }
+
+        function closeCatchupModal() {
+            document.getElementById('catchupModal').classList.remove('open');
+        }
+
+        // Close modal on outside click
+        document.getElementById('catchupModal')?.addEventListener('click', (e) => {
+            if (e.target.classList.contains('catchup-modal')) {
+                closeCatchupModal();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && document.getElementById('catchupModal').classList.contains('open')) {
+                closeCatchupModal();
+            }
+        });
+
         // Toggle collapsible sections
         function toggleSection(header) {
             const content = header.nextElementSibling;
