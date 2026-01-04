@@ -95,111 +95,31 @@
             font-weight: 600;
         }
 
-        .refresh-btn {
+        .refresh-btn, .catchup-btn {
             background: rgba(255, 255, 255, 0.2);
             border: 1px solid rgba(255, 255, 255, 0.3);
             color: white;
-            padding: 4px 12px;
+            padding: 6px 16px;
             border-radius: 20px;
             cursor: pointer;
-            font-size: 0.85em;
-            font-weight: 500;
+            font-size: 0.9em;
+            font-weight: 600;
             transition: all 0.2s ease;
             font-family: inherit;
+            text-decoration: none;
+            display: inline-block;
         }
 
-        .refresh-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
+        .refresh-btn:hover, .catchup-btn:hover {
+            background: rgba(255, 255, 255, 0.35);
             transform: scale(1.05);
-        }
-
-        /* Refresh Modal */
-        .refresh-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .refresh-modal.open {
-            display: flex;
-        }
-
-        .refresh-modal-content {
-            background: white;
-            border-radius: 16px;
-            padding: 30px;
-            max-width: 500px;
-            width: 90%;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            position: relative;
-        }
-
-        .refresh-modal h3 {
-            margin-bottom: 15px;
-            color: var(--text-primary);
-            font-size: 1.3em;
-        }
-
-        .refresh-modal p {
-            color: var(--text-secondary);
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-
-        .refresh-modal code {
-            background: #f1f5f9;
-            padding: 10px 15px;
-            border-radius: 8px;
-            display: block;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.85em;
-            margin: 10px 0;
-            color: var(--accent-purple);
-            word-break: break-all;
-        }
-
-        .refresh-modal .close-btn {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: none;
-            border: none;
-            font-size: 1.5em;
-            cursor: pointer;
-            color: var(--text-muted);
-        }
-
-        .refresh-modal .close-btn:hover {
-            color: var(--text-primary);
-        }
-
-        .copy-btn {
-            background: var(--accent-cyan);
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 500;
-            margin-top: 10px;
-            transition: all 0.2s ease;
-        }
-
-        .copy-btn:hover {
-            background: var(--accent-purple);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
 
         .container {
             max-width: 1300px;
             margin: 0 auto;
-            padding: 70px 30px 50px;
+            padding: 80px 30px 50px; /* Extra top padding for banner */
             position: relative;
             z-index: 1;
         }
@@ -629,21 +549,9 @@
 <body>
     <div class="update-banner">
         <span>🔄 <strong>Last Updated:</strong> December 31, 2025 at 11:20 PM</span>
-        <button class="refresh-btn" onclick="openRefreshModal()">↻ Refresh Data</button>
-    </div>
-
-    <!-- Refresh Modal -->
-    <div class="refresh-modal" id="refreshModal">
-        <div class="refresh-modal-content">
-            <button class="close-btn" onclick="closeRefreshModal()">×</button>
-            <h3>🔄 Refresh Dashboard Data</h3>
-            <p>To update all dashboard data, run this command in Terminal (requires VPN):</p>
-            <code id="refreshCommand">cd ~/.cursor && python3 fetch_enhanced_dashboard_data.py && python3 generate_enhanced_html.py && cp roc_dashboards_enhanced.html deployment/index.html && cd deployment && git add -A && git commit -m "🔄 Manual refresh" && git push</code>
-            <button class="copy-btn" onclick="copyRefreshCommand()">📋 Copy Command</button>
-            <p style="margin-top: 15px; font-size: 0.85em; color: var(--text-muted);">
-                <strong>Requirements:</strong> VPN connected, Python 3 installed
-            </p>
-        </div>
+        <a href="https://github.com/morhaliva/roc-dashboards/actions/workflows/manual-refresh.yml" target="_blank" class="refresh-btn catchup-btn" title="Click to refresh all dashboard data">
+            🔄 Catchup
+        </a>
     </div>
 
     <div class="bg-pattern"></div>
@@ -1400,32 +1308,6 @@ Alerts Directory: https://morhaliva.github.io/roc-dashboards/roc-alerts.html
 - Raven UI: https://raven.taboolasyndication.com/
 - Sage AI Agents (ROC): http://sage-stage.spd.svc.kube.taboolasyndication.com:8000/agents/roc_agent`;
 
-    // Refresh Modal Functions
-    function openRefreshModal() {
-        document.getElementById('refreshModal').classList.add('open');
-    }
-
-    function closeRefreshModal() {
-        document.getElementById('refreshModal').classList.remove('open');
-    }
-
-    function copyRefreshCommand() {
-        const command = document.getElementById('refreshCommand').textContent;
-        navigator.clipboard.writeText(command).then(() => {
-            const btn = document.querySelector('.copy-btn');
-            btn.textContent = '✅ Copied!';
-            setTimeout(() => {
-                btn.textContent = '📋 Copy Command';
-            }, 2000);
-        });
-    }
-
-    // Close modal on outside click
-    document.getElementById('refreshModal')?.addEventListener('click', (e) => {
-        if (e.target.classList.contains('refresh-modal')) {
-            closeRefreshModal();
-        }
-    });
 
     function toggleAIChat() {
         const panel = document.getElementById('aiChatPanel');
